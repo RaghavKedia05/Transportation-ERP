@@ -3,7 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Transportation ERP</title>
+=======
+    <title>Transportation ERP Dashboard</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <!-- CSS -->
+>>>>>>> 88dae6a (Admin Panel UI Update)
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,12 +31,237 @@
         
         <!-- Left Section End-->
 
+<<<<<<< HEAD
         <!-- Main Features Section Start-->
         <main>
             <h1>Main Features</h1>
             
         </main>
         <!-- Main Features Section End-->
+=======
+    <div class="container">
+
+        <!-- SIDEBAR START -->
+        <aside>
+
+            <div class="top">
+
+                <div class="logo">
+                    <h2>Transport<span class="danger">ERP</span></h2>
+                </div>
+
+                <div class="close">
+                    <span class="material-symbols-outlined">close</span>
+                </div>
+
+            </div>
+
+            <div class="sidebar">
+
+                <a href="#" class="active">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">local_shipping</span>
+                    <h3>Fleet</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">person</span>
+                    <h3>Drivers</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">route</span>
+                    <h3>Routes</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">inventory_2</span>
+                    <h3>Shipments</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">warehouse</span>
+                    <h3>Warehouses</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">payments</span>
+                    <h3>Billing</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">analytics</span>
+                    <h3>Reports</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">settings</span>
+                    <h3>Settings</h3>
+                </a>
+
+                <a href="#">
+                    <span class="material-symbols-outlined">logout</span>
+                    <h3>Logout</h3>
+                </a>
+
+            </div>
+
+        </aside>
+        <!-- SIDEBAR END -->
+
+
+        <!-- MAIN CONTENT -->
+        <main>
+
+            <h1>Dashboard</h1>
+
+            <div class="date">
+                <input type="date">
+            </div>
+
+            <div class="insights">
+
+                <div class="card">
+                    <span class="material-symbols-outlined">local_shipping</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Total Vehicles</h3>
+                            <h1>128</h1>
+                        </div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+
+                <div class="card">
+                    <span class="material-symbols-outlined">person</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Active Drivers</h3>
+                            <h1>64</h1>
+                        </div>
+                    </div>
+                    <small class="text-muted">Updated Just Now</small>
+                </div>
+
+                <div class="card">
+                    <span class="material-symbols-outlined">payments</span>
+                    <div class="middle">
+                        <div class="left">
+                            <h3>Revenue</h3>
+                            <h1>$24,500</h1>
+                        </div>
+                    </div>
+                    <small class="text-muted">This Month</small>
+                </div>
+
+            </div>
+
+            <!-- TABLE -->
+
+            <div class="recent-orders">
+
+                <h2>Recent Shipments</h2>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Shipment ID</th>
+                            <th>Driver</th>
+                            <th>Status</th>
+                            <th>Destination</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>#TR1021</td>
+                            <td>John</td>
+                            <td class="success">Delivered</td>
+                            <td>New York</td>
+                        </tr>
+
+                        <tr>
+                            <td>#TR1022</td>
+                            <td>Alex</td>
+                            <td class="warning">Pending</td>
+                            <td>Chicago</td>
+                        </tr>
+
+                        <tr>
+                            <td>#TR1023</td>
+                            <td>David</td>
+                            <td class="danger-text">Delayed</td>
+                            <td>California</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </main>
+
+
+        <!-- RIGHT PANEL -->
+
+        <div class="right">
+
+            <div class="top-right">
+
+                <div class="profile">
+
+                    <div class="info">
+                        <p><b>Admin</b></p>
+                        <small class="text-muted">Manager</small>
+                    </div>
+
+                    <div class="profile-photo">
+                        A
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="recent-updates">
+
+                <h2>Recent Updates</h2>
+
+                <div class="updates">
+
+                    <div class="update">
+                        <span class="material-symbols-outlined">notifications</span>
+
+                        <div class="message">
+                            <p><b>Truck #21</b> reached destination.</p>
+                            <small class="text-muted">2 Minutes Ago</small>
+                        </div>
+                    </div>
+
+                    <div class="update">
+                        <span class="material-symbols-outlined">warning</span>
+
+                        <div class="message">
+                            <p><b>Vehicle #18</b> requires maintenance.</p>
+                            <small class="text-muted">10 Minutes Ago</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+>>>>>>> 88dae6a (Admin Panel UI Update)
 
         <!-- Right Section Start-->
         <div class="right">

@@ -1,4 +1,5 @@
 *{
+<<<<<<< HEAD
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -40,4 +41,261 @@ main{
     background: #cbd5e1;
     padding: 1rem;
     border-radius: 10px;
+=======
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    text-decoration:none;
+    list-style:none;
+    border:0;
+    outline:0;
+}
+
+:root{
+    --color-primary:#7380ec;
+    --color-danger:#ff7782;
+    --color-success:#41f1b6;
+    --color-warning:#ffbb55;
+    --color-white:#ffffff;
+    --color-info-dark:#7d8da1;
+    --color-dark:#363949;
+    --color-light:#f6f6f9;
+    --color-background:#f6f6f9;
+
+    --card-border-radius:1.5rem;
+    --card-padding:1.8rem;
+
+    --box-shadow:0 2rem 3rem rgba(132,139,200,0.18);
+}
+
+body{
+    width:100vw;
+    min-height:100vh;
+    font-family:'Poppins',sans-serif;
+    background:var(--color-background);
+    overflow-x:hidden;
+    color:var(--color-dark);
+}
+
+.container{
+    display:grid;
+    width:96%;
+    margin:0 auto;
+    gap:1.8rem;
+    grid-template-columns:14rem auto 23rem;
+}
+
+aside{
+    height:100vh;
+    background:var(--color-white);
+    box-shadow:var(--box-shadow);
+}
+
+aside .top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:1.4rem;
+    padding:0 1rem;
+}
+
+.danger{
+    color:var(--color-danger);
+}
+
+aside .sidebar{
+    display:flex;
+    flex-direction:column;
+    height:86vh;
+    position:relative;
+    top:2rem;
+}
+
+aside .sidebar a{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    color:var(--color-info-dark);
+    margin-left:2rem;
+    height:3.7rem;
+    transition:0.3s;
+}
+
+aside .sidebar a:hover{
+    color:var(--color-primary);
+    margin-left:2.5rem;
+}
+
+aside .sidebar a.active{
+    background:rgba(115,128,236,0.1);
+    color:var(--color-primary);
+    margin-left:0;
+    border-left:5px solid var(--color-primary);
+}
+
+aside .sidebar span{
+    font-size:1.6rem;
+}
+
+main{
+    margin-top:1.4rem;
+}
+
+.date{
+    margin-top:1rem;
+}
+
+.date input{
+    padding:0.5rem 1rem;
+    border-radius:0.5rem;
+}
+
+.insights{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.6rem;
+    margin-top:1rem;
+}
+
+.card{
+    background:var(--color-white);
+    padding:var(--card-padding);
+    border-radius:var(--card-border-radius);
+    box-shadow:var(--box-shadow);
+}
+
+.card span{
+    background:var(--color-primary);
+    color:white;
+    padding:0.5rem;
+    border-radius:50%;
+    font-size:2rem;
+}
+
+.middle{
+    margin-top:1rem;
+}
+
+.text-muted{
+    color:var(--color-info-dark);
+}
+
+.recent-orders{
+    margin-top:2rem;
+}
+
+.recent-orders table{
+    background:var(--color-white);
+    width:100%;
+    padding:1rem;
+    border-radius:1rem;
+    box-shadow:var(--box-shadow);
+    border-collapse:collapse;
+    text-align:center;
+}
+
+table th,
+table td{
+    padding:1rem;
+    border-bottom:1px solid #eee;
+}
+
+.success{
+    color:var(--color-success);
+}
+
+.warning{
+    color:var(--color-warning);
+}
+
+.danger-text{
+    color:var(--color-danger);
+}
+
+.right{
+    margin-top:1.4rem;
+}
+
+.top-right{
+    display:flex;
+    justify-content:flex-end;
+}
+
+.profile{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+
+.profile-photo{
+    width:2.8rem;
+    height:2.8rem;
+    border-radius:50%;
+    background:var(--color-primary);
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+.recent-updates{
+    margin-top:1rem;
+}
+
+.updates{
+    background:var(--color-white);
+    padding:1.5rem;
+    border-radius:1rem;
+    box-shadow:var(--box-shadow);
+}
+
+.update{
+    display:flex;
+    gap:1rem;
+    margin-bottom:1rem;
+}
+
+.update span{
+    background:var(--color-primary);
+    color:white;
+    width:2.5rem;
+    height:2.5rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+}
+
+@media screen and (max-width:1200px){
+
+    .container{
+        grid-template-columns:7rem auto 20rem;
+    }
+
+    aside .logo h2,
+    aside .sidebar h3{
+        display:none;
+    }
+
+    .insights{
+        grid-template-columns:1fr;
+    }
+}
+
+@media screen and (max-width:768px){
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    aside{
+        display:none;
+    }
+
+    .insights{
+        grid-template-columns:1fr;
+    }
+
+>>>>>>> 88dae6a (Admin Panel UI Update)
 }
