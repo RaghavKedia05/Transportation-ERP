@@ -6,6 +6,7 @@
     list-style: none;
     border: 0;
     outline: 0;
+    min-width: 0;
 }
 
 :root {
@@ -48,8 +49,7 @@ body {
 .container {
     display: grid;
     width: 100%;
-    max-width;
-    100%;
+    max-width: 100%;
     min-height: 100vh;
     margin: 0 auto;
     gap: 1.5rem;
@@ -246,23 +246,27 @@ table td {
 .updates {
     background: var(--color-white);
     padding: 1.5rem;
-    border-radius: 1rem;
+    border-radius: var(--card-border-radius);
     box-shadow: var(--box-shadow);
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
     width: 100%;
+    transition: 0.3s ease;
 }
+
+.updates:hover {
+    transform: translateY(-5px);
+}       
 
 .update {
     display: flex;
+    flex-direction: row;
     align-items: flex-start;
     gap: 1rem;
     margin-bottom: 1rem;
     width: 100%;
     min-width: 0;
-
     overflow: hidden;
 }
 
@@ -289,6 +293,7 @@ table td {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    flex-shrink: 0;
 }
 
 h1 {
@@ -465,8 +470,4 @@ h3 {
     h3 {
         font-size: 1rem;
     }
-}
-
-* {
-    min-width: 0;
 }
