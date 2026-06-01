@@ -12,6 +12,6 @@
         <li><a href="/vehicles">Vehicles</a></li>
         <li><a href="/drivers">Drivers</a></li>
     </ul>
-
+    
 </body>
 </html>
