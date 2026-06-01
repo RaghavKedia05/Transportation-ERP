@@ -3,7 +3,10 @@
 use CodeIgniter\Router\RouteCollection;
 
 /** @var RouteCollection $routes */
-$routes->get('/', 'Home::index');
-$routes->get('/test', function() {
-    return view('test');
-});
+
+$routes->get('/', 'Admin::dashboard');
+
+$routes->get('/dashboard', 'Admin::dashboard');
+$routes->get('/transporters', 'Admin::transporters');
+$routes->get('/vehicles', 'Admin::vehicles');
+$routes->get('/drivers', 'Admin::drivers');
