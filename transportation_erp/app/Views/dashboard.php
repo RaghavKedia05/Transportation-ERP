@@ -4,272 +4,358 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transportation ERP Dashboard</title>
+    <title>SuperAdmin HRMS</title>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 
-    <!-- Material Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
 </head>
 
-<body>
+<body class="bg-[#f5f6fa]">
 
-    <button id="menu-btn">
-        <span class="material-symbols-outlined">menu</span>
-    </button>
+    <div class="flex h-screen">
 
-    <div class="container">
-    
-        <!-- SIDEBAR START -->
-        <aside>
-
-            <div class="top">
-
-                <div class="logo">
-                    <h2>Transport<span class="danger">ERP</span></h2>
-                </div>
-
-                <div class="close" id="close-btn">
-                    <span class="material-symbols-outlined">close</span>
-                </div>
-
+        <!-- Sidebar -->
+        <aside class="w-[230px] bg-white border-r border-slate-200 overflow-y-auto">
+            <div class="h-16 px-6 flex items-center border-b border-slate-100">
+                <h2 class="text-[20px] font-semibold text-slate-900">
+                    SuperAdmin HRMS
+                </h2>
             </div>
 
-            <div class="sidebar">
-
-                <a href="<?= base_url('dashboard') ?>" class="active">
-                    <span class="material-symbols-outlined">dashboard</span>
-                    <h3>Dashboard</h3>
+            <nav class="px-3 py-4">
+                <h6 class="px-4 mt-6 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
+                    Dashboard
+                </h6>
+                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md
+                    bg-indigo-600
+                    text-white
+                    text-slate-600
+                    hover:bg-indigo-50
+                    hover:translate-x-2
+                    hover:text-indigo-600
+                    transition-all duration-300
+                    font-small
+                    border-l-4 border-indigo-600">
+                    <i data-lucide="home" class="w-5 h-5 "></i>
+                    <span>Dashboard</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
 
-                <a href="<?= base_url('transporters') ?>">
-                    <span class="material-symbols-outlined">local_shipping</span>
-                    <h3>Transporters</h3>
+                <h6 class="px-4 mt-6 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
+                    WEB APPS
+                </h6>
+                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-2
+                    text-slate-600
+                    hover:bg-indigo-50
+                    hover:text-indigo-600
+                    hover:translate-x-2
+                    transition-all duration-300
+                    font-medium">
+                    <i data-lucide="layout-grid"></i>
+                    <span>Apps</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
 
-                <a href="<?= base_url('drivers') ?>">
-                    <span class="material-symbols-outlined">person</span>
-                    <h3>Drivers</h3>
+
+                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-2
+                    text-slate-600
+                    hover:bg-indigo-50
+                    hover:text-indigo-600
+                    hover:translate-x-2
+                    transition-all duration-300
+                    font-medium">
+                    <i data-lucide="layers"></i>
+                    <span>Nested Menu</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
 
-                <a href="<?= base_url('vehicles') ?>">
-                    <span class="material-symbols-outlined">directions_car</span>
-                    <h3>Vehicles</h3>
-                </a>
-                
-                <a href="<?= base_url('shipments') ?>">
-                    <span class="material-symbols-outlined">inventory_2</span>
-                    <h3>Shipments</h3>
-                </a>
-
-                <a href="<?= base_url('warehouses') ?>">
-                    <span class="material-symbols-outlined">warehouse</span>
-                    <h3>Warehouses</h3>
-                </a>
-
-                <a href="<?= base_url('billing') ?>">
-                    <span class="material-symbols-outlined">payments</span>
-                    <h3>Billing</h3>
+                <h6 class="px-4 mt-6 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
+                    CRAFTED
+                </h6>
+                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-2
+                    text-slate-600
+                    hover:bg-indigo-50
+                    hover:text-indigo-600
+                    hover:translate-x-2
+                    transition-all duration-300
+                    font-medium">
+                    <i data-lucide="lock"></i>
+                    <span>Authentication</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
 
-                <a href="<?= base_url('reports') ?>">
-                    <span class="material-symbols-outlined">analytics</span>
-                    <h3>Reports</h3>
+                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-2
+                    text-slate-600
+                    hover:bg-indigo-50
+                    hover:text-indigo-600
+                    hover:translate-x-2
+                    transition-all duration-300
+                    font-medium">
+                    <i data-lucide="circle-alert"></i>
+                    <span>Error</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
 
-                <a href="<?= base_url('settings') ?>">
-                    <span class="material-symbols-outlined">settings</span>
-                    <h3>Settings</h3>
+                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-2
+                    text-slate-600
+                    hover:bg-indigo-50
+                    hover:text-indigo-600
+                    hover:translate-x-2
+                    transition-all duration-300
+                    font-medium">
+                    <i data-lucide="file-text"></i>
+                    <span>Pages</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
 
-                <a href="<?= base_url('/') ?>">
-                    <span class="material-symbols-outlined">logout</span>
-                    <h3>Logout</h3>
+                <h6 class="px-4 mt-6 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
+                    MODULES
+                </h6>
+                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-2
+                    text-slate-600
+                    hover:bg-indigo-50
+                    hover:text-indigo-600
+                    hover:translate-x-2
+                    transition-all duration-300
+                    font-medium">
+                    <i data-lucide="form"></i>
+                    <span>Forms</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
 
-            </div>
+                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-2
+                    text-slate-600
+                    hover:bg-indigo-50
+                    hover:text-indigo-600
+                    hover:translate-x-2
+                    transition-all duration-300
+                    font-medium">
+                    <i data-lucide="archive"></i>
+                    <span>UI Elements</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+
+                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-2
+                    text-slate-600
+                    hover:bg-indigo-50
+                    hover:text-indigo-600
+                    hover:translate-x-2
+                    transition-all duration-300
+                    font-medium">
+                    <i data-lucide="sparkle"></i>
+                    <span>Advancedd UI</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+
+                </a>
+
+                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-2
+                    text-slate-600
+                    hover:bg-indigo-50
+                    hover:text-indigo-600
+                    hover:translate-x-2
+                    transition-all duration-300
+                    font-medium">
+                    <i data-lucide="award"></i>
+                    <span>Utilities</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+
+                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-2
+                    text-slate-600
+                    hover:bg-indigo-50
+                    hover:text-indigo-600
+                    hover:translate-x-2
+                    transition-all duration-300
+                    font-medium">
+                    <i data-lucide="gift"></i>
+                    <span>Widgets</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+
+                <h6 class="px-4 mt-6 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
+                    TOOLS AND COMPONENTS
+                </h6>
+
+                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-2
+                    text-slate-600
+                    hover:bg-indigo-50
+                    hover:text-indigo-600
+                    hover:translate-x-2
+                    transition-all duration-300
+                    font-medium">
+                    <i data-lucide="compass"></i>
+                    <span>Maps</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+
+                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-2
+                    text-slate-600
+                    hover:bg-indigo-50
+                    hover:text-indigo-600
+                    hover:translate-x-2
+                    transition-all duration-300
+                    font-medium">
+                    <i data-lucide="store"></i>
+                    <span>Icons</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+
+                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-2
+                    text-slate-600
+                    hover:bg-indigo-50
+                    hover:text-indigo-600
+                    hover:translate-x-2
+                    transition-all duration-300
+                    font-medium">
+                    <i data-lucide="chart-no-axes-combined"></i>
+                    <span>Charts</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+
+                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-2
+                    text-slate-600
+                    hover:bg-indigo-50
+                    hover:text-indigo-600
+                    hover:translate-x-2
+                    transition-all duration-300
+                    font-medium">
+                    <i data-lucide="table-2"></i>
+                    <span>Tables</span>
+                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                </a>
+
+
+
+            </nav>
 
         </aside>
-        <!-- SIDEBAR END -->
 
+        <!-- Main -->
+        <div class="flex-1 flex flex-col">
 
-        <!-- MAIN CONTENT -->
-        <main>
+            <!-- Navbar -->
+            <nav class="h-[72px] bg-white border-b border-slate-200 flex items-center justify-between px-8">
 
-            <h1>Dashboard</h1>
+                <div>
+                    <h1 class="text-[20px] font-semibold text-black">
+                        Dashboard
+                    </h1>
+                </div>
 
-            <div class="date">
-                <input type="date">
-            </div>
+                <!-- Search Button,Notification, Profile, Settings -->
+                <div class="flex items-center gap-5">
 
-            <div class="insights">
+                    <!-- Search -->
+                    <button class="text-slate-600 hover:text-indigo-600 transition">
+                        <i data-lucide="search"></i>
+                    </button>
 
-                <div class="card">
-                    <span class="material-symbols-outlined">local_shipping</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Total Vehicles</h3>
-                            <h1>128</h1>
+                    <!-- Notification -->
+                    <button class="text-slate-600 hover:text-indigo-600 transition">
+                        <i data-lucide="bell"></i>
+                    </button>
+
+                    <!-- Profile -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-indigo-500 text-white flex items-center justify-center">
+                            RK
                         </div>
-                    </div>
-                    <small class="text-muted">Last 24 Hours</small>
-                </div>
 
-                <div class="card">
-                    <span class="material-symbols-outlined">person</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Active Drivers</h3>
-                            <h1>64</h1>
+                        <div class="text-right">
+                            <p class="font-small text-slate-800">
+                                Mr. Kedia
+                            </p>
                         </div>
-                    </div>
-                    <small class="text-muted">Updated Just Now</small>
-                </div>
 
-                <div class="card">
-                    <span class="material-symbols-outlined">payments</span>
-                    <div class="middle">
-                        <div class="left">
-                            <h3>Revenue</h3>
-                            <h1>$24,500</h1>
-                        </div>
-                    </div>
-                    <small class="text-muted">This Month</small>
-                </div>
-
-            </div>
-
-            <!-- TABLE -->
-
-            <div class="recent-orders">
-
-                <h2>Recent Shipments</h2>
-
-                <div class="table-responsive">
-                    <table>
-
-                        <thead>
-                            <tr>
-                                <th>Shipment ID</th>
-                                <th>Driver</th>
-                                <th>Status</th>
-                                <th>Destination</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-
-                            <tr>
-                                <td>#TR1021</td>
-                                <td>John</td>
-                                <td class="success">Delivered</td>
-                                <td>New York</td>
-                            </tr>
-
-                            <tr>
-                                <td>#TR1022</td>
-                                <td>Alex</td>
-                                <td class="warning">Pending</td>
-                                <td>Chicago</td>
-                            </tr>
-
-                            <tr>
-                                <td>#TR1023</td>
-                                <td>David</td>
-                                <td class="danger-text">Delayed</td>
-                                <td>California</td>
-                            </tr>
-
-                        </tbody>
-
-                    </table>
-                </div>
-
-            </div>
-
-        </main>
-
-
-        <!-- RIGHT PANEL -->
-
-        <div class="right">
-
-            <div class="top-right">
-
-                <div class="profile">
-
-                    <div class="info">
-                        <p><b>Admin</b></p>
-                        <small class="text-muted">Manager</small>
                     </div>
 
-                    <div class="profile-photo">
-                        A
-                    </div>
+                    <!-- Settings -->
+                    <button class="text-slate-600 hover:text-indigo-600 transition">
+                        <i data-lucide="settings"></i>
+                    </button>
 
                 </div>
 
-            </div>
+            </nav>
 
-            <div class="recent-updates">
+            <!-- Main Content -->
+            <main class="p-6">
 
-                <h2>Recent Updates</h2>
+                <div class="grid grid-cols-3 gap-6">
 
-                <div class="updates">
+                    <!-- LEFT SIDE -->
+                    <div class="col-span-2">
 
-                    <div class="update">
-                        <span class="material-symbols-outlined">notifications</span>
-                        <div class="update-content">
+                        <div class="grid grid-cols-2 gap-6">
 
-                            <div class="message">
-                                <p><b>Truck #21</b> reached destination.</p>
-                                <small class="text-muted">2 Minutes Ago</small>
+                            <!-- Card 1 -->
+                            <div class="bg-white rounded-md border border-slate-100 p-6 relative h-[120px]">
+                                <p class="text-slate-500">Total Sales</p>
+                                <h2 class="text-3xl font-bold mt-2">$24.5K</h2>
                             </div>
+
+                            <!-- Card 2 -->
+                            <div class="bg-white rounded-md border border-slate-100 p-6 relative h-[120px]">
+                                <p class="text-slate-500">Orders</p>
+                                <h2 class="text-3xl font-bold mt-2">145</h2>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="bg-white rounded-md border border-slate-100 p-6 relative h-[120px]">
+                                <p class="text-slate-500">Drivers</p>
+                                <h2 class="text-3xl font-bold mt-2">52</h2>
+                            </div>
+
+                            <!-- Card 4 -->
+                            <div class="bg-white rounded-md border border-slate-100 p-6 relative h-[120px]">
+                                <p class="text-slate-500">Vehicles</p>
+                                <h2 class="text-3xl font-bold mt-2">128</h2>
+                            </div>
+
                         </div>
+
                     </div>
 
-                    <div class="update">
-                        <span class="material-symbols-outlined">warning</span>
-                        <div class="update-content">
-                            <div class="message">
-                                <p><b>Vehicle #18</b> requires maintenance.</p>
-                                <small class="text-muted">10 Minutes Ago</small>
-                            </div>
+                    <!-- RIGHT SIDE -->
+                    <div class="bg-white rounded-md border border-slate-100 p-6 relative h-[120px]">
+
+                        <h3 class="text-lg font-semibold mb-4">
+                            Fleet Distribution
+                        </h3>
+
+                        <div class="h-64 flex items-center justify-center text-slate-400">
+
+                            Pie Chart Here
+
                         </div>
+
                     </div>
 
                 </div>
 
-            </div>
+            </main>
 
         </div>
 
     </div>
 
-    <!-- JavaScript Start-->
     <script>
-
-        const menuBtn = document.getElementById("menu-btn");
-        const closeBtn = document.getElementById("close-btn");
-        const sidebar = document.querySelector("aside");
-
-        menuBtn.addEventListener("click", () => {
-            sidebar.classList.add("active");
-        });
-
-        closeBtn.addEventListener("click", () => {
-            sidebar.classList.remove("active");
-        });
-
+        lucide.createIcons();
     </script>
-    <!-- JavaScript End-->
+
 
 </body>
 
