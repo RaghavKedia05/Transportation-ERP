@@ -28,43 +28,40 @@
     <div class="flex h-screen">
 
         <!-- Sidebar -->
-        <aside class="w-[230px] bg-white border-r border-slate-200 overflow-y-auto">
-            <div class="h-16 px-6 flex items-center border-b border-slate-100">
-                <h2 class="text-[20px] font-semibold text-slate-900">
+        <aside class="w-[240px] bg-white border-r border-slate-200 overflow-y-auto">
+            <div class="px-3 py-6 h-[72px] flex items-center border-b border-slate-100">
+                <h2 class="text-[20px] font-semibold text-slate-900 whitespace-nowrap">
                     SuperAdmin HRMS
                 </h2>
             </div>
 
-            <nav class="px-3 py-4">
-                <h6 class="px-4 mt-6 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
+            <nav class="px-3 py-3">
+                <h6 class="px-1 mt-2 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
                     Dashboard
                 </h6>
-                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md
-                    bg-indigo-600
+                <a href="#" class="group flex items-center gap-12 px-4 py-2 rounded-md mt-4
+                    bg-indigo-500
                     text-white
                     text-slate-600
-                    hover:bg-indigo-50
-                    hover:translate-x-2
-                    hover:text-indigo-600
-                    transition-all duration-300
-                    font-small
-                    border-l-4 border-indigo-600">
-                    <i data-lucide="home" class="w-5 h-5 "></i>
-                    <span>Dashboard</span>
+                    hover:bg-indigo-500
+                    hover:text-white-600
+                    font-small">
+                    <div class="flex items-center gap-2.5">
+                        <i data-lucide="home" class="w-3.5 h-3.5"></i>
+                        <span class="text-[13px] ">Dashboards</span>
+                    </div>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
 
-                <h6 class="px-4 mt-6 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
+                <h6 class="px-1 mt-5 mb-4 text-[11px] font-medium tracking-wider uppercase text-slate-400">
                     WEB APPS
                 </h6>
-                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-2
+                <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-4
                     text-slate-600
-                    hover:bg-indigo-50
-                    hover:text-indigo-600
-                    hover:translate-x-2
-                    transition-all duration-300
+                    hover:bg-indigo-500
+                    hover:text-white-600
                     font-medium">
-                    <i data-lucide="layout-grid"></i>
+                    <i data-lucide="layout-grid" class="w-4 h-4"></i>
                     <span>Apps</span>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
@@ -72,17 +69,16 @@
 
                 <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-2
                     text-slate-600
-                    hover:bg-indigo-50
-                    hover:text-indigo-600
-                    hover:translate-x-2
+                    hover:bg-indigo-500
+                    hover:text-white                    
                     transition-all duration-300
                     font-medium">
-                    <i data-lucide="layers"></i>
+                    <i data-lucide="layers" class="w-4 h-4"></i>
                     <span>Nested Menu</span>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
 
-                <h6 class="px-4 mt-6 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
+                <h6 class="px-2 mt-6 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
                     CRAFTED
                 </h6>
                 <a href="#" class="group flex items-center gap-3 px-4 py-3 rounded-md mt-2
@@ -92,7 +88,7 @@
                     hover:translate-x-2
                     transition-all duration-300
                     font-medium">
-                    <i data-lucide="lock"></i>
+                    <i data-lucide="lock" class="w-4 h-4"></i>
                     <span>Authentication</span>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
@@ -104,7 +100,7 @@
                     hover:translate-x-2
                     transition-all duration-300
                     font-medium">
-                    <i data-lucide="circle-alert"></i>
+                    <i data-lucide="circle-alert" class="w-4 h-4"></i>
                     <span>Error</span>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
@@ -116,7 +112,7 @@
                     hover:translate-x-2
                     transition-all duration-300
                     font-medium">
-                    <i data-lucide="file-text"></i>
+                    <i data-lucide="file-text" class="w-4 h-4"></i>
                     <span>Pages</span>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
@@ -131,7 +127,7 @@
                     hover:translate-x-2
                     transition-all duration-300
                     font-medium">
-                    <i data-lucide="form"></i>
+                    <i data-lucide="form" class="w-4 h-4"></i>
                     <span>Forms</span>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
@@ -143,7 +139,7 @@
                     hover:translate-x-2
                     transition-all duration-300
                     font-medium">
-                    <i data-lucide="archive"></i>
+                    <i data-lucide="archive" class="w-4 h-4"></i>
                     <span>UI Elements</span>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
@@ -155,7 +151,7 @@
                     hover:translate-x-2
                     transition-all duration-300
                     font-medium">
-                    <i data-lucide="sparkle"></i>
+                    <i data-lucide="sparkle" class="w-4 h-4"></i>
                     <span>Advancedd UI</span>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
 
@@ -168,7 +164,7 @@
                     hover:translate-x-2
                     transition-all duration-300
                     font-medium">
-                    <i data-lucide="award"></i>
+                    <i data-lucide="award" class="w-4 h-4"></i>
                     <span>Utilities</span>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
@@ -180,7 +176,7 @@
                     hover:translate-x-2
                     transition-all duration-300
                     font-medium">
-                    <i data-lucide="gift"></i>
+                    <i data-lucide="gift" class="w-4 h-4"></i>
                     <span>Widgets</span>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
@@ -196,7 +192,7 @@
                     hover:translate-x-2
                     transition-all duration-300
                     font-medium">
-                    <i data-lucide="compass"></i>
+                    <i data-lucide="compass" class="w-4 h-4"></i>
                     <span>Maps</span>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
@@ -208,7 +204,7 @@
                     hover:translate-x-2
                     transition-all duration-300
                     font-medium">
-                    <i data-lucide="store"></i>
+                    <i data-lucide="store" class="w-4 h-4"></i>
                     <span>Icons</span>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
@@ -220,7 +216,7 @@
                     hover:translate-x-2
                     transition-all duration-300
                     font-medium">
-                    <i data-lucide="chart-no-axes-combined"></i>
+                    <i data-lucide="chart-no-axes-combined" class="w-4 h-4"></i>
                     <span>Charts</span>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
@@ -232,7 +228,7 @@
                     hover:translate-x-2
                     transition-all duration-300
                     font-medium">
-                    <i data-lucide="table-2"></i>
+                    <i data-lucide="table-2" class="w-4 h-4"></i>
                     <span>Tables</span>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
