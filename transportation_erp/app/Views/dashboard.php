@@ -30,8 +30,9 @@
     <div class="flex h-screen">
 
         <!-- Sidebar -->
-        <aside class="w-[240px] bg-white border-r border-slate-200 ">
-
+        <aside class="w-[240px] h-[1340px] bg-white border-r border-slate-200 ">
+            
+            <!-- Header -->
             <a href="#" onclick="location.reload()" class="h-[72px] flex items-center px-4 border-b border-slate-200">
                 <h2 class="text-xl font-semibold text-slate-900">
                     SuperAdmin HRMS
@@ -47,14 +48,12 @@
 
                 <!-- Dashboard -->
                 <a href="#" class="group flex items-center justify-between gap-3 px-4 py-3 rounded-md mt-4            
-                    text-slate-500
-                    bg-indigo-500
-                    text-white
-                    hover:bg-indigo-500
-                    hover:text-white">
+                    text-slate-800
+                    bg-slate-200                    
+                    hover:bg-slate-200">
                     <div class="flex items-center gap-2.5">
                         <i data-lucide="home" class="w-3.5 h-3.5"></i>
-                        <span class="text-[13px]">Dashboards</span>
+                        <span class="text-[13px] font-semibold">Dashboards</span>
                     </div>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
@@ -65,12 +64,11 @@
 
                 <!-- Companies -->
                 <a href="#" class="group flex items-center justify-between gap-3 px-4 py-3 rounded-md mt-4
-                    text-slate-500
-                    hover:bg-indigo-500
-                    hover:text-white">
+                    text-slate-800
+                    hover:bg-slate-200">
                     <div class="flex items-center gap-2.5">
                         <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
-                        <span class="text-[13px]">Companies</span>
+                        <span class="text-[13px] font-semibold">Companies</span>
                     </div>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
@@ -81,12 +79,11 @@
 
                 <!-- Subscriptions -->
                 <a href="#" class="group flex items-center justify-between gap-3 px-4 py-3 rounded-md mt-4
-                   text-slate-500
-                    hover:bg-indigo-500
-                    hover:text-white">
+                   text-slate-800
+                    hover:bg-slate-200">
                     <div class="flex items-center gap-2.5">
                         <i data-lucide="crown" class="w-4 h-4"></i>
-                        <span class="text-[13px]">Subscriptions</span>
+                        <span class="text-[13px] font-semibold">Subscriptions</span>
                     </div>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
@@ -95,17 +92,17 @@
 
                 <!-- Purchased -->
                 <a href="#" class="group flex items-center justify-between gap-3 px-4 py-3 rounded-md mt-4
-                    text-slate-500
-                    hover:bg-indigo-500
-                    hover:text-white">
+                    text-slate-800
+                    hover:bg-slate-200">
                     <div class="flex items-center gap-2.5">
                         <i data-lucide="shopping-cart" class="w-4 h-4"></i>
-                        <span class="text-[13px]">Purchased</span>
+                        <span class="text-[13px] font-semibold">Purchased</span>
                     </div>
                     <i data-lucide="chevron-right" class="w-4 h-4"></i>
                 </a>
 
             </nav>
+        
 
         </aside>
 
@@ -154,7 +151,6 @@
                     </button>
 
                 </div>
-
             </nav>
 
             <!-- Main Content -->
