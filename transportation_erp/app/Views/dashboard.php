@@ -384,6 +384,166 @@
                 </div>
 
 
+                <!-- Charts -->
+                <div class="grid grid-cols-1 xl:grid-cols-12 gap-6 mb-6 m-6">
+
+                    <!-- Companies -->
+                    <div class="xl:col-span-3">
+                        <div class="bg-white rounded-2xl border border-gray-200 h-full">
+
+                            <!-- Header -->
+                            <div class="flex items-center justify-between p-6 border-b">
+
+                                <h3 class="text-lg font-semibold text-slate-800">
+                                    Companies
+                                </h3>
+
+                                <button class="flex items-center gap-2 text-sm border rounded-lg px-3 py-2">
+
+                                    <i data-lucide="calendar-days" class="w-4 h-4"></i>
+
+                                    This Week
+
+                                </button>
+
+                            </div>
+
+                            <!-- Chart -->
+                            <div class="p-6">
+
+                                <canvas id="companiesChart"></canvas>
+
+                                <div class="mt-6 flex items-center gap-2">
+
+                                    <span class="bg-green-500 text-white text-xs px-2 py-1 rounded font-semibold">
+                                        +6%
+                                    </span>
+
+                                    <span class="text-gray-500 text-sm">
+                                        5 Companies from last month
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Revenue -->
+                    <div class="xl:col-span-6">
+                        <div class="bg-white rounded-2xl border border-gray-200 h-full">
+
+                            <div class="flex justify-between items-center p-6 border-b">
+
+                                <h3 class="text-lg font-semibold text-slate-800">
+                                    Revenue
+                                </h3>
+
+                                <button class="flex items-center gap-2 border rounded-lg px-3 py-2 text-sm">
+
+                                    <i data-lucide="calendar-days" class="w-4 h-4"></i>
+
+                                    2025
+
+                                </button>
+
+                            </div>
+
+                            <div class="p-6">
+
+                                <h2 class="text-3xl font-bold text-slate-800">
+                                    $45,787
+                                </h2>
+
+                                <p class="mt-1">
+                                    <span class="text-green-500 font-semibold">
+                                        +40%
+                                    </span>
+
+                                    <span class="text-gray-500">
+                                        increased from last year
+                                    </span>
+                                </p>
+
+                                <div class="mt-6">
+                                    <canvas id="revenueChart"></canvas>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Top Plans -->
+                    <div class="xl:col-span-3">
+                        <div class="bg-white rounded-2xl border border-gray-200 h-full">
+
+                            <div class="flex justify-between items-center p-6 border-b">
+
+                                <h3 class="text-lg font-semibold text-slate-800">
+                                    Top Plans
+                                </h3>
+
+                                <button class="flex items-center gap-2 border rounded-lg px-3 py-2 text-sm">
+
+                                    <i data-lucide="calendar-days" class="w-4 h-4"></i>
+
+                                    This Month
+
+                                </button>
+
+                            </div>
+
+                            <div class="p-6">
+
+                                <canvas id="plansChart"></canvas>
+
+                                <div class="mt-8 space-y-4">
+
+                                    <div class="flex justify-between">
+
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-3 h-3 rounded-full bg-orange-500"></span>
+                                            <span>Basic</span>
+                                        </div>
+
+                                        <span class="font-semibold">20%</span>
+
+                                    </div>
+
+                                    <div class="flex justify-between">
+
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                                            <span>Premium</span>
+                                        </div>
+
+                                        <span class="font-semibold">20%</span>
+
+                                    </div>
+
+                                    <div class="flex justify-between">
+
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-3 h-3 rounded-full bg-blue-500"></span>
+                                            <span>Enterprise</span>
+                                        </div>
+
+                                        <span class="font-semibold">60%</span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
 
 
 
@@ -393,12 +553,163 @@
 
     </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
     <script>
         lucide.createIcons();
     </script>
 
-    
+    <!-- Companies Chart Data -->
+    <script>
+        new Chart(
+            document.getElementById('companiesChart'),
+            {
+                type: 'bar',
+                data: {
+                    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
 
+                    datasets: [{
+                        data: [6, 9, 3, 12, 9, 9, 9],
+                        backgroundColor: '#1f2937',
+                        borderRadius: 12,
+                        borderSkipped: false
+                    }]
+                },
+
+                options: {
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            border: {
+                                display: false
+                            }
+                        },
+
+                        y: {
+                            display: false
+                        }
+                    }
+                }
+            });
+    </script>
+
+    <!-- Revenue Chart Data -->
+    <script>
+        new Chart(
+            document.getElementById('revenueChart'),
+            {
+                type: 'bar',
+                data: {
+                    labels: [
+                        'Jan', 'Feb', 'Mar', 'Apr',
+                        'May', 'Jun', 'Jul', 'Aug',
+                        'Sep', 'Oct', 'Nov', 'Dec'
+                    ],
+
+                    datasets: [{
+                        label: 'Revenue',
+                        data: [
+                            40, 30, 45, 80,
+                            85, 90, 80, 80,
+                            80, 85, 20, 80
+                        ],
+                        backgroundColor: '#f97316',
+                        borderRadius: 8,
+                        borderSkipped: false
+                    }]
+                },
+
+                options: {
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            align: 'end',
+
+                            labels: {
+                                usePointStyle: true,
+                                pointStyle: 'circle'
+                            }
+                        }
+                    },
+
+                    scales: {
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            border: {
+                                display: false
+                            }
+                        },
+
+                        y: {
+                            ticks: {
+                                callback: (value) => value + 'K'
+                            },
+                            border: {
+                                display: false
+                            },
+                            grid: {
+                                color: '#f1f5f9',
+                                borderDash: [5, 5]
+                            }
+                        }
+                    }
+                }
+            });
+    </script>
+
+    <!-- Plans Chart Data -->
+    <script>
+        new Chart(
+            document.getElementById('plansChart'),
+            {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        'Basic',
+                        'Premium',
+                        'Enterprise'
+                    ],
+                    datasets: [{
+                        data: [20, 20, 60],
+                        backgroundColor: [
+                            '#f97316',
+                            '#facc15',
+                            '#3b82f6'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+
+                options: {
+                    cutout: '50%',
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+    </script>
 
 
 
