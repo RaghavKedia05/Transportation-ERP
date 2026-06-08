@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperAdmin HRMS</title>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Graph JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body class="bg-[#f8fafc]">
+
+    <div class="flex h-screen">
+
+        <!-- Sidebar -->
+        <?php include __DIR__ . '/sidebar.php'; ?>
+
+        <!-- Main -->
+        <div class="flex-1 flex flex-col ">
+
+            <!-- Navbar -->
+            <nav class="min-h-[72px] bg-white border-b border-slate-200 flex items-center justify-between px-8">
+
+                <div>
+                    <h1 class="text-[20px] font-semibold text-black">
+                        !
+                    </h1>
+                </div>
+
+                <!-- Search Button,Notification, Profile, Settings -->
+                <div class="flex items-center gap-5">
+
+                    <!-- Search -->
+                    <button class="text-slate-600 hover:text-indigo-600 transition">
+                        <i data-lucide="search" class="w-4 h-4"></i>
+                    </button>
+
+                    <!-- Notification -->
+                    <button class="text-slate-600 hover:text-indigo-600 transition">
+                        <i data-lucide="bell" class="w-4 h-4"></i>
+                    </button>
+
+                    <!-- Profile -->
+                    <div class="flex items-center gap-3">
+                        <div class="w-7 h-7 rounded-full bg-indigo-500 text-white flex items-center justify-center">
+                            RK
+                        </div>
+
+                        <div class="text-right">
+                            <p class="font-sm text-slate-800">
+                                Mr. Kedia
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- Settings -->
+                    <button class="text-slate-600 hover:text-indigo-600 transition">
+                        <i data-lucide="settings" class="w-4 h-4"></i>
+                    </button>
+
+                </div>
+            </nav>
+
+            <!-- Page Content -->
+            <div class="p-5">
+                <!-- Page Header -->
+                <div class="flex items-start justify-between mb-6">
+
+                    <div>
+
+                        <h1 class="text-3xl font-semibold text-slate-800">
+                            Companies
+                        </h1>
+
+                        <div class="flex items-center gap-2 mt-2 text-sm text-slate-500">
+
+                            <i data-lucide="house" class="w-4 h-4"></i>
+
+                            <span>/</span>
+
+                            <span>Super Admin</span>
+
+                            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+
+                            <span class="text-slate-700">
+                                Companies List
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-center gap-3">
+
+                        <button
+                            class="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-md text-sm">
+
+                            <i data-lucide="file-down" class="w-4 h-4"></i>
+
+                            Export
+
+                            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+
+                        </button>
+
+                        <button class="flex items-center gap-2 px-4 py-2 bg-orange-500 text-white rounded-md text-sm">
+
+                            <i data-lucide="plus-circle" class="w-4 h-4"></i>
+
+                            Add Company
+
+                        </button>
+
+                        <button
+                            class="w-10 h-10 flex items-center justify-center bg-white border border-gray-200 rounded-md">
+
+                            <i data-lucide="chevrons-up" class="w-4 h-4"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- Statistics Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-6">
+
+                    <!-- Total Companies -->
+                    <div class="bg-white border border-gray-200 rounded-md p-5">
+                        <div class="flex items-center justify-between">
+
+                            <div class="flex items-center gap-4">
+
+                                <div class="w-11 h-11 bg-orange-500 rounded flex items-center justify-center">
+                                    <i data-lucide="building-2" class="w-5 h-5 text-white"></i>
+                                </div>
+
+                                <div>
+                                    <p class="text-sm text-slate-500">
+                                        Total Companies
+                                    </p>
+
+                                    <h3 class="text-3xl font-bold text-slate-800">
+                                        950
+                                    </h3>
+                                </div>
+
+                            </div>
+
+                            <svg width="60" height="30" viewBox="0 0 60 30" fill="none">
+                                <path d="M2 18L10 6L18 10L26 22L34 8L42 24L50 15L58 18" stroke="#f97316"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </div>
+                    </div>
+
+                    <!-- Active Companies -->
+                    <div class="bg-white border border-gray-200 rounded-md p-5">
+                        <div class="flex items-center justify-between">
+
+                            <div class="flex items-center gap-4">
+
+                                <div class="w-11 h-11 bg-green-500 rounded flex items-center justify-center">
+                                    <i data-lucide="building-2" class="w-5 h-5 text-white"></i>
+                                </div>
+
+                                <div>
+                                    <p class="text-sm text-slate-500">
+                                        Active Companies
+                                    </p>
+
+                                    <h3 class="text-3xl font-bold text-slate-800">
+                                        920
+                                    </h3>
+                                </div>
+
+                            </div>
+
+                            <svg width="60" height="30" viewBox="0 0 60 30" fill="none">
+                                <path d="M2 12L10 4L18 6L26 16L34 7L42 23L50 8L58 20" stroke="#f97316"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </div>
+                    </div>
+
+                    <!-- Inactive Companies -->
+                    <div class="bg-white border border-gray-200 rounded-md p-5">
+                        <div class="flex items-center justify-between">
+
+                            <div class="flex items-center gap-4">
+
+                                <div class="w-11 h-11 bg-red-500 rounded flex items-center justify-center">
+                                    <i data-lucide="building-2" class="w-5 h-5 text-white"></i>
+                                </div>
+
+                                <div>
+                                    <p class="text-sm text-slate-500">
+                                        Inactive Companies
+                                    </p>
+
+                                    <h3 class="text-3xl font-bold text-slate-800">
+                                        30
+                                    </h3>
+                                </div>
+
+                            </div>
+
+                            <svg width="60" height="30" viewBox="0 0 60 30" fill="none">
+                                <path d="M2 8L10 24L18 6L26 25L34 12L42 10L50 13L58 12" stroke="#f97316"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </div>
+                    </div>
+
+                    <!-- Company Location -->
+                    <div class="bg-white border border-gray-200 rounded-md p-5">
+                        <div class="flex items-center justify-between">
+
+                            <div class="flex items-center gap-4">
+
+                                <div class="w-11 h-11 bg-cyan-500 rounded flex items-center justify-center">
+                                    <i data-lucide="map-pinned" class="w-5 h-5 text-white"></i>
+                                </div>
+
+                                <div>
+                                    <p class="text-sm text-slate-500">
+                                        Company Location
+                                    </p>
+
+                                    <h3 class="text-3xl font-bold text-slate-800">
+                                        180
+                                    </h3>
+                                </div>
+
+                            </div>
+
+                            <svg width="60" height="30" viewBox="0 0 60 30" fill="none">
+                                <path d="M2 10L10 4L18 22L26 18L34 20L42 17L50 16L58 15" stroke="#f97316"
+                                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Companies List -->
+                <div class="bg-white rounded-md border border-gray-200 mt-6">
+
+                    <!-- Header -->
+                    <div class="flex items-center justify-between p-5 border-b">
+
+                        <h3 class="text-xl font-semibold text-slate-800">
+                            Companies List
+                        </h3>
+
+                        <div class="flex items-center gap-4">
+
+                            <!-- Date -->
+                            <button class="flex items-center gap-2 border rounded-md px-4 py-2 text-sm">
+                                <i data-lucide="calendar-days" class="w-4 h-4"></i>
+                                08/06/2026 - 08/06/2026
+                            </button>
+
+                            <!-- Plan -->
+                            <select class="border rounded-md px-4 py-2 text-sm">
+                                <option>Select Plan</option>
+                            </select>
+
+                            <!-- Status -->
+                            <select class="border rounded-md px-4 py-2 text-sm">
+                                <option>Select Status</option>
+                            </select>
+
+                            <!-- Sort -->
+                            <select class="border rounded-md px-4 py-2 text-sm">
+                                <option>Sort By : Last 7 Days</option>
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Table Top Controls -->
+                    <div class="flex items-center justify-between p-5">
+
+                        <div class="flex items-center gap-3">
+
+                            <span class="text-sm text-slate-700">
+                                Row Per Page
+                            </span>
+
+                            <select class="border rounded-md px-3 py-2 text-sm">
+                                <option>10</option>
+                            </select>
+
+                            <span class="text-sm text-slate-700">
+                                Entries
+                            </span>
+
+                        </div>
+
+                        <input type="text" placeholder="Search" class="border rounded-md px-4 py-2 text-sm w-[170px]">
+
+                    </div>
+
+                    <div class="overflow-x-auto">
+
+                        <table class="w-full">
+
+                            <thead>
+
+                                <tr class="bg-slate-100 text-left">
+
+                                    <th class="p-4">
+                                        <input type="checkbox">
+                                    </th>
+
+                                    <th class="p-4 text-sm font-semibold">
+                                        Company Name
+                                    </th>
+
+                                    <th class="p-4 text-sm font-semibold">
+                                        Email
+                                    </th>
+
+                                    <th class="p-4 text-sm font-semibold">
+                                        Account URL
+                                    </th>
+
+                                    <th class="p-4 text-sm font-semibold">
+                                        Plan
+                                    </th>
+
+                                    <th class="p-4 text-sm font-semibold">
+                                        Created Date
+                                    </th>
+
+                                    <th class="p-4 text-sm font-semibold">
+                                        Status
+                                    </th>
+
+                                    <th class="p-4"></th>
+
+                                </tr>
+
+                            </thead>
+
+                            
+                            <tbody class="divide-y divide-slate-200">
+                                <tr>
+                                    <td class="p-4"><input type="checkbox"></td>
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-full border border-gray-200 bg-gray-50"></div>
+                                            <span class="font-medium">BrightWave Innovations</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">michael@example.com</td>
+                                    <td class="p-4">bwi.example.com</td>
+                                    <td class="p-4 flex items-center justify-between">
+                                        <span>Advanced (Monthly)</span>
+                                        <span
+                                            class="bg-purple-500 text-white text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    </td>
+                                    <td class="p-4">12 Sep 2024</td>
+                                    <td class="p-4"><span
+                                            class="bg-green-500 text-white text-[11px] px-3 py-1 rounded">•
+                                            Active</span></td>
+                                    <td class="p-4">
+                                        <div class="flex gap-4">
+                                            <i data-lucide="eye" class="w-4 h-4"></i>
+                                            <i data-lucide="square-pen" class="w-4 h-4"></i>
+                                            <i data-lucide="trash-2" class="w-4 h-4"></i>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="p-4"><input type="checkbox"></td>
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-full border border-gray-200 bg-gray-50"></div>
+                                            <span class="font-medium">Stellar Dynamics</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">sophie@example.com</td>
+                                    <td class="p-4">sd.example.com</td>
+                                    <td class="p-4 flex items-center justify-between"><span>Basic (Yearly)</span><span
+                                            class="bg-purple-500 text-white text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    </td>
+                                    <td class="p-4">24 Oct 2024</td>
+                                    <td class="p-4"><span
+                                            class="bg-green-500 text-white text-[11px] px-3 py-1 rounded">•
+                                            Active</span></td>
+                                    <td class="p-4">
+                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i><i
+                                                data-lucide="square-pen" class="w-4 h-4"></i><i data-lucide="trash-2"
+                                                class="w-4 h-4"></i></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="p-4"><input type="checkbox"></td>
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-full border border-gray-200 bg-gray-50"></div>
+                                            <span class="font-medium">Quantum Nexus</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">cameron@example.com</td>
+                                    <td class="p-4">qn.example.com</td>
+                                    <td class="p-4 flex items-center justify-between"><span>Advanced
+                                            (Monthly)</span><span
+                                            class="bg-purple-500 text-white text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    </td>
+                                    <td class="p-4">18 Feb 2024</td>
+                                    <td class="p-4"><span
+                                            class="bg-green-500 text-white text-[11px] px-3 py-1 rounded">•
+                                            Active</span></td>
+                                    <td class="p-4">
+                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i><i
+                                                data-lucide="square-pen" class="w-4 h-4"></i><i data-lucide="trash-2"
+                                                class="w-4 h-4"></i></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="p-4"><input type="checkbox"></td>
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-full border border-gray-200 bg-gray-50"></div>
+                                            <span class="font-medium">EcoVision Enterprises</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">doris@example.com</td>
+                                    <td class="p-4">eve.example.com</td>
+                                    <td class="p-4 flex items-center justify-between"><span>Advanced
+                                            (Monthly)</span><span
+                                            class="bg-purple-500 text-white text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    </td>
+                                    <td class="p-4">17 Oct 2024</td>
+                                    <td class="p-4"><span
+                                            class="bg-green-500 text-white text-[11px] px-3 py-1 rounded">•
+                                            Active</span></td>
+                                    <td class="p-4">
+                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i><i
+                                                data-lucide="square-pen" class="w-4 h-4"></i><i data-lucide="trash-2"
+                                                class="w-4 h-4"></i></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="p-4"><input type="checkbox"></td>
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-full border border-gray-200 bg-gray-50"></div>
+                                            <span class="font-medium">Aurora Technologies</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">thomas@example.com</td>
+                                    <td class="p-4">at.example.com</td>
+                                    <td class="p-4 flex items-center justify-between"><span>Enterprise
+                                            (Monthly)</span><span
+                                            class="bg-purple-500 text-white text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    </td>
+                                    <td class="p-4">20 Jul 2024</td>
+                                    <td class="p-4"><span
+                                            class="bg-green-500 text-white text-[11px] px-3 py-1 rounded">•
+                                            Active</span></td>
+                                    <td class="p-4">
+                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i><i
+                                                data-lucide="square-pen" class="w-4 h-4"></i><i data-lucide="trash-2"
+                                                class="w-4 h-4"></i></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="p-4"><input type="checkbox"></td>
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-full border border-gray-200 bg-gray-50"></div>
+                                            <span class="font-medium">BlueSky Ventures</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">kathleen@example.com</td>
+                                    <td class="p-4">bsv.example.com</td>
+                                    <td class="p-4 flex items-center justify-between"><span>Advanced
+                                            (Monthly)</span><span
+                                            class="bg-purple-500 text-white text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    </td>
+                                    <td class="p-4">10 Apr 2024</td>
+                                    <td class="p-4"><span
+                                            class="bg-green-500 text-white text-[11px] px-3 py-1 rounded">•
+                                            Active</span></td>
+                                    <td class="p-4">
+                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i><i
+                                                data-lucide="square-pen" class="w-4 h-4"></i><i data-lucide="trash-2"
+                                                class="w-4 h-4"></i></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="p-4"><input type="checkbox"></td>
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-full border border-gray-200 bg-gray-50"></div>
+                                            <span class="font-medium">TerraFusion Energy</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">bruce@example.com</td>
+                                    <td class="p-4">tfe.example.com</td>
+                                    <td class="p-4 flex items-center justify-between"><span>Enterprise
+                                            (Yearly)</span><span
+                                            class="bg-purple-500 text-white text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    </td>
+                                    <td class="p-4">29 Aug 2024</td>
+                                    <td class="p-4"><span
+                                            class="bg-green-500 text-white text-[11px] px-3 py-1 rounded">•
+                                            Active</span></td>
+                                    <td class="p-4">
+                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i><i
+                                                data-lucide="square-pen" class="w-4 h-4"></i><i data-lucide="trash-2"
+                                                class="w-4 h-4"></i></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="p-4"><input type="checkbox"></td>
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-full border border-gray-200 bg-gray-50"></div>
+                                            <span class="font-medium">UrbanPulse Design</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">estelle@example.com</td>
+                                    <td class="p-4">upd.example.com</td>
+                                    <td class="p-4 flex items-center justify-between"><span>Basic (Monthly)</span><span
+                                            class="bg-purple-500 text-white text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    </td>
+                                    <td class="p-4">22 Feb 2024</td>
+                                    <td class="p-4"><span class="bg-red-500 text-white text-[11px] px-3 py-1 rounded">•
+                                            Inactive</span></td>
+                                    <td class="p-4">
+                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i><i
+                                                data-lucide="square-pen" class="w-4 h-4"></i><i data-lucide="trash-2"
+                                                class="w-4 h-4"></i></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="p-4"><input type="checkbox"></td>
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-full border border-gray-200 bg-gray-50"></div>
+                                            <span class="font-medium">Nimbus Networks</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">stephen@example.com</td>
+                                    <td class="p-4">nn.example.com</td>
+                                    <td class="p-4 flex items-center justify-between"><span>Basic (Yearly)</span><span
+                                            class="bg-purple-500 text-white text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    </td>
+                                    <td class="p-4">03 Nov 2024</td>
+                                    <td class="p-4"><span
+                                            class="bg-green-500 text-white text-[11px] px-3 py-1 rounded">•
+                                            Active</span></td>
+                                    <td class="p-4">
+                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i><i
+                                                data-lucide="square-pen" class="w-4 h-4"></i><i data-lucide="trash-2"
+                                                class="w-4 h-4"></i></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="p-4"><input type="checkbox"></td>
+                                    <td class="p-4">
+                                        <div class="flex items-center gap-3">
+                                            <div class="w-8 h-8 rounded-full border border-gray-200 bg-gray-50"></div>
+                                            <span class="font-medium">Epicurean Delights</span>
+                                        </div>
+                                    </td>
+                                    <td class="p-4">angela@example.com</td>
+                                    <td class="p-4">ed.example.com</td>
+                                    <td class="p-4 flex items-center justify-between"><span>Advanced
+                                            (Monthly)</span><span
+                                            class="bg-purple-500 text-white text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    </td>
+                                    <td class="p-4">17 Dec 2024</td>
+                                    <td class="p-4"><span
+                                            class="bg-green-500 text-white text-[11px] px-3 py-1 rounded">•
+                                            Active</span></td>
+                                    <td class="p-4">
+                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i><i
+                                                data-lucide="square-pen" class="w-4 h-4"></i><i data-lucide="trash-2"
+                                                class="w-4 h-4"></i></div>
+                                    </td>
+                                </tr>
+
+
+
+
+                            </tbody>
+                        </table>
+                        <div class="flex items-center justify-between p-5 border-t">
+
+                            <p class="text-sm text-slate-600">
+                                Showing 1 - 10 of 10 entries
+                            </p>
+
+                            <div class="flex items-center gap-4">
+
+                                <button>
+                                    <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                                </button>
+
+                                <button class="w-8 h-8 rounded-full bg-orange-500 text-white text-sm">
+                                    1
+                                </button>
+
+                                <button>
+                                    <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+        <script>
+            lucide.createIcons();
+        </script>
+
+
+</body>
