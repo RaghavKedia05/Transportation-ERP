@@ -19,8 +19,8 @@ class DashboardController extends BaseController
         return view('subscriptions');
     }
 
-    public function purchased()
+    public function purchase_transaction()
     {
-        return view('purchased');
+        return view('purchase_transaction');
     }
 }

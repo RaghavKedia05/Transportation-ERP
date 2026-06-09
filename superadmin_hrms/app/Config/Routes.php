@@ -11,4 +11,4 @@ $routes->get('/dashboard', 'DashboardController::index');
 
 $routes->get('/companies', 'DashboardController::companies');
 $routes->get('/subscriptions', 'DashboardController::subscriptions');
-$routes->get('/purchased', 'DashboardController::purchased');
+$routes->get('/purchase_transaction', 'DashboardController::purchase_transaction');

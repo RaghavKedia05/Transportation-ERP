@@ -664,11 +664,6 @@
 
                     </div>
 
-
-
-
-
-
                 </div>
 
             </div>
@@ -682,6 +677,7 @@
         <script>
             lucide.createIcons();
         </script>
+    </div>
 
 
 </body>

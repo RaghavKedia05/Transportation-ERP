@@ -87,7 +87,7 @@
                     <div>
 
                         <h1 class="text-2xl font-semibold text-slate-800">
-                            Companies
+                            Subscription
                         </h1>
 
                         <div class="flex items-center gap-2 mt-2 text-sm text-slate-500">
