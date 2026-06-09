@@ -23,4 +23,9 @@ class DashboardController extends BaseController
     {
         return view('purchase_transaction');
     }
+
+    public function packages()
+    {
+        return view('packages');
+    }
 }
