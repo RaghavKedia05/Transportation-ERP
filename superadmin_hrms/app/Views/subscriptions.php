@@ -121,14 +121,7 @@
 
                         </button>
 
-                        <button class="flex items-center gap-2 px-4 py-2 bg-orange-500 text-white rounded-md text-sm">
-
-                            <i data-lucide="plus-circle" class="w-4 h-4"></i>
-
-                            Add Company
-
-                        </button>
-
+                        
                         <button
                             class="w-10 h-10 flex items-center justify-center bg-white border border-gray-200 rounded-md">
 
@@ -141,18 +134,18 @@
                 </div>
 
                 <!-- Statistics Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-6 ">
 
                     <!-- Total Transaction -->
-                    <div class="bg-white border border-gray-200 rounded-md px-6 py-5">
+                    <div class="bg-white border border-gray-200 rounded-md px-6 py-5 shadow-sm">
                         <div class="flex justify-between items-start">
 
                             <div>
-                                <p class="text-[15px] text-slate-500">
+                                <p class="text-[15px] text-sm text-slate-500">
                                     Total Transaction
                                 </p>
 
-                                <h3 class="mt-1 text-[32px] font-bold text-slate-800">
+                                <h3 class="mt-1 text-[32px] font-semibold text-lg text-slate-800">
                                     $5,340
                                 </h3>
                             </div>
@@ -167,8 +160,8 @@
 
                         </div>
 
-                        <div class="border-t border-slate-200 mt-5 pt-4">
-                            <p class="text-sm">
+                        <div class="border-t border-slate-200 mt-2 pt-4">
+                            <p class="text-xs">
                                 <span class="text-orange-500 font-medium">
                                     ↝ +19.01%
                                 </span>
@@ -180,15 +173,15 @@
                     </div>
 
                     <!-- Total Subscribers -->
-                    <div class="bg-white border border-gray-200 rounded-md px-6 py-5">
+                    <div class="bg-white border border-gray-200 rounded-md px-6 py-5 shadow-sm">
                         <div class="flex justify-between items-start">
 
                             <div>
-                                <p class="text-[15px] text-slate-500">
+                                <p class="text-[15px] text-sm text-slate-500">
                                     Total Subscribers
                                 </p>
 
-                                <h3 class="mt-1 text-[32px] font-bold text-slate-800">
+                                <h3 class="mt-1 text-[32px] font-semibold text-lg text-slate-800">
                                     600
                                 </h3>
                             </div>
@@ -203,8 +196,8 @@
 
                         </div>
 
-                        <div class="border-t border-slate-200 mt-5 pt-4">
-                            <p class="text-sm">
+                        <div class="border-t border-slate-200 mt-2 pt-4">
+                            <p class="text-xs">
                                 <span class="text-orange-500 font-medium">
                                     ↝ +19.01%
                                 </span>
@@ -216,15 +209,15 @@
                     </div>
 
                     <!-- Active Subscribers -->
-                    <div class="bg-white border border-gray-200 rounded-md px-6 py-5">
+                    <div class="bg-white border border-gray-200 rounded-md px-6 py-5 shadow-sm">
                         <div class="flex justify-between items-start">
 
                             <div>
-                                <p class="text-[15px] text-slate-500">
+                                <p class="text-[15px] text-sm text-slate-500">
                                     Active Subscribers
                                 </p>
 
-                                <h3 class="mt-1 text-[32px] font-bold text-slate-800">
+                                <h3 class="mt-1 text-[32px] font-semibold text-lg text-slate-800">
                                     560
                                 </h3>
                             </div>
@@ -239,8 +232,8 @@
 
                         </div>
 
-                        <div class="border-t border-slate-200 mt-5 pt-4">
-                            <p class="text-sm">
+                        <div class="border-t border-slate-200 mt-2 pt-4">
+                            <p class="text-xs">
                                 <span class="text-orange-500 font-medium">
                                     ↝ +19.01%
                                 </span>
@@ -252,15 +245,15 @@
                     </div>
 
                     <!-- Expired Subscribers -->
-                    <div class="bg-white border border-gray-200 rounded-md px-6 py-5">
+                    <div class="bg-white border border-gray-200 rounded-md px-6 py-5 shadow-sm">
                         <div class="flex justify-between items-start">
 
                             <div>
-                                <p class="text-[15px] text-slate-500">
+                                <p class="text-[15px] text-sm text-slate-500">
                                     Expired Subscribers
                                 </p>
 
-                                <h3 class="mt-1 text-[32px] font-bold text-slate-800">
+                                <h3 class="mt-1 text-[32px] font-semibold text-lg text-slate-800">
                                     40
                                 </h3>
                             </div>
@@ -275,8 +268,8 @@
 
                         </div>
 
-                        <div class="border-t border-slate-200 mt-5 pt-4">
-                            <p class="text-sm">
+                        <div class="border-t border-slate-200 mt-2 pt-4">
+                            <p class="text-xs">
                                 <span class="text-orange-500 font-medium">
                                     ↝ +19.01%
                                 </span>
@@ -293,7 +286,7 @@
                 <div class="bg-white rounded-md border border-gray-200 mt-6">
 
                     <!-- Header -->
-                    <div class="flex items-center justify-between p-5 border-b">
+                    <div class="flex items-center justify-between p-4 border-b">
 
                         <h3 class="text-l font-semibold text-slate-800">
                             Subscription List
@@ -327,7 +320,7 @@
                     </div>
 
                     <!-- Table Top Controls -->
-                    <div class="flex items-center justify-between p-5">
+                    <div class="flex items-center justify-between p-4">
 
                         <div class="flex items-center gap-3">
 
@@ -406,21 +399,21 @@
                                         <td class="px-5"><input type="checkbox"></td>
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
-                                                <div class="w-8 h-8 rounded-full border bg-white"></div>
-                                                <span class="font-medium text-slate-800">BrightWave Innovations</span>
+                                                <div class="w-7 h-7 rounded-full border bg-white"></div>
+                                                <span class="font-medium text-sm font-semibold text-slate-800">BrightWave Innovations</span>
                                             </div>
                                         </td>
-                                        <td class="px-5 text-slate-600">Advanced (Monthly)</td>
-                                        <td class="px-5 text-slate-600">30 Days</td>
-                                        <td class="px-5 text-slate-600">Credit Card</td>
-                                        <td class="px-5 text-slate-600">$200</td>
-                                        <td class="px-5 text-slate-600">12 Sep 2024</td>
-                                        <td class="px-5 text-slate-600">11 Oct 2024</td>
+                                        <td class="px-5 text-sm text-slate-600">Advanced (Monthly)</td>
+                                        <td class="px-5 text-sm text-slate-600">30 Days</td>
+                                        <td class="px-5 text-sm text-slate-600">Credit Card</td>
+                                        <td class="px-5 text-sm text-slate-600">$200</td>
+                                        <td class="px-5 text-sm text-slate-600">12 Sep 2024</td>
+                                        <td class="px-5 text-sm text-slate-600">11 Oct 2024</td>
                                         <td class="px-5">
                                             <span
                                                 class="px-3 py-1 text-xs font-semibold text-white bg-green-500 rounded">Paid</span>
                                         </td>
-                                        <td class="px-5">
+                                        <td class="px-5 text-sm text-slate-600">
                                             <div class="flex justify-center gap-5">
                                                 <i data-lucide="file-text" class="w-4 h-4"></i>
                                                 <i data-lucide="download" class="w-4 h-4"></i>
@@ -433,21 +426,21 @@
                                         <td class="px-5"><input type="checkbox"></td>
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
-                                                <div class="w-8 h-8 rounded-full border bg-white"></div>
-                                                <span class="font-medium text-slate-800">Stellar Dynamics</span>
+                                                <div class="w-7 h-7 rounded-full border bg-white"></div>
+                                                <span class="font-medium text-sm font-semibold text-slate-800">Stellar Dynamics</span>
                                             </div>
                                         </td>
-                                        <td class="px-5 text-slate-600">Basic (Yearly)</td>
-                                        <td class="px-5 text-slate-600">365 Days</td>
-                                        <td class="px-5 text-slate-600">Paypal</td>
-                                        <td class="px-5 text-slate-600">$600</td>
-                                        <td class="px-5 text-slate-600">24 Oct 2024</td>
-                                        <td class="px-5 text-slate-600">23 Nov 2025</td>
+                                        <td class="px-5 text-sm text-slate-600">Basic (Yearly)</td>
+                                        <td class="px-5 text-sm text-slate-600">365 Days</td>
+                                        <td class="px-5 text-sm text-slate-600">Paypal</td>
+                                        <td class="px-5 text-sm text-slate-600">$600</td>
+                                        <td class="px-5 text-sm text-slate-600">24 Oct 2024</td>
+                                        <td class="px-5 text-sm text-slate-600">23 Nov 2025</td>
                                         <td class="px-5">
                                             <span
                                                 class="px-3 py-1 text-xs font-semibold text-white bg-green-500 rounded">Paid</span>
                                         </td>
-                                        <td class="px-5">
+                                        <td class="px-5 text-sm text-slate-600">
                                             <div class="flex justify-center gap-5">
                                                 <i data-lucide="file-text" class="w-4 h-4"></i>
                                                 <i data-lucide="download" class="w-4 h-4"></i>
@@ -460,21 +453,21 @@
                                         <td class="px-5"><input type="checkbox"></td>
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
-                                                <div class="w-8 h-8 rounded-full border bg-white"></div>
-                                                <span class="font-medium text-slate-800">Quantum Nexus</span>
+                                                <div class="w-7 h-7 rounded-full border bg-white"></div>
+                                                <span class="font-medium text-sm font-semibold text-slate-800">Quantum Nexus</span>
                                             </div>
                                         </td>
-                                        <td class="px-5 text-slate-600">Advanced (Monthly)</td>
-                                        <td class="px-5 text-slate-600">30 Days</td>
-                                        <td class="px-5 text-slate-600">Debit Card</td>
-                                        <td class="px-5 text-slate-600">$200</td>
-                                        <td class="px-5 text-slate-600">18 Feb 2024</td>
-                                        <td class="px-5 text-slate-600">17 Mar 2024</td>
+                                        <td class="px-5 text-sm text-slate-600">Advanced (Monthly)</td>
+                                        <td class="px-5 text-sm text-slate-600">30 Days</td>
+                                        <td class="px-5 text-sm text-slate-600">Debit Card</td>
+                                        <td class="px-5 text-sm text-slate-600">$200</td>
+                                        <td class="px-5 text-sm text-slate-600">18 Feb 2024</td>
+                                        <td class="px-5 text-sm text-slate-600">17 Mar 2024</td>
                                         <td class="px-5">
                                             <span
                                                 class="px-3 py-1 text-xs font-semibold text-white bg-green-500 rounded">Paid</span>
                                         </td>
-                                        <td class="px-5">
+                                        <td class="px-5 text-sm text-slate-600">
                                             <div class="flex justify-center gap-5">
                                                 <i data-lucide="file-text" class="w-4 h-4"></i>
                                                 <i data-lucide="download" class="w-4 h-4"></i>
@@ -487,21 +480,21 @@
                                         <td class="px-5"><input type="checkbox"></td>
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
-                                                <div class="w-8 h-8 rounded-full border bg-white"></div>
-                                                <span class="font-medium text-slate-800">EcoVision Enterprises</span>
+                                                <div class="w-7 h-7 rounded-full border bg-white"></div>
+                                                <span class="font-medium text-sm font-semibold text-slate-800">EcoVision Enterprises</span>
                                             </div>
                                         </td>
-                                        <td class="px-5 text-slate-600">Advanced (Monthly)</td>
-                                        <td class="px-5 text-slate-600">30 Days</td>
-                                        <td class="px-5 text-slate-600">Paypal</td>
-                                        <td class="px-5 text-slate-600">$200</td>
-                                        <td class="px-5 text-slate-600">17 Oct 2024</td>
-                                        <td class="px-5 text-slate-600">16 Nov 2024</td>
+                                        <td class="px-5 text-sm text-slate-600">Advanced (Monthly)</td>
+                                        <td class="px-5 text-sm text-slate-600">30 Days</td>
+                                        <td class="px-5 text-sm text-slate-600">Paypal</td>
+                                        <td class="px-5 text-sm text-slate-600">$200</td>
+                                        <td class="px-5 text-sm text-slate-600">17 Oct 2024</td>
+                                        <td class="px-5 text-sm text-slate-600">16 Nov 2024</td>
                                         <td class="px-5">
                                             <span
                                                 class="px-3 py-1 text-xs font-semibold text-white bg-green-500 rounded">Paid</span>
                                         </td>
-                                        <td class="px-5">
+                                        <td class="px-5 text-sm text-slate-600">
                                             <div class="flex justify-center gap-5">
                                                 <i data-lucide="file-text" class="w-4 h-4"></i>
                                                 <i data-lucide="download" class="w-4 h-4"></i>
@@ -514,21 +507,21 @@
                                         <td class="px-5"><input type="checkbox"></td>
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
-                                                <div class="w-8 h-8 rounded-full border bg-white"></div>
-                                                <span class="font-medium text-slate-800">Aurora Technologies</span>
+                                                <div class="w-7 h-7 rounded-full border bg-white"></div>
+                                                <span class="font-medium text-sm font-semibold text-slate-800">Aurora Technologies</span>
                                             </div>
                                         </td>
-                                        <td class="px-5 text-slate-600">Enterprise (Monthly)</td>
-                                        <td class="px-5 text-slate-600">30 Days</td>
-                                        <td class="px-5 text-slate-600">Credit Card</td>
-                                        <td class="px-5 text-slate-600">$400</td>
-                                        <td class="px-5 text-slate-600">20 Jul 2024</td>
-                                        <td class="px-5 text-slate-600">19 Aug 2024</td>
+                                        <td class="px-5 text-sm text-slate-600">Enterprise (Monthly)</td>
+                                        <td class="px-5 text-sm text-slate-600">30 Days</td>
+                                        <td class="px-5 text-sm text-slate-600">Credit Card</td>
+                                        <td class="px-5 text-sm text-slate-600">$400</td>
+                                        <td class="px-5 text-sm text-slate-600">20 Jul 2024</td>
+                                        <td class="px-5 text-sm text-slate-600">19 Aug 2024</td>
                                         <td class="px-5">
                                             <span
                                                 class="px-3 py-1 text-xs font-semibold text-white bg-green-500 rounded">Paid</span>
                                         </td>
-                                        <td class="px-5">
+                                        <td class="px-5 text-sm text-slate-600">
                                             <div class="flex justify-center gap-5">
                                                 <i data-lucide="file-text" class="w-4 h-4"></i>
                                                 <i data-lucide="download" class="w-4 h-4"></i>
@@ -537,26 +530,25 @@
                                         </td>
                                     </tr>
 
-                                    <!-- Continue same pattern -->
-
+                                    
                                     <tr class="h-16 hover:bg-gray-50">
                                         <td class="px-5"><input type="checkbox"></td>
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
-                                                <div class="w-8 h-8 rounded-full border bg-white"></div>
-                                                <span class="font-medium text-slate-800">BlueSky Ventures</span>
+                                                <div class="w-7 h-7 rounded-full border bg-white"></div>
+                                                <span class="font-medium text-sm font-semibold text-slate-800">BlueSky Ventures</span>
                                             </div>
                                         </td>
-                                        <td class="px-5 text-slate-600">Advanced (Monthly)</td>
-                                        <td class="px-5 text-slate-600">30 Days</td>
-                                        <td class="px-5 text-slate-600">Paypal</td>
-                                        <td class="px-5 text-slate-600">$200</td>
-                                        <td class="px-5 text-slate-600">10 Apr 2024</td>
-                                        <td class="px-5 text-slate-600">09 May 2024</td>
+                                        <td class="px-5 text-sm text-slate-600">Advanced (Monthly)</td>
+                                        <td class="px-5 text-sm text-slate-600">30 Days</td>
+                                        <td class="px-5 text-sm text-slate-600">Paypal</td>
+                                        <td class="px-5 text-sm text-slate-600">$200</td>
+                                        <td class="px-5 text-sm text-slate-600">10 Apr 2024</td>
+                                        <td class="px-5 text-sm text-slate-600">09 May 2024</td>
                                         <td class="px-5"><span
                                                 class="px-3 py-1 text-xs font-semibold text-white bg-green-500 rounded">Paid</span>
                                         </td>
-                                        <td class="px-5">
+                                        <td class="px-5 text-sm text-slate-600">
                                             <div class="flex justify-center gap-5"><i data-lucide="file-text"
                                                     class="w-4 h-4"></i><i data-lucide="download" class="w-4 h-4"></i><i
                                                     data-lucide="trash-2" class="w-4 h-4"></i></div>
@@ -567,20 +559,20 @@
                                         <td class="px-5"><input type="checkbox"></td>
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
-                                                <div class="w-8 h-8 rounded-full border bg-white"></div><span
-                                                    class="font-medium text-slate-800">TerraFusion Energy</span>
+                                                <div class="w-7 h-7 rounded-full border bg-white"></div><span
+                                                    class="font-medium text-sm font-semibold text-slate-800">TerraFusion Energy</span>
                                             </div>
                                         </td>
-                                        <td class="px-5 text-slate-600">Enterprise (Yearly)</td>
-                                        <td class="px-5 text-slate-600">365 Days</td>
-                                        <td class="px-5 text-slate-600">Credit Card</td>
-                                        <td class="px-5 text-slate-600">$4800</td>
-                                        <td class="px-5 text-slate-600">29 Aug 2024</td>
-                                        <td class="px-5 text-slate-600">28 Aug 2025</td>
+                                        <td class="px-5 text-sm text-slate-600">Enterprise (Yearly)</td>
+                                        <td class="px-5 text-sm text-slate-600">365 Days</td>
+                                        <td class="px-5 text-sm text-slate-600">Credit Card</td>
+                                        <td class="px-5 text-sm text-slate-600">$4800</td>
+                                        <td class="px-5 text-sm text-slate-600">29 Aug 2024</td>
+                                        <td class="px-5 text-sm text-slate-600">28 Aug 2025</td>
                                         <td class="px-5"><span
                                                 class="px-3 py-1 text-xs font-semibold text-white bg-green-500 rounded">Paid</span>
                                         </td>
-                                        <td class="px-5">
+                                        <td class="px-5 text-sm text-slate-600">
                                             <div class="flex justify-center gap-5"><i data-lucide="file-text"
                                                     class="w-4 h-4"></i><i data-lucide="download" class="w-4 h-4"></i><i
                                                     data-lucide="trash-2" class="w-4 h-4"></i></div>
@@ -591,20 +583,20 @@
                                         <td class="px-5"><input type="checkbox"></td>
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
-                                                <div class="w-8 h-8 rounded-full border bg-white"></div><span
-                                                    class="font-medium text-slate-800">UrbanPulse Design</span>
+                                                <div class="w-7 h-7 rounded-full border bg-white"></div><span
+                                                    class="font-medium text-sm font-semibold text-slate-800">UrbanPulse Design</span>
                                             </div>
                                         </td>
-                                        <td class="px-5 text-slate-600">Basic (Monthly)</td>
-                                        <td class="px-5 text-slate-600">30 Days</td>
-                                        <td class="px-5 text-slate-600">Credit Card</td>
-                                        <td class="px-5 text-slate-600">$50</td>
-                                        <td class="px-5 text-slate-600">22 Feb 2024</td>
-                                        <td class="px-5 text-slate-600">21 Mar 2024</td>
+                                        <td class="px-5 text-sm text-slate-600">Basic (Monthly)</td>
+                                        <td class="px-5 text-sm text-slate-600">30 Days</td>
+                                        <td class="px-5 text-sm text-slate-600">Credit Card</td>
+                                        <td class="px-5 text-sm text-slate-600">$50</td>
+                                        <td class="px-5 text-sm text-slate-600">22 Feb 2024</td>
+                                        <td class="px-5 text-sm text-slate-600">21 Mar 2024</td>
                                         <td class="px-5"><span
                                                 class="px-3 py-1 text-xs font-semibold text-white bg-red-500 rounded">Unpaid</span>
                                         </td>
-                                        <td class="px-5">
+                                        <td class="px-5 text-sm text-slate-600">
                                             <div class="flex justify-center gap-5"><i data-lucide="file-text"
                                                     class="w-4 h-4"></i><i data-lucide="download" class="w-4 h-4"></i><i
                                                     data-lucide="trash-2" class="w-4 h-4"></i></div>
@@ -615,20 +607,20 @@
                                         <td class="px-5"><input type="checkbox"></td>
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
-                                                <div class="w-8 h-8 rounded-full border bg-white"></div><span
-                                                    class="font-medium text-slate-800">Nimbus Networks</span>
+                                                <div class="w-7 h-7 rounded-full border bg-white"></div><span
+                                                    class="font-medium text-sm font-semibold text-slate-800">Nimbus Networks</span>
                                             </div>
                                         </td>
-                                        <td class="px-5 text-slate-600">Basic (Yearly)</td>
-                                        <td class="px-5 text-slate-600">365 Days</td>
-                                        <td class="px-5 text-slate-600">Paypal</td>
-                                        <td class="px-5 text-slate-600">$600</td>
-                                        <td class="px-5 text-slate-600">03 Nov 2024</td>
-                                        <td class="px-5 text-slate-600">02 Nov 2025</td>
+                                        <td class="px-5 text-sm text-slate-600">Basic (Yearly)</td>
+                                        <td class="px-5 text-sm text-slate-600">365 Days</td>
+                                        <td class="px-5 text-sm text-slate-600">Paypal</td>
+                                        <td class="px-5 text-sm text-slate-600">$600</td>
+                                        <td class="px-5 text-sm text-slate-600">03 Nov 2024</td>
+                                        <td class="px-5 text-sm text-slate-600">02 Nov 2025</td>
                                         <td class="px-5"><span
                                                 class="px-3 py-1 text-xs font-semibold text-white bg-green-500 rounded">Paid</span>
                                         </td>
-                                        <td class="px-5">
+                                        <td class="px-5 text-sm text-slate-600">
                                             <div class="flex justify-center gap-5"><i data-lucide="file-text"
                                                     class="w-4 h-4"></i><i data-lucide="download" class="w-4 h-4"></i><i
                                                     data-lucide="trash-2" class="w-4 h-4"></i></div>
@@ -639,20 +631,20 @@
                                         <td class="px-5"><input type="checkbox"></td>
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
-                                                <div class="w-8 h-8 rounded-full border bg-white"></div><span
-                                                    class="font-medium text-slate-800">Epicurean Delights</span>
+                                                <div class="w-7 h-7 rounded-full border bg-white"></div><span
+                                                    class="font-medium text-sm font-semibold text-slate-800">Epicurean Delights</span>
                                             </div>
                                         </td>
-                                        <td class="px-5 text-slate-600">Advanced (Monthly)</td>
-                                        <td class="px-5 text-slate-600">30 Days</td>
-                                        <td class="px-5 text-slate-600">Credit Card</td>
-                                        <td class="px-5 text-slate-600">$200</td>
-                                        <td class="px-5 text-slate-600">17 Dec 2024</td>
-                                        <td class="px-5 text-slate-600">16 Jan 2025</td>
+                                        <td class="px-5 text-sm text-slate-600">Advanced (Monthly)</td>
+                                        <td class="px-5 text-sm text-slate-600">30 Days</td>
+                                        <td class="px-5 text-sm text-slate-600">Credit Card</td>
+                                        <td class="px-5 text-sm text-slate-600">$200</td>
+                                        <td class="px-5 text-sm text-slate-600">17 Dec 2024</td>
+                                        <td class="px-5 text-sm text-slate-600">16 Jan 2025</td>
                                         <td class="px-5"><span
                                                 class="px-3 py-1 text-xs font-semibold text-white bg-green-500 rounded">Paid</span>
                                         </td>
-                                        <td class="px-5">
+                                        <td class="px-5 text-sm text-slate-600">
                                             <div class="flex justify-center gap-5"><i data-lucide="file-text"
                                                     class="w-4 h-4"></i><i data-lucide="download" class="w-4 h-4"></i><i
                                                     data-lucide="trash-2" class="w-4 h-4"></i></div>
@@ -666,7 +658,7 @@
                         </div>
 
                         <!-- Footer -->
-                        <div class="flex items-center justify-between p-5 border-t">
+                        <div class="flex items-center justify-between p-3 border-t">
 
                             <p class="text-sm text-slate-600">
                                 Showing 1 - 10 of 10 entries
