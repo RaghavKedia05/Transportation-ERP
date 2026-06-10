@@ -130,7 +130,7 @@
                         </button>
 
                         <!-- Add Plan -->
-                        <button
+                        <button onclick="openAddPlanModal()"
                             class="flex items-center gap-2 px-4 py-1.5 bg-orange-500 text-white rounded-md text-sm font-medium">
 
                             <i data-lucide="plus-circle" class="w-4 h-4"></i>
@@ -295,7 +295,7 @@
 
                         <!-- Basic Card -->
                         <div class="bg-white border border-slate-200 rounded-md p-5 shadow-md">
-                            
+
                             <div class="border border-slate-200 rounded-md p-5 shadow-sm">
 
                                 <h3 class="text-lg font-semibold text-slate-800">
@@ -586,3 +586,19 @@
             </div>
         </div>
     </div>
+
+    <?= $this->include('Components/add_plan_modal') ?>
+
+    <script>
+        function openAddPlanModal() {
+            document.getElementById('addPlanModal').classList.remove('hidden');
+            document.getElementById('addPlanModal').classList.add('flex');
+        }
+
+        function closeAddPlanModal() {
+            document.getElementById('addPlanModal').classList.add('hidden');
+            document.getElementById('addPlanModal').classList.remove('flex');
+        }
+    </script>
+
+</body>

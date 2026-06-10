@@ -130,7 +130,7 @@
                         </button>
 
                         <!-- Add Plan -->
-                        <button
+                        <button onclick="openAddPlanModal()"
                             class="flex items-center gap-2 px-4 py-1.5 bg-orange-500 text-white rounded-md text-sm font-medium">
 
                             <i data-lucide="plus-circle" class="w-4 h-4"></i>
@@ -546,6 +546,21 @@
                 selectAll.checked = allChecked;
             });
         });
+    </script>
+
+
+    <?= $this->include('Components/add_plan_modal') ?>
+
+    <script>
+        function openAddPlanModal() {
+            document.getElementById('addPlanModal').classList.remove('hidden');
+            document.getElementById('addPlanModal').classList.add('flex');
+        }
+
+        function closeAddPlanModal() {
+            document.getElementById('addPlanModal').classList.add('hidden');
+            document.getElementById('addPlanModal').classList.remove('flex');
+        }
     </script>
 
 </body>
