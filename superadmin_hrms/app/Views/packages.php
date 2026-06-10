@@ -108,15 +108,16 @@
                     <div class="flex items-center gap-3">
 
                         <!-- List View -->
-                        <button class="w-7 h-7 bg-orange-500 rounded-md flex items-center justify-center text-white">
+                        <a href="<?= base_url('packages') ?>"
+                            class="w-10 h-10 bg-orange-500 rounded-md flex items-center justify-center text-white">
                             <i data-lucide="list" class="w-4 h-4"></i>
-                        </button>
+                        </a>
 
                         <!-- Grid View -->
-                        <button
+                        <a href="<?= base_url('package-grid') ?>"
                             class="w-8 h-8 bg-white border border-slate-200 rounded-md flex items-center justify-center text-slate-500">
                             <i data-lucide="grid-2x2" class="w-4 h-4"></i>
-                        </button>
+                        </a>
 
                         <!-- Export -->
                         <button
@@ -340,7 +341,8 @@
 
                                 <tr>
                                     <td class="w-12 text-center">
-                                        <input type="checkbox" class="rowCheckbox w-4 h-4"></td>
+                                        <input type="checkbox" class="rowCheckbox w-4 h-4">
+                                    </td>
                                     <td class="p-4 font-medium">Basic</td>
                                     <td class="p-4 text-slate-500">Monthly</td>
                                     <td class="p-4 text-slate-500">56</td>
@@ -361,7 +363,8 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="w-12 text-center"><input type="checkbox" class="rowCheckbox w-4 h-4"></td>
+                                    <td class="w-12 text-center"><input type="checkbox" class="rowCheckbox w-4 h-4">
+                                    </td>
                                     <td class="p-4 font-medium">Advanced</td>
                                     <td class="p-4 text-slate-500">Monthly</td>
                                     <td class="p-4 text-slate-500">99</td>
@@ -378,7 +381,8 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="w-12 text-center"><input type="checkbox" class="rowCheckbox w-4 h-4"></td>
+                                    <td class="w-12 text-center"><input type="checkbox" class="rowCheckbox w-4 h-4">
+                                    </td>
                                     <td class="p-4 font-medium">Premium</td>
                                     <td class="p-4 text-slate-500">Monthly</td>
                                     <td class="p-4 text-slate-500">58</td>
@@ -395,7 +399,8 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="w-12 text-center"><input type="checkbox" class="rowCheckbox w-4 h-4"></td>
+                                    <td class="w-12 text-center"><input type="checkbox" class="rowCheckbox w-4 h-4">
+                                    </td>
                                     <td class="p-4 font-medium">Enterprise</td>
                                     <td class="p-4 text-slate-500">Monthly</td>
                                     <td class="p-4 text-slate-500">67</td>
@@ -412,7 +417,8 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="w-12 text-center"><input type="checkbox" class="rowCheckbox w-4 h-4"></td>
+                                    <td class="w-12 text-center"><input type="checkbox" class="rowCheckbox w-4 h-4">
+                                    </td>
                                     <td class="p-4 font-medium">Basic</td>
                                     <td class="p-4 text-slate-500">Yearly</td>
                                     <td class="p-4 text-slate-500">78</td>
@@ -429,7 +435,8 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="w-12 text-center"><input type="checkbox" class="rowCheckbox w-4 h-4"></td>
+                                    <td class="w-12 text-center"><input type="checkbox" class="rowCheckbox w-4 h-4">
+                                    </td>
                                     <td class="p-4 font-medium">Advanced</td>
                                     <td class="p-4 text-slate-500">Yearly</td>
                                     <td class="p-4 text-slate-500">99</td>
@@ -446,7 +453,8 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="w-12 text-center"><input type="checkbox" class="rowCheckbox w-4 h-4"></td>
+                                    <td class="w-12 text-center"><input type="checkbox" class="rowCheckbox w-4 h-4">
+                                    </td>
                                     <td class="p-4 font-medium">Premium</td>
                                     <td class="p-4 text-slate-500">Yearly</td>
                                     <td class="p-4 text-slate-500">48</td>
@@ -463,7 +471,8 @@
                                 </tr>
 
                                 <tr>
-                                    <td class="w-12 text-center"><input type="checkbox" class="rowCheckbox w-4 h-4"></td>
+                                    <td class="w-12 text-center"><input type="checkbox" class="rowCheckbox w-4 h-4">
+                                    </td>
                                     <td class="p-4 font-medium">Enterprise</td>
                                     <td class="p-4 text-slate-500">Yearly</td>
                                     <td class="p-4 text-slate-500">17</td>
