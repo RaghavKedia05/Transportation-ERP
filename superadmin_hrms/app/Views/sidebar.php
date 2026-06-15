@@ -150,7 +150,10 @@ if (empty($currentPage)) {
                 $currentPage == 'invoice_report' ||
                 $currentPage == 'user_report' ||
                 $currentPage == 'employee_report' ||
-                $currentPage == 'payslip_report';
+                $currentPage == 'payslip_report' ||
+                $currentPage == 'attendance_report' ||
+                $currentPage == 'leave_report' ||
+                $currentPage == 'daily_report';
             ?>
 
             <!-- Parent Menu -->
@@ -209,6 +212,27 @@ if (empty($currentPage)) {
                 ? 'text-orange-500 font-medium'
                 : 'text-slate-600 hover:text-orange-500'; ?>">
                     Payslip Report
+                </a>
+
+                <a href="/Reports/attendance_report" class="block pl-4 py-2 text-xs
+            <?= ($currentPage == 'attendance_report')
+                ? 'text-orange-500 font-medium'
+                : 'text-slate-600 hover:text-orange-500'; ?>">
+                    Attendance Report
+                </a>
+
+                <a href="/Reports/leave_report" class="block pl-4 py-2 text-xs
+            <?= ($currentPage == 'leave_report')
+                ? 'text-orange-500 font-medium'
+                : 'text-slate-600 hover:text-orange-500'; ?>">
+                    Leave Report
+                </a>
+
+                <a href="/Reports/daily_report" class="block pl-4 py-2 text-xs
+            <?= ($currentPage == 'daily_report')
+                ? 'text-orange-500 font-medium'
+                : 'text-slate-600 hover:text-orange-500'; ?>">
+                    Daily Report
                 </a>
 
             </div>

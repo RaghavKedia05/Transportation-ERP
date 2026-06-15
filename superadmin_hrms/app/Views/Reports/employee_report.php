@@ -341,11 +341,7 @@
                             </tr>
 
                         </thead>
-
-                        <tbody>
-
-                        <tbody>
-
+                 
                         <tbody>
 
                             <tr class="border-b border-slate-200 hover:bg-slate-50">
@@ -557,9 +553,7 @@
                             </tr>
 
                         </tbody>
-
-                        </tbody>
-
+                        
                     </table>
 
                     <!-- Footer -->

@@ -21,3 +21,6 @@ $routes->get('/Reports/invoice_report', 'ReportController::invoiceReport');
 $routes->get('/Reports/user_report', 'ReportController::userReport');
 $routes->get('/Reports/employee_report', 'ReportController::employeeReport');
 $routes->get('/Reports/payslip_report', 'ReportController::payslipReport');
+$routes->get('/Reports/attendance_report', 'ReportController::attendanceReport');
+$routes->get('/Reports/leave_report', 'ReportController::leaveReport');
+$routes->get('/Reports/daily_report', 'ReportController::dailyReport');

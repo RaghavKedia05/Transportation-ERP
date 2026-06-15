@@ -26,4 +26,19 @@ class ReportController extends BaseController
     {
         return view('Reports/payslip_report');
     }
+
+    public function attendanceReport()
+    {
+        return view('Reports/attendance_report');
+    }
+
+    public function leaveReport()
+    {
+        return view('Reports/leave_report');
+    }
+
+    public function dailyReport()
+    {
+        return view('Reports/daily_report');
+    }
 }
