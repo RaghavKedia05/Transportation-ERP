@@ -142,6 +142,9 @@ if (empty($currentPage)) {
         </a>
 
         <!-- Reports -->
+        <h6 class="px-1 mt-4 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
+            Reports
+        </h6>
         <div class="mt-4">
 
             <?php
@@ -238,6 +241,26 @@ if (empty($currentPage)) {
             </div>
 
         </div>
+
+        <h6 class="px-1 mt-4 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
+            Billing
+        </h6>
+
+        <a href="/invoice" class="group flex items-center justify-between gap-3 px-4 py-3 rounded-md mt-4
+            <?= ($currentPage == 'invoice')
+                ? 'bg-slate-200 text-slate-800'
+                : 'text-slate-800 hover:bg-slate-200'; ?>">
+
+            <div class="flex items-center gap-2.5">
+                <i data-lucide="receipt" class="w-4 h-4"></i>
+                <span class="text-[13px] font-semibold">
+                    Invoice
+                </span>
+            </div>
+
+            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+
+        </a>
 
 
 

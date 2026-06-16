@@ -34,4 +34,18 @@ class DashboardController extends BaseController
         return view('support_ticket');
     }
 
+    public function invoice()
+    {
+        return view('invoice');
+    }
+
+    public function invoiceDetails($invoiceId = null)
+    {
+        $data = [
+            'invoiceId' => $invoiceId
+        ];
+
+        return view('invoice-details', $data);
+    }
+
 }

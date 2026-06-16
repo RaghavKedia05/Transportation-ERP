@@ -24,3 +24,6 @@ $routes->get('/Reports/payslip_report', 'ReportController::payslipReport');
 $routes->get('/Reports/attendance_report', 'ReportController::attendanceReport');
 $routes->get('/Reports/leave_report', 'ReportController::leaveReport');
 $routes->get('/Reports/daily_report', 'ReportController::dailyReport');
+
+$routes->get('/invoice', 'DashboardController::invoice');
+$routes->get('/invoice-details/(:any)', 'DashboardController::invoiceDetails/$1');
