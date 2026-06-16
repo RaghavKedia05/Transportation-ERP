@@ -64,10 +64,11 @@
                             <i data-lucide="chevron-down" class="w-4 h-4"></i>
                         </button>
 
-                        <button class="flex items-center gap-2 px-4 py-2 bg-orange-500 text-white rounded-md text-sm">
+                        <a href="<?= base_url('invoice/add') ?>"
+                            class="flex items-center gap-2 px-4 py-2 bg-orange-500 text-white rounded-md text-sm hover:bg-orange-600 transition">
                             <i data-lucide="plus" class="w-4 h-4"></i>
                             Add Invoice
-                        </button>
+                        </a>
                     </div>
 
                 </div>
@@ -75,8 +76,9 @@
                 <!-- Stats -->
                 <div class="grid grid-cols-4 gap-5 mb-6">
 
+                    <!-- Card 1 -->
                     <div class="bg-white rounded-lg border p-6 shadow-sm">
-                        <p class="text-sm text-slate-500">Total Invoice</p>
+                        <p class="text-sm text-slate-500 font-semibold">Total Invoice</p>
                         <h3 class="text-2xl font-semibold mt-2">$3,237.94</h3>
 
                         <div class="w-full h-2 bg-slate-100 rounded-full mt-5">
@@ -89,8 +91,9 @@
                         </p>
                     </div>
 
+                    <!-- Card 2 -->
                     <div class="bg-white rounded-lg border p-6 shadow-sm">
-                        <p class="text-sm text-slate-500">Outstanding</p>
+                        <p class="text-sm text-slate-500 font-semibold">Outstanding</p>
                         <h3 class="text-2xl font-semibold mt-2">$3,237.94</h3>
 
                         <div class="w-full h-2 bg-slate-100 rounded-full mt-5">
@@ -103,8 +106,9 @@
                         </p>
                     </div>
 
+                    <!-- Card 3 -->
                     <div class="bg-white rounded-lg border p-6 shadow-sm">
-                        <p class="text-sm text-slate-500">Draft</p>
+                        <p class="text-sm text-slate-500 font-semibold">Draft</p>
                         <h3 class="text-2xl font-semibold mt-2">$3,237.94</h3>
 
                         <div class="w-full h-2 bg-slate-100 rounded-full mt-5">
@@ -117,8 +121,9 @@
                         </p>
                     </div>
 
+                    <!-- Card 4 -->
                     <div class="bg-white rounded-lg border p-6 shadow-sm">
-                        <p class="text-sm text-slate-500">Total Overdue</p>
+                        <p class="text-sm text-slate-500 font-semibold">Total Overdue</p>
                         <h3 class="text-2xl font-semibold mt-2">$3,237.94</h3>
 
                         <div class="w-full h-2 bg-slate-100 rounded-full mt-5">
@@ -142,7 +147,7 @@
                         <div class="flex justify-between items-center">
 
                             <div class="flex items-center gap-3">
-                                <h2 class="font-semibold text-xl text-slate-800">
+                                <h2 class="font-semibold text-lg text-slate-800">
                                     Invoices
                                 </h2>
 
@@ -153,11 +158,11 @@
 
                             <div class="flex items-center gap-3">
 
-                                <input type="date" class="border rounded-md px-4 py-2 text-sm">
+                                <input type="date" class="border rounded-md px-4 py-1 text-sm">
 
-                                <input type="date" class="border rounded-md px-4 py-2 text-sm">
+                                <input type="date" class="border rounded-md px-4 py-1 text-sm">
 
-                                <select class="border rounded-md px-4 py-2 text-sm">
+                                <select class="border rounded-md px-4 py-1 text-sm">
                                     <option>Select Status</option>
                                     <option>Paid</option>
                                     <option>Pending</option>
@@ -165,8 +170,10 @@
                                     <option>Overdue</option>
                                 </select>
 
-                                <select class="border rounded-md px-4 py-2 text-sm">
+                                <select class="border rounded-md px-4 py-1 text-sm">
                                     <option>Sort By : Last 7 Days</option>
+                                    <option>Created Date</option>
+                                    <option>Due Date</option>
                                 </select>
 
                             </div>
@@ -266,7 +273,7 @@
                                             <input type="checkbox" onclick="event.stopPropagation()">
                                         </td>
 
-                                        <td class="px-5 text-slate-600">
+                                        <td class="px-5 text-slate-600 text-sm">
                                             <?= $row[0] ?>
                                         </td>
 
@@ -275,14 +282,14 @@
                                             <div class="flex items-center gap-4">
 
                                                 <img src="https://randomuser.me/api/portraits/<?= $row[3] ?>.jpg"
-                                                    class="w-12 h-12 rounded-full object-cover">
+                                                    class="w-10 h-10 rounded-full object-cover">
 
                                                 <div>
-                                                    <h4 class="font-medium text-slate-800">
+                                                    <h4 class="font-medium text-slate-800 text-sm">
                                                         <?= $row[1] ?>
                                                     </h4>
 
-                                                    <p class="text-sm text-slate-500">
+                                                    <p class="text-xs text-slate-500">
                                                         <?= $row[2] ?>
                                                     </p>
                                                 </div>
@@ -291,19 +298,19 @@
 
                                         </td>
 
-                                        <td class="px-5 text-slate-600">
+                                        <td class="px-5 text-slate-600 text-sm">
                                             <?= $row[4] ?>
                                         </td>
 
-                                        <td class="px-5 text-slate-600">
+                                        <td class="px-5 text-slate-600 text-sm">
                                             <?= $row[5] ?>
                                         </td>
 
-                                        <td class="px-5 text-slate-600">
+                                        <td class="px-5 text-slate-600 text-sm">
                                             <?= $row[6] ?>
                                         </td>
 
-                                        <td class="px-5 text-slate-600">
+                                        <td class="px-5 text-slate-600 text-sm">
                                             <?= $row[4] ?>
                                         </td>
 
@@ -311,16 +318,16 @@
 
                                             <?php
                                             $bg = [
-                                                'green' => 'bg-green-50 text-green-600',
-                                                'red' => 'bg-red-50 text-red-600',
-                                                'purple' => 'bg-purple-50 text-purple-600',
-                                                'yellow' => 'bg-yellow-50 text-yellow-600'
+                                                'green' => 'bg-green-50 text-green-600 text-sm',
+                                                'red' => 'bg-red-50 text-red-600 text-sm',
+                                                'purple' => 'bg-purple-50 text-purple-600 text-sm',
+                                                'yellow' => 'bg-yellow-50 text-yellow-600 text-sm'
                                             ];
                                             ?>
 
                                             <span
                                                 class="inline-flex items-center gap-2 px-3 py-1 rounded-md text-sm <?= $bg[$row[8]] ?>">
-                                                <span class="w-2 h-2 rounded-full bg-current"></span>
+                                                <span class="w-2 h-2 rounded-full bg-current "></span>
                                                 <?= $row[7] ?>
                                             </span>
 

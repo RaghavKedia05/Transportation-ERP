@@ -8,7 +8,7 @@ class DashboardController extends BaseController
     {
         return view('dashboard');
     }
-    
+
     public function companies()
     {
         return view('companies');
@@ -46,6 +46,11 @@ class DashboardController extends BaseController
         ];
 
         return view('invoice-details', $data);
+    }
+
+    public function addInvoice()
+    {
+        return view('add_invoice');
     }
 
 }

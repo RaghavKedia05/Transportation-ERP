@@ -15,8 +15,8 @@ if (empty($currentPage)) {
     <!-- Header -->
     <a href="/dashboard" class="h-[72px] flex items-center px-4 border-b border-slate-200">
 
-        <h2 class="text-xl font-semibold text-slate-900">
-            SuperAdmin HRMS
+        <h2 class="text-4xl font-bold text-blue-500">
+            GIC<span class="text-slate-800">HRMS</span>
         </h2>
 
     </a>
