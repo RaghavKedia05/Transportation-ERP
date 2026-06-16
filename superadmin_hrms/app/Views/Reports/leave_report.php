@@ -91,7 +91,7 @@
                         <div class="grid grid-cols-2 gap-6 w-full">
 
                             <!-- Card 1 -->
-                            <div class="bg-white border rounded-md p-6 relative overflow-hidden shadow-sm h-[140px]">
+                            <div class="bg-white border rounded-md p-5 relative overflow-hidden shadow-sm h-[120px]">
 
                                 <div class="flex justify-between">
 
@@ -100,7 +100,7 @@
                                             Total Leaves
                                         </p>
 
-                                        <h3 class="text-xl font-semibold mt-2">
+                                        <h3 class="text-xl font-semibold mt-1">
                                             800
                                         </h3>
 
@@ -113,7 +113,7 @@
                                     </div>
 
                                     <div
-                                        class="w-9 h-9 rounded-xl border border-orange-500 bg-orange-50 flex items-center justify-center text-orange-500">
+                                        class="w-10 h-10 rounded-xl border border-orange-500 bg-orange-50 flex items-center justify-center text-orange-500 mt-2 mr-1">
                                         <i data-lucide="user-round" class="w-4 h-4"></i>
                                     </div>
 
@@ -122,7 +122,7 @@
                             </div>
 
                             <!-- Card 2 -->
-                            <div class="bg-white border rounded-md p-6 relative overflow-hidden shadow-sm h-[140px]">
+                            <div class="bg-white border rounded-md p-5 relative overflow-hidden shadow-sm h-[120px]">
 
                                 <div class="flex justify-between">
 
@@ -131,7 +131,7 @@
                                             Approved Leaves
                                         </p>
 
-                                        <h3 class="text-xl font-semibold mt-2">
+                                        <h3 class="text-xl font-semibold mt-1">
                                             750
                                         </h3>
 
@@ -144,7 +144,7 @@
                                     </div>
 
                                     <div
-                                        class="w-9 h-9 rounded-xl border border-green-500 bg-green-50 flex items-center justify-center text-green-500 text-xs">
+                                        class="w-10 h-10 rounded-xl border border-green-500 bg-green-50 flex items-center justify-center text-green-500 mt-2 mr-1">
                                         <i data-lucide="user-round-check" class="w-4 h-4"></i>
                                     </div>
 
@@ -153,7 +153,7 @@
                             </div>
 
                             <!-- Card 3 -->
-                            <div class="bg-white border rounded-md p-6 relative overflow-hidden shadow-sm h-[140px]">
+                            <div class="bg-white border rounded-md p-5 relative overflow-hidden shadow-sm h-[120px]">
 
                                 <div class="flex justify-between">
 
@@ -162,7 +162,7 @@
                                             Pending Leaves
                                         </p>
 
-                                        <h3 class="text-xl font-semibold mt-2">
+                                        <h3 class="text-xl font-semibold mt-1">
                                             100
                                         </h3>
 
@@ -175,7 +175,7 @@
                                     </div>
 
                                     <div
-                                        class="w-9 h-9 rounded-xl border border-cyan-500 bg-cyan-50 flex items-center justify-center text-cyan-500">
+                                        class="w-10 h-10 rounded-xl border border-cyan-500 bg-cyan-50 flex items-center justify-center text-cyan-500 mt-2 mr-1">
                                         <i data-lucide="user-round-plus" class="w-4 h-4"></i>
                                     </div>
 
@@ -184,7 +184,7 @@
                             </div>
 
                             <!-- Card 4 -->
-                            <div class="bg-white border rounded-md p-6 relative overflow-hidden shadow-sm h-[140px]">
+                            <div class="bg-white border rounded-md p-5 relative overflow-hidden shadow-sm h-[120px]">
 
                                 <div class="flex justify-between">
 
@@ -193,7 +193,7 @@
                                             Rejected Leaves
                                         </p>
 
-                                        <h3 class="text-xl font-semibold mt-2">
+                                        <h3 class="text-xl font-semibold mt-1">
                                             50
                                         </h3>
 
@@ -206,7 +206,7 @@
                                     </div>
 
                                     <div
-                                        class="w-9 h-9 rounded-xl border border-red-500 bg-red-50 flex items-center justify-center text-red-500">
+                                        class="w-10 h-10 rounded-xl border border-red-500 bg-red-50 flex items-center justify-center text-red-500 mt-2 mr-1">
                                         <i data-lucide="user-round-x" class="w-4 h-4"></i>
                                     </div>
 
@@ -256,7 +256,7 @@
                                 </div>
                             </div>
 
-                            <div class="h-[220px]">
+                            <div class="h-[152px]">
                                 <canvas id="leavesChart"></canvas>
                             </div>
                         </div>
