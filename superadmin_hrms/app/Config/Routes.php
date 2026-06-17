@@ -28,3 +28,6 @@ $routes->get('/Reports/daily_report', 'ReportController::dailyReport');
 $routes->get('/invoice', 'DashboardController::invoice');
 $routes->get('/invoice-details/(:any)', 'DashboardController::invoiceDetails/$1');
 $routes->get('/invoice/add', 'DashboardController::addInvoice');
+
+$routes->get('/chat', 'ChatController::index');
+$routes->get('/chat/(:num)', 'ChatController::conversation/$1');

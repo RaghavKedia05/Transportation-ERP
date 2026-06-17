@@ -10,7 +10,7 @@ if (empty($currentPage)) {
 }
 ?>
 
-<aside class="w-[240px] bg-white border-r border-slate-200 min-h-screen">
+<aside class="w-[240px] h-screen bg-white border-r border-slate-200 flex flex-col">
 
     <!-- Header -->
     <a href="/dashboard" class="h-[72px] flex items-center px-4 border-b border-slate-200">
@@ -22,7 +22,7 @@ if (empty($currentPage)) {
     </a>
 
     <!-- Navigation -->
-    <nav class="px-3 py-3 overflow-y-auto h-[calc(100vh-72px)]">
+    <nav class="flex-1 min-h-0 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-3 py-3">
 
         <!-- Dashboard -->
         <h6 class="px-1 mt-4 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
@@ -261,6 +261,27 @@ if (empty($currentPage)) {
             <i data-lucide="chevron-down" class="w-4 h-4"></i>
 
         </a>
+
+        <h6 class="px-1 mt-4 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
+            Support
+        </h6>
+
+        <a href="/chat" class="group flex items-center justify-between gap-3 px-4 py-3 rounded-md mt-4
+            <?= ($currentPage == 'chat')
+                ? 'bg-slate-200 text-slate-800'
+                : 'text-slate-800 hover:bg-slate-200'; ?>">
+
+            <div class="flex items-center gap-2.5">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span class="text-[13px] font-semibold">
+                    Chat
+                </span>
+            </div>
+
+            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+
+        </a>
+        
 
 
 

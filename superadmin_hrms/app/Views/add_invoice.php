@@ -25,7 +25,7 @@
 
 <body class="bg-slate-50">
 
-    <div class="flex h-screen">
+    <div class="flex h-screen overflow-hidden">
 
         <!-- Sidebar -->
         <?php include __DIR__ . '/sidebar.php'; ?>

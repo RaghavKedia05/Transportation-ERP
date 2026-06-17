@@ -25,12 +25,12 @@
 
 <body class="bg-slate-100">
 
-    <div class="flex h-screen">
+    <div class="flex h-screen overflow-hidden">
         <!-- Sidebar -->
         <?php include __DIR__ . '/sidebar.php'; ?>
 
         <!-- Main -->
-        <div class="flex-1 flex flex-col ">
+        <div class="flex-1 flex flex-col overflow-hidden">
 
             <!-- Navbar -->
             <?php include __DIR__ . '/navbar.php'; ?>

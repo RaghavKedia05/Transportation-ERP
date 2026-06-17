@@ -25,18 +25,18 @@
 
 <body class="bg-slate-50">
 
-    <div class="flex h-screen">
+    <div class="flex h-screen overflow-hidden">
 
         <!-- Sidebar -->
         <?php include __DIR__ . '/sidebar.php'; ?>
 
-        <div class="flex-1 flex flex-col">
+        <div class="flex-1 flex flex-col overflow-hidden">
 
             <!-- Navbar -->
             <?php include __DIR__ . '/navbar.php'; ?>
 
             <!-- Main Content -->
-            <div class="p-5">
+            <div class="flex-1 overflow-y-auto p-5">
 
                 <!-- Header -->
                 <div class="flex justify-between items-start mb-6">
