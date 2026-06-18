@@ -27,9 +27,7 @@
 
 <body class="bg-[#f8fafc]">
 
-    <div
-        id="sidebarOverlay"
-        class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden">
+    <div id="sidebarOverlay" class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden">
     </div>
 
     <div class="flex h-screen overflow-hidden">
@@ -44,9 +42,9 @@
             <?php include __DIR__ . '/navbar.php'; ?>
 
             <!-- Page Content -->
-            <div class="flex-1 overflow-y-auto p-5">
+            <div class="flex-1 overflow-y-auto p-4 lg:p-5">
                 <!-- Page Header -->
-                <div class="flex items-start justify-between mb-6">
+                <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
 
                     <div>
 
@@ -54,7 +52,7 @@
                             Companies
                         </h1>
 
-                        <div class="flex items-center gap-2 mt-2 text-sm text-slate-500">
+                        <div class="flex flex-wrap items-center gap-2 mt-2 text-sm text-slate-500">
 
                             <i data-lucide="house" class="w-4 h-4"></i>
 
@@ -72,10 +70,10 @@
 
                     </div>
 
-                    <div class="flex items-center gap-3">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 w-full lg:w-auto">
 
                         <button
-                            class="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-md text-sm">
+                            class="flex items-center justify-center gap-2 px-4 py-2 w-full sm:w-auto bg-white border border-gray-200 rounded-md text-sm">
 
                             <i data-lucide="file-down" class="w-4 h-4"></i>
 
@@ -85,7 +83,8 @@
 
                         </button>
 
-                        <button class="flex items-center gap-2 px-4 py-2 bg-orange-500 text-white rounded-md text-sm">
+                        <button
+                            class="flex items-center justify-center gap-2 px-4 py-2 w-full sm:w-auto bg-orange-500 text-white rounded-md text-sm">
 
                             <i data-lucide="plus-circle" class="w-4 h-4"></i>
 
@@ -105,13 +104,13 @@
                 </div>
 
                 <!-- Statistics Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-6 mb-6">
 
                     <!-- Total Companies -->
                     <div class="bg-white border border-gray-200 rounded-md p-5">
-                        <div class="flex items-center justify-between">
+                        <div class="flex items-start justify-between gap-3">
 
-                            <div class="flex items-center gap-4">
+                            <div class="flex items-center gap-3">
 
                                 <div class="w-11 h-11 bg-orange-500 rounded flex items-center justify-center">
                                     <i data-lucide="building-2" class="w-5 h-5 text-white"></i>
@@ -139,9 +138,9 @@
 
                     <!-- Active Companies -->
                     <div class="bg-white border border-gray-200 rounded-md p-5">
-                        <div class="flex items-center justify-between">
+                        <div class="flex items-start justify-between gap-3">
 
-                            <div class="flex items-center gap-4">
+                            <div class="flex items-center gap-3">
 
                                 <div class="w-11 h-11 bg-green-500 rounded flex items-center justify-center">
                                     <i data-lucide="building-2" class="w-5 h-5 text-white"></i>
@@ -169,9 +168,9 @@
 
                     <!-- Inactive Companies -->
                     <div class="bg-white border border-gray-200 rounded-md p-5">
-                        <div class="flex items-center justify-between">
+                        <div class="flex items-start justify-between gap-3">
 
-                            <div class="flex items-center gap-4">
+                            <div class="flex items-center gap-3">
 
                                 <div class="w-11 h-11 bg-red-500 rounded flex items-center justify-center">
                                     <i data-lucide="building-2" class="w-5 h-5 text-white"></i>
@@ -199,9 +198,9 @@
 
                     <!-- Company Location -->
                     <div class="bg-white border border-gray-200 rounded-md p-5">
-                        <div class="flex items-center justify-between">
+                        <div class="flex items-start justify-between gap-3">
 
-                            <div class="flex items-center gap-4">
+                            <div class="flex items-center gap-3">
 
                                 <div class="w-11 h-11 bg-cyan-500 rounded flex items-center justify-center">
                                     <i data-lucide="map-pinned" class="w-5 h-5 text-white"></i>
@@ -233,16 +232,17 @@
                 <div class="bg-white rounded-md border border-gray-200 mt-6">
 
                     <!-- Header -->
-                    <div class="flex items-center justify-between p-5 border-b">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5 border-b">
 
                         <h3 class="text-l font-semibold text-slate-800">
                             Companies List
                         </h3>
 
-                        <div class="flex items-center gap-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:flex gap-3 w-full lg:w-auto">
 
                             <!-- Date -->
-                            <button class="flex items-center gap-2 border rounded-md px-4 py-1 p-2 text-xs">
+                            <button
+                                class="flex items-center gap-2 border rounded-md px-4 py-2 text-xs w-full sm:w-auto">
                                 <i data-lucide="calendar-days" class="w-4 h-4"></i>
                                 08/06/2026 - 08/06/2026
                             </button>
@@ -267,9 +267,9 @@
                     </div>
 
                     <!-- Table Top Controls -->
-                    <div class="flex items-center justify-between p-5">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5">
 
-                        <div class="flex items-center gap-3">
+                        <div class="flex items-center flex-wrap gap-2">
 
                             <span class="text-sm text-slate-700">
                                 Row Per Page
@@ -285,13 +285,14 @@
 
                         </div>
 
-                        <input type="text" placeholder="Search" class="border rounded-md px-4 py-1 text-xs w-[170px]">
+                        <input type="text" placeholder="Search"
+                            class="border rounded-md px-4 py-2 text-sm w-full md:w-[220px]">
 
                     </div>
 
                     <div class="overflow-x-auto">
 
-                        <table class="w-full">
+                        <table class="w-full min-w-[1100px]">
 
                             <thead>
 
@@ -336,18 +337,23 @@
                                 <tr>
                                     <td class="p-4"><input type="checkbox"></td>
                                     <td class="p-4">
-                                        <div class="flex items-center gap-3">
+                                        <div class="flex items-center flex-wrap gap-2">
                                             <div class="w-7 h-7 rounded-full border border-gray-200 bg-gray-50"></div>
                                             <span class="font-medium text-sm">BrightWave Innovations</span>
                                         </div>
                                     </td>
                                     <td class="p-4 text-sm text-slate-500">michael@example.com</td>
                                     <td class="p-4 text-sm text-slate-500">bwi.example.com</td>
-                                    <td class="p-4 flex items-center justify-between text-sm text-slate-500">
-                                        <span>Advanced (Monthly)</span>
-                                        <span
-                                            class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    <td class="p-4 text-sm text-slate-500">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <span>Advanced (Monthly)</span>
+                                            <span
+                                                class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">
+                                                Upgrade
+                                            </span>
+                                        </div>
                                     </td>
+
                                     <td class="p-4 text-sm text-slate-500">12 Sep 2024</td>
                                     <td class="p-4 "><span
                                             class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
@@ -364,23 +370,28 @@
                                 <tr>
                                     <td class="p-4"><input type="checkbox"></td>
                                     <td class="p-4">
-                                        <div class="flex items-center gap-3">
+                                        <div class="flex items-center flex-wrap gap-2">
                                             <div class="w-7 h-7 rounded-full border border-gray-200 bg-gray-50"></div>
                                             <span class="font-medium text-sm">Stellar Dynamics</span>
                                         </div>
                                     </td>
                                     <td class="p-4 text-sm text-slate-500">sophie@example.com</td>
                                     <td class="p-4 text-sm text-slate-500">sd.example.com</td>
-                                    <td class="p-4 flex items-center justify-between text-sm text-slate-500"><span>Basic
-                                            (Yearly)</span><span
-                                            class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    <td class="p-4 text-sm text-slate-500">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <span>Advanced (Monthly)</span>
+                                            <span
+                                                class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">
+                                                Upgrade
+                                            </span>
+                                        </div>
                                     </td>
                                     <td class="p-4 text-sm text-slate-500">24 Oct 2024</td>
                                     <td class="p-4 text-sm text-slate-500"><span
                                             class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
                                             Active</span></td>
                                     <td class="p-4 text-sm text-slate-500">
-                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i>
+                                        <div class="flex items-center gap-3"><i data-lucide="eye" class="w-4 h-4"></i>
                                             <i data-lucide="square-pen" class="w-4 h-4"></i>
                                             <i data-lucide="trash-2" class="w-4 h-4"></i>
                                         </div>
@@ -390,24 +401,29 @@
                                 <tr>
                                     <td class="p-4"><input type="checkbox"></td>
                                     <td class="p-4">
-                                        <div class="flex items-center gap-3">
+                                        <div class="flex items-center flex-wrap gap-2">
                                             <div class="w-7 h-7 rounded-full border border-gray-200 bg-gray-50"></div>
                                             <span class="font-medium text-sm">Quantum Nexus</span>
                                         </div>
                                     </td>
                                     <td class="p-4 text-sm text-slate-500">cameron@example.com</td>
                                     <td class="p-4 text-sm text-slate-500">qn.example.com</td>
-                                    <td class="p-4 flex items-center justify-between text-sm text-slate-500">
-                                        <span>Advanced
-                                            (Monthly)</span><span
-                                            class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    <td class="p-4 text-sm text-slate-500">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <span>Advanced (Monthly)</span>
+                                            <span
+                                                class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">
+                                                Upgrade
+                                            </span>
+                                        </div>
                                     </td>
+
                                     <td class="p-4 text-sm text-slate-500">18 Feb 2024</td>
                                     <td class="p-4 text-sm text-slate-500"><span
                                             class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
                                             Active</span></td>
                                     <td class="p-4 text-sm text-slate-500">
-                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i><i
+                                        <div class="flex items-center gap-3"><i data-lucide="eye" class="w-4 h-4"></i><i
                                                 data-lucide="square-pen" class="w-4 h-4"></i><i data-lucide="trash-2"
                                                 class="w-4 h-4"></i></div>
                                     </td>
@@ -416,24 +432,29 @@
                                 <tr>
                                     <td class="p-4"><input type="checkbox"></td>
                                     <td class="p-4">
-                                        <div class="flex items-center gap-3">
+                                        <div class="flex items-center flex-wrap gap-2">
                                             <div class="w-7 h-7 rounded-full border border-gray-200 bg-gray-50"></div>
                                             <span class="font-medium text-sm">EcoVision Enterprises</span>
                                         </div>
                                     </td>
                                     <td class="p-4 text-sm text-slate-500">doris@example.com</td>
                                     <td class="p-4 text-sm text-slate-500">eve.example.com</td>
-                                    <td class="p-4 flex items-center justify-between text-sm text-slate-500">
-                                        <span>Advanced
-                                            (Monthly)</span><span
-                                            class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    <td class="p-4 text-sm text-slate-500">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <span>Advanced (Monthly)</span>
+                                            <span
+                                                class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">
+                                                Upgrade
+                                            </span>
+                                        </div>
                                     </td>
+
                                     <td class="p-4 text-sm text-slate-500">17 Oct 2024</td>
                                     <td class="p-4 text-sm text-slate-500"><span
                                             class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
                                             Active</span></td>
                                     <td class="p-4 text-sm text-slate-500">
-                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i><i
+                                        <div class="flex items-center gap-3"><i data-lucide="eye" class="w-4 h-4"></i><i
                                                 data-lucide="square-pen" class="w-4 h-4"></i><i data-lucide="trash-2"
                                                 class="w-4 h-4"></i></div>
                                     </td>
@@ -442,24 +463,29 @@
                                 <tr>
                                     <td class="p-4"><input type="checkbox"></td>
                                     <td class="p-4">
-                                        <div class="flex items-center gap-3">
+                                        <div class="flex items-center flex-wrap gap-2">
                                             <div class="w-7 h-7 rounded-full border border-gray-200 bg-gray-50"></div>
                                             <span class="font-medium text-sm">Aurora Technologies</span>
                                         </div>
                                     </td>
                                     <td class="p-4 text-sm text-slate-500">thomas@example.com</td>
                                     <td class="p-4 text-sm text-slate-500">at.example.com</td>
-                                    <td class="p-4 flex items-center justify-between text-sm text-slate-500">
-                                        <span>Enterprise
-                                            (Monthly)</span><span
-                                            class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    <td class="p-4 text-sm text-slate-500">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <span>Advanced (Monthly)</span>
+                                            <span
+                                                class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">
+                                                Upgrade
+                                            </span>
+                                        </div>
                                     </td>
+
                                     <td class="p-4 text-sm text-slate-500">20 Jul 2024</td>
                                     <td class="p-4 text-sm text-slate-500"><span
                                             class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
                                             Active</span></td>
                                     <td class="p-4 text-sm text-slate-500">
-                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i><i
+                                        <div class="flex items-center gap-3"><i data-lucide="eye" class="w-4 h-4"></i><i
                                                 data-lucide="square-pen" class="w-4 h-4"></i><i data-lucide="trash-2"
                                                 class="w-4 h-4"></i></div>
                                     </td>
@@ -468,24 +494,29 @@
                                 <tr>
                                     <td class="p-4"><input type="checkbox"></td>
                                     <td class="p-4">
-                                        <div class="flex items-center gap-3">
+                                        <div class="flex items-center flex-wrap gap-2">
                                             <div class="w-7 h-7 rounded-full border border-gray-200 bg-gray-50"></div>
                                             <span class="font-medium text-sm">BlueSky Ventures</span>
                                         </div>
                                     </td>
                                     <td class="p-4 text-sm text-slate-500">kathleen@example.com</td>
                                     <td class="p-4 text-sm text-slate-500">bsv.example.com</td>
-                                    <td class="p-4 flex items-center justify-between text-sm text-slate-500">
-                                        <span>Advanced
-                                            (Monthly)</span><span
-                                            class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    <td class="p-4 text-sm text-slate-500">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <span>Advanced (Monthly)</span>
+                                            <span
+                                                class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">
+                                                Upgrade
+                                            </span>
+                                        </div>
                                     </td>
+
                                     <td class="p-4 text-sm text-slate-500">10 Apr 2024</td>
                                     <td class="p-4 text-sm text-slate-500"><span
                                             class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
                                             Active</span></td>
                                     <td class="p-4 text-sm text-slate-500">
-                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i><i
+                                        <div class="flex items-center gap-3"><i data-lucide="eye" class="w-4 h-4"></i><i
                                                 data-lucide="square-pen" class="w-4 h-4"></i><i data-lucide="trash-2"
                                                 class="w-4 h-4"></i></div>
                                     </td>
@@ -494,24 +525,29 @@
                                 <tr>
                                     <td class="p-4"><input type="checkbox"></td>
                                     <td class="p-4">
-                                        <div class="flex items-center gap-3">
+                                        <div class="flex items-center flex-wrap gap-2">
                                             <div class="w-7 h-7 rounded-full border border-gray-200 bg-gray-50"></div>
                                             <span class="font-medium text-sm">TerraFusion Energy</span>
                                         </div>
                                     </td>
                                     <td class="p-4 text-sm text-slate-500">bruce@example.com</td>
                                     <td class="p-4 text-sm text-slate-500">tfe.example.com</td>
-                                    <td class="p-4 flex items-center justify-between text-sm text-slate-500">
-                                        <span>Enterprise
-                                            (Yearly)</span><span
-                                            class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    <td class="p-4 text-sm text-slate-500">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <span>Advanced (Monthly)</span>
+                                            <span
+                                                class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">
+                                                Upgrade
+                                            </span>
+                                        </div>
                                     </td>
+
                                     <td class="p-4 text-sm text-slate-500">29 Aug 2024</td>
                                     <td class="p-4 text-sm text-slate-500"><span
                                             class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
                                             Active</span></td>
                                     <td class="p-4 text-sm text-slate-500">
-                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i><i
+                                        <div class="flex items-center gap-3"><i data-lucide="eye" class="w-4 h-4"></i><i
                                                 data-lucide="square-pen" class="w-4 h-4"></i><i data-lucide="trash-2"
                                                 class="w-4 h-4"></i></div>
                                     </td>
@@ -520,19 +556,23 @@
                                 <tr>
                                     <td class="p-4"><input type="checkbox"></td>
                                     <td class="p-4">
-                                        <div class="flex items-center gap-3">
+                                        <div class="flex items-center flex-wrap gap-2">
                                             <div class="w-7 h-7 rounded-full border border-gray-200 bg-gray-50"></div>
                                             <span class="font-medium text-sm">UrbanPulse Design</span>
                                         </div>
                                     </td>
                                     <td class="p-4 text-sm text-slate-500">estelle@example.com</td>
                                     <td class="p-4 text-sm text-slate-500">upd.example.com</td>
-                                    <td class="p-4 flex items-center justify-between text-sm text-slate-500">
-                                        <span>Basic
-                                            (Monthly)</span>
-                                        <span
-                                            class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    <td class="p-4 text-sm text-slate-500">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <span>Advanced (Monthly)</span>
+                                            <span
+                                                class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">
+                                                Upgrade
+                                            </span>
+                                        </div>
                                     </td>
+
                                     <td class="p-4 text-sm text-slate-500">22 Feb 2024</td>
                                     <td class="p-4 text-sm text-slate-500">
                                         <span
@@ -540,7 +580,7 @@
                                             Inactive</span>
                                     </td>
                                     <td class="p-4 text-sm text-slate-500">
-                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i><i
+                                        <div class="flex items-center gap-3"><i data-lucide="eye" class="w-4 h-4"></i><i
                                                 data-lucide="square-pen" class="w-4 h-4"></i><i data-lucide="trash-2"
                                                 class="w-4 h-4"></i></div>
                                     </td>
@@ -549,23 +589,28 @@
                                 <tr>
                                     <td class="p-4"><input type="checkbox"></td>
                                     <td class="p-4">
-                                        <div class="flex items-center gap-3">
+                                        <div class="flex items-center flex-wrap gap-2">
                                             <div class="w-7 h-7 rounded-full border border-gray-200 bg-gray-50"></div>
                                             <span class="font-medium text-sm">Nimbus Networks</span>
                                         </div>
                                     </td>
                                     <td class="p-4 text-sm text-slate-500">stephen@example.com</td>
                                     <td class="p-4 text-sm text-slate-500">nn.example.com</td>
-                                    <td class="p-4 flex items-center justify-between text-sm text-slate-500"><span>Basic
-                                            (Yearly)</span><span
-                                            class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    <td class="p-4 text-sm text-slate-500">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <span>Advanced (Monthly)</span>
+                                            <span
+                                                class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">
+                                                Upgrade
+                                            </span>
+                                        </div>
                                     </td>
                                     <td class="p-4 text-sm text-slate-500">03 Nov 2024</td>
                                     <td class="p-4 text-sm text-slate-500"><span
                                             class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
                                             Active</span></td>
                                     <td class="p-4 text-sm text-slate-500">
-                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i><i
+                                        <div class="flex items-center gap-3"><i data-lucide="eye" class="w-4 h-4"></i><i
                                                 data-lucide="square-pen" class="w-4 h-4"></i><i data-lucide="trash-2"
                                                 class="w-4 h-4"></i></div>
                                     </td>
@@ -574,24 +619,29 @@
                                 <tr>
                                     <td class="p-4 "><input type="checkbox"></td>
                                     <td class="p-4">
-                                        <div class="flex items-center gap-3">
+                                        <div class="flex items-center flex-wrap gap-2">
                                             <div class="w-7 h-7 rounded-full border border-gray-200 bg-gray-50"></div>
                                             <span class="font-medium text-sm">Epicurean Delights</span>
                                         </div>
                                     </td>
                                     <td class="p-4 text-sm text-slate-500">angela@example.com</td>
                                     <td class="p-4 text-sm text-slate-500">ed.example.com</td>
-                                    <td class="p-4 flex items-center justify-between text-sm text-slate-500">
-                                        <span>Advanced
-                                            (Monthly)</span><span
-                                            class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">Upgrade</span>
+                                    <td class="p-4 text-sm text-slate-500">
+                                        <div class="flex items-center justify-between gap-2">
+                                            <span>Advanced (Monthly)</span>
+                                            <span
+                                                class="bg-purple-500 text-white font-semibold text-[10px] px-2 py-1 rounded">
+                                                Upgrade
+                                            </span>
+                                        </div>
                                     </td>
+
                                     <td class="p-4 text-sm text-slate-500">17 Dec 2024</td>
                                     <td class="p-4 text-sm text-slate-500"><span
                                             class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
                                             Active</span></td>
                                     <td class="p-4 text-sm text-slate-500">
-                                        <div class="flex gap-4"><i data-lucide="eye" class="w-4 h-4"></i><i
+                                        <div class="flex items-center gap-3"><i data-lucide="eye" class="w-4 h-4"></i><i
                                                 data-lucide="square-pen" class="w-4 h-4"></i><i data-lucide="trash-2"
                                                 class="w-4 h-4"></i></div>
                                     </td>
@@ -602,24 +652,28 @@
 
                             </tbody>
                         </table>
-                        <div class="flex items-center justify-between p-5 border-t">
+
+
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-5 border-t">
 
                             <p class="text-sm text-slate-600">
                                 Showing 1 - 10 of 10 entries
                             </p>
 
-                            <div class="flex items-center gap-4">
+                            <div class="flex items-center gap-3">
 
                                 <button>
-                                    <i data-lucide="chevron-left" class="text-slate-500 w-4 h-4"></i>
+                                    <i data-lucide="chevron-left" class="w-4 h-4 text-slate-500">
+                                    </i>
                                 </button>
 
-                                <button class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs">
+                                <button class="w-7 h-7 rounded-full bg-orange-500 text-white text-xs">
                                     1
                                 </button>
 
                                 <button>
-                                    <i data-lucide="chevron-right" class="text-slate-500 w-4 h-4"></i>
+                                    <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500">
+                                    </i>
                                 </button>
 
                             </div>

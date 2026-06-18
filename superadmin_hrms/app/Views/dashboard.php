@@ -32,7 +32,7 @@
         class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden">
     </div>
 
-    <div class="flex h-screen overflow-hidden">
+    <div class="flex min-h-screen overflow-hidden">
 
         <!-- Sidebar -->
 
@@ -45,13 +45,13 @@
             <?php include __DIR__ . '/navbar.php'; ?>
 
             <!-- Main Content -->
-            <main class="flex-1 overflow-y-auto p-5">
+            <main class="flex-1 overflow-y-auto p-3 sm:p-4 lg:p-5">
                 <!-- Header -->
-                <div class="flex items-start justify-between mt-6 mb-6 m-6">
+                <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 m-4 lg:m-4 lg:m-6">
                     <!-- Left -->
                     <div>
 
-                        <h1 class="text-2xl font-bold text-slate-800 ">
+                        <h1 class="text-xl sm:text-2xl font-bold text-slate-800 ">
                             Dashboard
                         </h1>
 
@@ -74,7 +74,7 @@
                     </div>
 
                     <!-- Right -->
-                    <div class="flex justify-center items-center gap-2">
+                    <div class="flex flex-wrap items-center gap-2">
                         <!-- Date Range -->
                         <button
                             class="bg-white border border-gray-200 rounded-md px-4 py-2 shadow-sm flex items-center gap-2">
@@ -100,17 +100,17 @@
                 </div>
 
                 <!-- Welcome Banner -->
-                <div class="relative overflow-hidden rounded-md bg-orange-500 p-8 mb-6 m-6">
+                <div class="relative overflow-hidden rounded-md bg-orange-500 p-8 mb-6 m-4 lg:m-6">
 
                     <!-- Decorative circles -->
                     <div class="absolute -top-8 -left-8 h-20 w-20 rounded-full bg-orange-400 opacity-40"></div>
                     <div class="absolute -bottom-10 -right-10 h-32 w-32 rounded-full bg-orange-300 opacity-40"></div>
 
-                    <div class="flex items-center justify-between relative z-10">
+                    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 relative z-10">
 
                         <!-- Left -->
                         <div>
-                            <h2 class="text-4xl font-bold text-white">
+                            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
                                 Welcome Back, User
                             </h2>
 
@@ -120,9 +120,9 @@
                         </div>
 
                         <!-- Right Buttons -->
-                        <div class="flex gap-3">
+                        <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
 
-                            <button class="bg-slate-900 text-white px-5 py-2 rounded-md font-medium">
+                            <button class="bg-slate-900 text-white px-5 py-2 rounded-md font-medium w-full sm:w-auto">
                                 Companies
                             </button>
 
@@ -137,12 +137,12 @@
                 </div>
 
                 <!-- Stats Cards Section-->
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-6 m-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-6 m-4 lg:m-4 lg:m-6">
 
                     <!-- Card 1 -->
-                    <div class="bg-white rounded-md p-6 h-[150px] border border-gray-200 shadow-md">
+                    <div class="bg-white rounded-md p-6 min-h-[150px] border border-gray-200 shadow-md">
 
-                        <div class="flex justify-between items-start">
+                        <div class="flex flex-col sm:flex-row sm:justify-between gap-4">
 
                             <div class="w-7 h-7 bg-slate-900 rounded-md flex items-center justify-center">
 
@@ -161,7 +161,7 @@
                             5468
                         </h3>
 
-                        <p class="text-xs text-gray-500 mt-1">
+                        <p class="text-xs text-gray-500 break-words mt-1">
                             Total Companies
                         </p>
 
@@ -172,9 +172,9 @@
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="bg-white rounded-md p-6 h-[150px] border border-gray-200 shadow-md">
+                    <div class="bg-white rounded-md p-6 min-h-[150px] border border-gray-200 shadow-md">
 
-                        <div class="flex justify-between items-start">
+                        <div class="flex flex-col sm:flex-row sm:justify-between gap-4">
 
                             <div class="w-8 h-8 bg-slate-900 rounded-md flex items-center justify-center">
 
@@ -193,7 +193,7 @@
                             4598
                         </h3>
 
-                        <p class="text-xs text-gray-500 mt-1">
+                        <p class="text-xs text-gray-500 break-words mt-1">
                             Active Companies
                         </p>
 
@@ -204,8 +204,8 @@
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="bg-white rounded-md p-6 h-[150px] border border-gray-200 shadow-md">
-                        <div class="flex justify-between items-start">
+                    <div class="bg-white rounded-md p-6 min-h-[150px] border border-gray-200 shadow-md">
+                        <div class="flex flex-col sm:flex-row sm:justify-between gap-4">
                             <div class="w-7 h-7 bg-slate-900 rounded-md flex items-center justify-center">
 
                                 <i data-lucide="users" class="w-5 h-5 text-white">
@@ -223,7 +223,7 @@
                             3698
                         </h3>
 
-                        <p class="text-xs text-gray-500 mt-1">
+                        <p class="text-xs text-gray-500 break-words mt-1">
                             Total Subscribers
                         </p>
 
@@ -234,9 +234,9 @@
                     </div>
 
                     <!-- Card 4 -->
-                    <div class="bg-white rounded-md p-6 h-[150px] border border-gray-200 shadow-md">
+                    <div class="bg-white rounded-md p-6 min-h-[150px] border border-gray-200 shadow-md">
 
-                        <div class="flex justify-between items-start">
+                        <div class="flex flex-col sm:flex-row sm:justify-between gap-4">
 
                             <div class="w-7 h-7 bg-slate-900 rounded-md flex items-center justify-center">
 
@@ -255,7 +255,7 @@
                             $89,878,58
                         </h3>
 
-                        <p class="text-xs text-gray-500 mt-1">
+                        <p class="text-xs text-gray-500 break-words mt-1">
                             Total Earnings
                         </p>
 
@@ -272,11 +272,11 @@
 
 
                 <!-- Charts -->
-                <div class="grid grid-cols-1 xl:grid-cols-12 gap-6 mb-6 m-6">
+                <div class="grid grid-cols-1 xl:grid-cols-12 gap-4 lg:gap-6 m-4 lg:m-4 lg:m-6">
 
                     <!-- Companies -->
                     <div class="xl:col-span-3">
-                        <div class="bg-white rounded-md border border-gray-200 h-[390px] shadow-sm flex flex-col">
+                        <div class="bg-white rounded-md border border-gray-200 min-h-[390px] shadow-sm flex flex-col">
 
                             <!-- Header -->
                             <div class="flex items-center justify-between p-3 border-b">
@@ -297,7 +297,7 @@
 
                             <!-- Chart -->
                             <div class="p-4">
-                                <div class="h-[220px]">
+                                <div class="h-[180px] sm:h-[220px]">
                                     <canvas id="companiesChart"></canvas>
                                 </div>
 
@@ -320,7 +320,7 @@
 
                     <!-- Revenue -->
                     <div class="xl:col-span-6">
-                        <div class="bg-white rounded-md border border-gray-200 h-[390px] shadow-sm flex flex-col">
+                        <div class="bg-white rounded-md border border-gray-200 min-h-[390px] shadow-sm flex flex-col">
 
                             <div class="flex justify-between items-center p-3 border-b">
 
@@ -340,7 +340,7 @@
 
                             <div class="p-4">
 
-                                <div class="flex justify-between items-start">
+                                <div class="flex flex-col sm:flex-row sm:justify-between gap-4">
 
                                     <div>
                                         <h2 class="text-3xl font-bold text-slate-800">
@@ -375,7 +375,7 @@
 
                     <!-- Top Plans -->
                     <div class="xl:col-span-3">
-                        <div class="bg-white rounded-md border border-gray-200 h-[390px] shadow-sm flex flex-col">
+                        <div class="bg-white rounded-md border border-gray-200 min-h-[390px] shadow-sm flex flex-col">
 
                             <div class="flex justify-between items-center p-3 border-b">
 
@@ -443,7 +443,7 @@
                 </div>
 
                 <!-- Recent Activities Section -->
-                <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 m-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6 m-4 lg:m-4 lg:m-6">
 
                     <!-- Recent Transactions -->
                     <div class="bg-white rounded-md border border-gray-200 shadow-sm flex flex-col">
@@ -467,7 +467,7 @@
                         <div class="divide-y">
 
                             <!-- Item -->
-                            <div class="p-3 flex justify-between items-center">
+                            <div class="p-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
 
                                 <div class="flex items-center gap-4">
 
@@ -480,7 +480,7 @@
                                             Stellar Dynamics
                                         </h4>
 
-                                        <p class="text-xs text-gray-500">
+                                        <p class="text-xs text-gray-500 break-words">
                                             #12457 • 14 Jan 2025
                                         </p>
 
@@ -493,7 +493,7 @@
                                         +$245
                                     </p>
 
-                                    <p class="text-xs text-gray-500">
+                                    <p class="text-xs text-gray-500 break-words">
                                         Basic (Monthly)
                                     </p>
 
@@ -501,7 +501,7 @@
 
                             </div>
 
-                            <div class="p-3 flex justify-between items-center">
+                            <div class="p-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
 
                                 <div class="flex items-center gap-4">
 
@@ -514,7 +514,7 @@
                                             Quantum Nexus
                                         </h4>
 
-                                        <p class="text-xs text-gray-500">
+                                        <p class="text-xs text-gray-500 break-words">
                                             #65974 • 14 Jan 2025
                                         </p>
 
@@ -527,7 +527,7 @@
                                         +$395
                                     </p>
 
-                                    <p class="text-xs text-gray-500">
+                                    <p class="text-xs text-gray-500 break-words">
                                         Enterprise (Yearly)
                                     </p>
 
@@ -535,7 +535,7 @@
 
                             </div>
 
-                            <div class="p-3 flex justify-between items-center">
+                            <div class="p-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
 
                                 <div class="flex items-center gap-4">
 
@@ -548,7 +548,7 @@
                                             Aurora Technologies
                                         </h4>
 
-                                        <p class="text-xs text-gray-500">
+                                        <p class="text-xs text-gray-500 break-words">
                                             #22457 • 14 Jan 2025
                                         </p>
 
@@ -561,7 +561,7 @@
                                         +$145
                                     </p>
 
-                                    <p class="text-xs text-gray-500">
+                                    <p class="text-xs text-gray-500 break-words">
                                         Advanced (Monthly)
                                     </p>
 
@@ -569,7 +569,7 @@
 
                             </div>
 
-                            <div class="p-3 flex justify-between items-center">
+                            <div class="p-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
 
                                 <div class="flex items-center gap-4">
 
@@ -582,7 +582,7 @@
                                             Epicurean Delights
                                         </h4>
 
-                                        <p class="text-xs text-gray-500">
+                                        <p class="text-xs text-gray-500 break-words">
                                             #43567 • 14 Jan 2025
                                         </p>
 
@@ -595,7 +595,7 @@
                                         +$145
                                     </p>
 
-                                    <p class="text-xs text-gray-500">
+                                    <p class="text-xs text-gray-500 break-words">
                                         Enterprise (Monthly)
                                     </p>
 
@@ -603,7 +603,7 @@
 
                             </div>
 
-                            <div class="p-3 flex justify-between items-center">
+                            <div class="p-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
 
                                 <div class="flex items-center gap-4">
 
@@ -616,7 +616,7 @@
                                             Epicurean Delights
                                         </h4>
 
-                                        <p class="text-xs text-gray-500">
+                                        <p class="text-xs text-gray-500 break-words">
                                             #12453 • 14 Jan 2025
                                         </p>
 
@@ -629,7 +629,7 @@
                                         +$977
                                     </p>
 
-                                    <p class="text-xs text-gray-500">
+                                    <p class="text-xs text-gray-500 break-words">
                                         Premium (Yearly)
                                     </p>
 
@@ -663,7 +663,7 @@
                         <div class="divide-y">
 
                             <!-- Item -->
-                            <div class="p-3 flex justify-between items-center">
+                            <div class="p-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
 
                                 <div class="flex items-center gap-4">
 
@@ -676,7 +676,7 @@
                                             Pitch
                                         </h4>
 
-                                        <p class="text-xs text-gray-500">
+                                        <p class="text-xs text-gray-500 break-words">
                                             Basic (Monthly)
                                         </p>
 
@@ -689,7 +689,7 @@
                                         150 Users
                                     </p>
 
-                                    <p class="text-xs text-slate-800">
+                                    <p class="text-xs text-slate-800 break-words">
                                         pitch.example.com
                                     </p>
 
@@ -697,7 +697,7 @@
 
                             </div>
 
-                            <div class="p-3 flex justify-between items-center">
+                            <div class="p-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
 
                                 <div class="flex items-center gap-4">
 
@@ -710,7 +710,7 @@
                                             Initech
                                         </h4>
 
-                                        <p class="text-xs text-gray-500">
+                                        <p class="text-xs text-gray-500 break-words">
                                             Enterprise (Yearly)
                                         </p>
 
@@ -723,7 +723,7 @@
                                         200 Users
                                     </p>
 
-                                    <p class="text-xs text-slate-800">
+                                    <p class="text-xs text-slate-800 break-words">
                                         initech.example.com
                                     </p>
 
@@ -731,7 +731,7 @@
 
                             </div>
 
-                            <div class="p-3 flex justify-between items-center">
+                            <div class="p-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
 
                                 <div class="flex items-center gap-4">
 
@@ -744,7 +744,7 @@
                                             Umbrella Corp
                                         </h4>
 
-                                        <p class="text-xs text-gray-500">
+                                        <p class="text-xs text-gray-500 break-words">
                                             Advanced (Monthly)
                                         </p>
 
@@ -757,7 +757,7 @@
                                         129 Users
                                     </p>
 
-                                    <p class="text-xs text-slate-800">
+                                    <p class="text-xs text-slate-800 break-words">
                                         umbcorp.example.com
                                     </p>
 
@@ -765,7 +765,7 @@
 
                             </div>
 
-                            <div class="p-3 flex justify-between items-center">
+                            <div class="p-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
 
                                 <div class="flex items-center gap-4">
 
@@ -778,7 +778,7 @@
                                             Capital Partners
                                         </h4>
 
-                                        <p class="text-xs text-gray-500">
+                                        <p class="text-xs text-gray-500 break-words">
                                             Enterprise (Monthly)
                                         </p>
 
@@ -791,7 +791,7 @@
                                         103 Users
                                     </p>
 
-                                    <p class="text-xs text-slate-800">
+                                    <p class="text-xs text-slate-800 break-words">
                                         capitalpart.example.com
                                     </p>
 
@@ -799,7 +799,7 @@
 
                             </div>
 
-                            <div class="p-3 flex justify-between items-center">
+                            <div class="p-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
 
                                 <div class="flex items-center gap-4">
 
@@ -812,7 +812,7 @@
                                             Massive Dynamic
                                         </h4>
 
-                                        <p class="text-xs text-gray-500">
+                                        <p class="text-xs text-gray-500 break-words">
                                             Premium (Yearly)
                                         </p>
 
@@ -825,7 +825,7 @@
                                         108 Users
                                     </p>
 
-                                    <p class="text-xs text-slate-800">
+                                    <p class="text-xs text-slate-800 break-words">
                                         msdynamic.example.com
                                     </p>
 
@@ -855,7 +855,7 @@
                         <div class="divide-y">
 
                             <!-- Names of the Companies -->
-                            <div class="p-3 flex justify-between items-center">
+                            <div class="p-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
 
                                 <div class="flex items-center gap-4">
 
@@ -868,7 +868,7 @@
                                             Silicon Corp
                                         </h4>
 
-                                        <p class="text-xs text-gray-500">
+                                        <p class="text-xs text-gray-500 break-words">
                                             #12457 • 14 Jan 2025
                                         </p>
 
@@ -881,7 +881,7 @@
                                         Send Reminder
                                     </p>
 
-                                    <p class="text-xs text-gray-500">
+                                    <p class="text-xs text-gray-500 break-words">
                                         Basic (Monthly)
                                     </p>
 
@@ -889,7 +889,7 @@
 
                             </div>
 
-                            <div class="p-3 flex justify-between items-center">
+                            <div class="p-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
 
                                 <div class="flex items-center gap-4">
 
@@ -902,7 +902,7 @@
                                             Hubspot
                                         </h4>
 
-                                        <p class="text-xs text-gray-500">
+                                        <p class="text-xs text-gray-500 break-words">
                                             #65974 • 14 Jan 2025
                                         </p>
 
@@ -915,7 +915,7 @@
                                         Send Reminder
                                     </p>
 
-                                    <p class="text-xs text-gray-500">
+                                    <p class="text-xs text-gray-500 break-words">
                                         Enterprise (Yearly)
                                     </p>
 
@@ -923,7 +923,7 @@
 
                             </div>
 
-                            <div class="p-3 flex justify-between items-center">
+                            <div class="p-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
 
                                 <div class="flex items-center gap-4">
 
@@ -936,7 +936,7 @@
                                             Licon Industries
                                         </h4>
 
-                                        <p class="text-xs text-gray-500">
+                                        <p class="text-xs text-gray-500 break-words">
                                             #12457 • 14 Jan 2025
                                         </p>
 
@@ -949,7 +949,7 @@
                                         Send Reminder
                                     </p>
 
-                                    <p class="text-xs text-gray-500">
+                                    <p class="text-xs text-gray-500 break-words">
                                         Advanced (Monthly)
                                     </p>
 
@@ -957,7 +957,7 @@
 
                             </div>
 
-                            <div class="p-3 flex justify-between items-center">
+                            <div class="p-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
 
                                 <div class="flex items-center gap-4">
 
@@ -970,7 +970,7 @@
                                             TerraFusion Energy
                                         </h4>
 
-                                        <p class="text-xs text-gray-500">
+                                        <p class="text-xs text-gray-500 break-words">
                                             #43421 • 14 Jan 2025
                                         </p>
 
@@ -983,7 +983,7 @@
                                         Send Reminder
                                     </p>
 
-                                    <p class="text-xs text-gray-500">
+                                    <p class="text-xs text-gray-500 break-words">
                                         Enterprise (Monthly)
                                     </p>
 
@@ -991,7 +991,7 @@
 
                             </div>
 
-                            <div class="p-3 flex justify-between items-center">
+                            <div class="p-3 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3">
 
                                 <div class="flex items-center gap-4">
 
@@ -1004,7 +1004,7 @@
                                             Epicurean Delights
                                         </h4>
 
-                                        <p class="text-xs text-gray-500">
+                                        <p class="text-xs text-gray-500 break-words">
                                             #43567 • 14 Jan 2025
                                         </p>
 
@@ -1017,7 +1017,7 @@
                                         Send Reminder
                                     </p>
 
-                                    <p class="text-xs text-gray-500">
+                                    <p class="text-xs text-gray-500 break-words">
                                         Premium (Yearly)
                                     </p>
 
