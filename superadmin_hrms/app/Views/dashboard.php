@@ -27,10 +27,15 @@
 
 <body class="bg-[#f8fafc]">
 
+    <div
+        id="sidebarOverlay"
+        class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden">
+    </div>
+
     <div class="flex h-screen overflow-hidden">
 
         <!-- Sidebar -->
-        
+
         <?php include __DIR__ . '/sidebar.php'; ?>
 
         <!-- Main -->
@@ -770,7 +775,7 @@
                                     <div>
 
                                         <h4 class="text-sm font-semibold text-slate-800 mb-1">
-                                           Capital Partners
+                                            Capital Partners
                                         </h4>
 
                                         <p class="text-xs text-gray-500">
@@ -1020,9 +1025,9 @@
 
                             </div>
 
-                    </div>
+                        </div>
 
-                </div>
+                    </div>
 
             </main>
 
@@ -1044,10 +1049,29 @@
 
     <script>
         lucide.createIcons();
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        document
+            .getElementById('sidebarOverlay')
+            .addEventListener('click', function () {
+
+                document
+                    .getElementById('sidebar')
+                    .classList.add('-translate-x-full');
+
+                this.classList.add('hidden');
+            });
     </script>
-    
+
     <!-- Card 1 Chart -->
-     
+
 
 
 

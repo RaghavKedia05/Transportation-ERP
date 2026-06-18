@@ -25,6 +25,11 @@
 
 <body class="bg-slate-100">
 
+    <div
+        id="sidebarOverlay"
+        class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden">
+    </div>
+
     <div class="flex h-screen overflow-hidden">
         <!-- Sidebar -->
         <?php include __DIR__ . '/sidebar.php'; ?>
@@ -806,7 +811,7 @@
                                     </span>
 
                                 </div>
-                                
+
                                 <div class="flex justify-between items-center p-4">
 
                                     <div class="flex items-center gap-3">
@@ -837,6 +842,25 @@
 
         <script>
             lucide.createIcons();
+
+            function toggleSidebar() {
+                const sidebar = document.getElementById('sidebar');
+                const overlay = document.getElementById('sidebarOverlay');
+
+                sidebar.classList.toggle('-translate-x-full');
+                overlay.classList.toggle('hidden');
+            }
+
+            document
+                .getElementById('sidebarOverlay')
+                .addEventListener('click', function () {
+
+                    document
+                        .getElementById('sidebar')
+                        .classList.add('-translate-x-full');
+
+                    this.classList.add('hidden');
+                });
         </script>
 
 </body>

@@ -25,6 +25,11 @@
 
 <body class="bg-slate-50">
 
+    <div
+        id="sidebarOverlay"
+        class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden">
+    </div>
+
     <div class="flex h-screen overflow-hidden">
 
         <!-- Sidebar -->
@@ -396,19 +401,21 @@
 
                                             <p>Bank Name :
                                                 <span class="text-slate-800">
-                                                HDFC Bank
-                                            </span>
+                                                    HDFC Bank
+                                                </span>
                                             </p>
-                                            
+
                                             <p>Account Number :
-                                            <span class="text-slate-800">
-                                                 45366287987
-                                            </span></p>
-                                            
+                                                <span class="text-slate-800">
+                                                    45366287987
+                                                </span>
+                                            </p>
+
                                             <p>IFSC :
-                                            <span class="text-slate-800">
-                                                 HDFC0018159
-                                            </span></p>
+                                                <span class="text-slate-800">
+                                                    HDFC0018159
+                                                </span>
+                                            </p>
 
                                         </div>
 
@@ -440,10 +447,30 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <script>
+        lucide.createIcons();
 
-            <script>
-                lucide.createIcons();
-            </script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        document
+            .getElementById('sidebarOverlay')
+            .addEventListener('click', function () {
+
+                document
+                    .getElementById('sidebar')
+                    .classList.add('-translate-x-full');
+
+                this.classList.add('hidden');
+            });
+    </script>
 
 </body>
 

@@ -10,22 +10,35 @@ if (empty($currentPage)) {
 }
 ?>
 
-<aside class="w-[240px] h-screen bg-white border-r border-slate-200 flex flex-col">
+<aside id="sidebar"
+    class="
+    fixed lg:static
+    top-0 left-0
+    z-50
+    w-[260px] lg:w-[240px]
+    h-screen
+    bg-white
+    border-r border-slate-200
+    shadow-xl lg:shadow-none
+    flex flex-col
+    transition-transform duration-300
+    -translate-x-full
+    lg:translate-x-0">
 
     <!-- Header -->
-    <a href="/dashboard" class="h-[72px] flex items-center px-4 border-b border-slate-200">
+    <a href="/dashboard" class="h-[72px] flex items-center px-3 lg:px-4 border-b border-slate-200">
 
-        <h2 class="text-4xl font-bold text-blue-500">
+        <h2 class="text-3xl lg:text-4xl font-bold text-blue-500">
             GIC<span class="text-slate-800">HRMS</span>
         </h2>
 
     </a>
 
     <!-- Navigation -->
-    <nav class="flex-1 min-h-0 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-3 py-3">
+    <nav class="flex-1 min-h-0 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-2 lg:px-3 py-3">
 
         <!-- Dashboard -->
-        <h6 class="px-1 mt-4 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
+        <h6 class="px-1 mt-4 mb-2 text-[10px] lg:text-[11px] font-medium tracking-wider uppercase text-slate-400">
             Dashboard
         </h6>
 
@@ -34,9 +47,9 @@ if (empty($currentPage)) {
                 ? 'bg-slate-200 text-slate-800'
                 : 'text-slate-800 hover:bg-slate-200'; ?>">
 
-            <div class="flex items-center gap-2.5">
+            <div class="flex items-center gap-2 lg:gap-2.5">
                 <i data-lucide="home" class="w-3.5 h-3.5"></i>
-                <span class="text-[13px] font-semibold">
+                <span class="text-xs lg:text-[13px] font-semibold">
                     Dashboards
                 </span>
             </div>
@@ -56,9 +69,9 @@ if (empty($currentPage)) {
                 ? 'bg-slate-200 text-slate-800'
                 : 'text-slate-800 hover:bg-slate-200'; ?>">
 
-            <div class="flex items-center gap-2.5">
+            <div class="flex items-center gap-2 lg:gap-2.5">
                 <i data-lucide="building-2" class="w-3.5 h-3.5"></i>
-                <span class="text-[13px] font-semibold">
+                <span class="text-xs lg:text-[13px] font-semibold">
                     Companies
                 </span>
             </div>
@@ -79,9 +92,9 @@ if (empty($currentPage)) {
                 ? 'bg-slate-200 text-slate-800'
                 : 'text-slate-800 hover:bg-slate-200'; ?>">
 
-            <div class="flex items-center gap-2.5">
+            <div class="flex items-center gap-2 lg:gap-2.5">
                 <i data-lucide="crown" class="w-4 h-4"></i>
-                <span class="text-[13px] font-semibold">
+                <span class="text-xs lg:text-[13px] font-semibold">
                     Subscriptions
                 </span>
             </div>
@@ -96,9 +109,9 @@ if (empty($currentPage)) {
                 ? 'bg-slate-200 text-slate-800'
                 : 'text-slate-800 hover:bg-slate-200'; ?>">
 
-            <div class="flex items-center gap-2.5">
+            <div class="flex items-center gap-2 lg:gap-2.5">
                 <i data-lucide="shopping-cart" class="w-4 h-4"></i>
-                <span class="text-[13px] font-semibold">
+                <span class="text-xs lg:text-[13px] font-semibold">
                     Purchase Transaction
                 </span>
             </div>
@@ -113,9 +126,9 @@ if (empty($currentPage)) {
                 ? 'bg-slate-200 text-slate-800'
                 : 'text-slate-800 hover:bg-slate-200'; ?>">
 
-            <div class="flex items-center gap-2.5">
+            <div class="flex items-center gap-2 lg:gap-2.5">
                 <i data-lucide="gem" class="w-4 h-4"></i>
-                <span class="text-[13px] font-semibold">
+                <span class="text-xs lg:text-[13px] font-semibold">
                     Packages
                 </span>
             </div>
@@ -130,9 +143,9 @@ if (empty($currentPage)) {
                 ? 'bg-slate-200 text-slate-800'
                 : 'text-slate-800 hover:bg-slate-200'; ?>">
 
-            <div class="flex items-center gap-2.5">
+            <div class="flex items-center gap-2 lg:gap-2.5">
                 <i data-lucide="ticket" class="w-4 h-4"></i>
-                <span class="text-[13px] font-semibold">
+                <span class="text-xs lg:text-[13px] font-semibold">
                     Support Ticket
                 </span>
             </div>
@@ -142,7 +155,7 @@ if (empty($currentPage)) {
         </a>
 
         <!-- Reports -->
-        <h6 class="px-1 mt-4 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
+        <h6 class="px-1 mt-4 mb-2 text-[10px] lg:text-[11px] font-medium tracking-wider uppercase text-slate-400">
             Reports
         </h6>
         <div class="mt-4">
@@ -165,10 +178,10 @@ if (empty($currentPage)) {
             ? 'bg-slate-200 text-slate-800'
             : 'text-slate-800 hover:bg-slate-200'; ?>">
 
-                <div class="flex items-center gap-2.5">
+                <div class="flex items-center gap-2 lg:gap-2.5">
                     <i data-lucide="file-text" class="w-4 h-4"></i>
 
-                    <span class="text-[13px] font-semibold">
+                    <span class="text-xs lg:text-[13px] font-semibold">
                         Reports
                     </span>
                 </div>
@@ -242,7 +255,7 @@ if (empty($currentPage)) {
 
         </div>
 
-        <h6 class="px-1 mt-4 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
+        <h6 class="px-1 mt-4 mb-2 text-[10px] lg:text-[11px] font-medium tracking-wider uppercase text-slate-400">
             Billing
         </h6>
 
@@ -251,9 +264,9 @@ if (empty($currentPage)) {
                 ? 'bg-slate-200 text-slate-800'
                 : 'text-slate-800 hover:bg-slate-200'; ?>">
 
-            <div class="flex items-center gap-2.5">
+            <div class="flex items-center gap-2 lg:gap-2.5">
                 <i data-lucide="receipt" class="w-4 h-4"></i>
-                <span class="text-[13px] font-semibold">
+                <span class="text-xs lg:text-[13px] font-semibold">
                     Invoice
                 </span>
             </div>
@@ -262,7 +275,7 @@ if (empty($currentPage)) {
 
         </a>
 
-        <h6 class="px-1 mt-4 mb-2 text-[11px] font-medium tracking-wider uppercase text-slate-400">
+        <h6 class="px-1 mt-4 mb-2 text-[10px] lg:text-[11px] font-medium tracking-wider uppercase text-slate-400">
             Support
         </h6>
 
@@ -271,9 +284,9 @@ if (empty($currentPage)) {
                 ? 'bg-slate-200 text-slate-800'
                 : 'text-slate-800 hover:bg-slate-200'; ?>">
 
-            <div class="flex items-center gap-2.5">
+            <div class="flex items-center gap-2 lg:gap-2.5">
                 <i data-lucide="message-circle" class="w-4 h-4"></i>
-                <span class="text-[13px] font-semibold">
+                <span class="text-xs lg:text-[13px] font-semibold">
                     Chat
                 </span>
             </div>

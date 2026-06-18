@@ -28,6 +28,11 @@
 <body>
     <div class="flex h-screen overflow-hidden">
 
+    <div
+        id="sidebarOverlay"
+        class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden">
+    </div>
+
         <!-- Sidebar -->
         <?php include __DIR__ . '/sidebar.php'; ?>
 
@@ -394,10 +399,30 @@
                 </div>
 
             </div>
+        </div>
+    </div>
 
 
+    <script>
+        lucide.createIcons();
 
-            <script>
-                lucide.createIcons();
-            </script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        document
+            .getElementById('sidebarOverlay')
+            .addEventListener('click', function () {
+
+                document
+                    .getElementById('sidebar')
+                    .classList.add('-translate-x-full');
+
+                this.classList.add('hidden');
+            });
+    </script>
 </body>

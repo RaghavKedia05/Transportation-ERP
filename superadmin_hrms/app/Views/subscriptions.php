@@ -27,6 +27,11 @@
 
 <body class="bg-[#f8fafc]">
 
+    <div
+        id="sidebarOverlay"
+        class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden">
+    </div>
+
     <div class="flex h-screen overflow-hidden">
 
         <!-- Sidebar -->
@@ -80,7 +85,7 @@
 
                         </button>
 
-                        
+
                         <button
                             class="w-10 h-10 flex items-center justify-center bg-white border border-gray-200 rounded-md">
 
@@ -359,7 +364,9 @@
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div>
-                                                <span class="font-medium text-sm font-semibold text-slate-800">BrightWave Innovations</span>
+                                                <span
+                                                    class="font-medium text-sm font-semibold text-slate-800">BrightWave
+                                                    Innovations</span>
                                             </div>
                                         </td>
                                         <td class="px-5 text-sm text-slate-600">Advanced (Monthly)</td>
@@ -386,7 +393,8 @@
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div>
-                                                <span class="font-medium text-sm font-semibold text-slate-800">Stellar Dynamics</span>
+                                                <span class="font-medium text-sm font-semibold text-slate-800">Stellar
+                                                    Dynamics</span>
                                             </div>
                                         </td>
                                         <td class="px-5 text-sm text-slate-600">Basic (Yearly)</td>
@@ -413,7 +421,8 @@
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div>
-                                                <span class="font-medium text-sm font-semibold text-slate-800">Quantum Nexus</span>
+                                                <span class="font-medium text-sm font-semibold text-slate-800">Quantum
+                                                    Nexus</span>
                                             </div>
                                         </td>
                                         <td class="px-5 text-sm text-slate-600">Advanced (Monthly)</td>
@@ -440,7 +449,8 @@
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div>
-                                                <span class="font-medium text-sm font-semibold text-slate-800">EcoVision Enterprises</span>
+                                                <span class="font-medium text-sm font-semibold text-slate-800">EcoVision
+                                                    Enterprises</span>
                                             </div>
                                         </td>
                                         <td class="px-5 text-sm text-slate-600">Advanced (Monthly)</td>
@@ -467,7 +477,8 @@
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div>
-                                                <span class="font-medium text-sm font-semibold text-slate-800">Aurora Technologies</span>
+                                                <span class="font-medium text-sm font-semibold text-slate-800">Aurora
+                                                    Technologies</span>
                                             </div>
                                         </td>
                                         <td class="px-5 text-sm text-slate-600">Enterprise (Monthly)</td>
@@ -489,13 +500,14 @@
                                         </td>
                                     </tr>
 
-                                    
+
                                     <tr class="h-16 hover:bg-gray-50">
                                         <td class="px-5"><input type="checkbox"></td>
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div>
-                                                <span class="font-medium text-sm font-semibold text-slate-800">BlueSky Ventures</span>
+                                                <span class="font-medium text-sm font-semibold text-slate-800">BlueSky
+                                                    Ventures</span>
                                             </div>
                                         </td>
                                         <td class="px-5 text-sm text-slate-600">Advanced (Monthly)</td>
@@ -519,7 +531,8 @@
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div><span
-                                                    class="font-medium text-sm font-semibold text-slate-800">TerraFusion Energy</span>
+                                                    class="font-medium text-sm font-semibold text-slate-800">TerraFusion
+                                                    Energy</span>
                                             </div>
                                         </td>
                                         <td class="px-5 text-sm text-slate-600">Enterprise (Yearly)</td>
@@ -543,7 +556,8 @@
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div><span
-                                                    class="font-medium text-sm font-semibold text-slate-800">UrbanPulse Design</span>
+                                                    class="font-medium text-sm font-semibold text-slate-800">UrbanPulse
+                                                    Design</span>
                                             </div>
                                         </td>
                                         <td class="px-5 text-sm text-slate-600">Basic (Monthly)</td>
@@ -567,7 +581,8 @@
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div><span
-                                                    class="font-medium text-sm font-semibold text-slate-800">Nimbus Networks</span>
+                                                    class="font-medium text-sm font-semibold text-slate-800">Nimbus
+                                                    Networks</span>
                                             </div>
                                         </td>
                                         <td class="px-5 text-sm text-slate-600">Basic (Yearly)</td>
@@ -591,7 +606,8 @@
                                         <td class="px-5">
                                             <div class="flex items-center gap-4">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div><span
-                                                    class="font-medium text-sm font-semibold text-slate-800">Epicurean Delights</span>
+                                                    class="font-medium text-sm font-semibold text-slate-800">Epicurean
+                                                    Delights</span>
                                             </div>
                                         </td>
                                         <td class="px-5 text-sm text-slate-600">Advanced (Monthly)</td>
@@ -646,6 +662,25 @@
 
     <script>
         lucide.createIcons();
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        document
+            .getElementById('sidebarOverlay')
+            .addEventListener('click', function () {
+
+                document
+                    .getElementById('sidebar')
+                    .classList.add('-translate-x-full');
+
+                this.classList.add('hidden');
+            });
     </script>
 
 </body>
