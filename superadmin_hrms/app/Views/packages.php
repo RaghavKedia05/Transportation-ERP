@@ -45,16 +45,16 @@
 
 
             <!-- Page Content -->
-            <div class="flex-1 overflow-y-auto p-5">
+            <div class="flex-1 overflow-y-auto p-4 lg:p-5">
                 <!-- Page Header -->
-                <div class="flex items-start justify-between mb-6">
+                <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
 
                     <div>
-                        <h1 class="text-[28px] font-semibold text-2xl text-slate-800">
+                        <h1 class="text-2xl sm:text-[28px] font-semibold text-slate-800">
                             Packages
                         </h1>
 
-                        <div class="flex items-center gap-2 mt-2 text-sm text-slate-500">
+                        <div class="flex flex-wrap items-center gap-2 mt-2 text-sm text-slate-500">
                             <i data-lucide="house" class="w-4 h-4"></i>
 
                             <i data-lucide="chevron-right" class="w-4 h-4"></i>
@@ -69,7 +69,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-3">
+                    <div class="flex flex-wrap items-center gap-2">
 
                         <!-- List View -->
                         <a href="<?= base_url('packages') ?>"
@@ -85,7 +85,7 @@
 
                         <!-- Export -->
                         <button
-                            class="flex items-center gap-2 px-4 py-1.5 bg-white border border-slate-200 rounded-md text-sm">
+                            class="flex items-center justify-center gap-2 px-3 py-2 text-xs sm:text-sm bg-white border border-slate-200 rounded-md">
                             <i data-lucide="file-down" class="w-4 h-4"></i>
 
                             Export
@@ -95,7 +95,7 @@
 
                         <!-- Add Plan -->
                         <button onclick="openAddPlanModal()"
-                            class="flex items-center gap-2 px-4 py-1.5 bg-orange-500 text-white rounded-md text-sm font-medium">
+                            class="flex items-center justify-center gap-2 px-3 py-2 text-xs sm:text-sm bg-orange-500 text-white rounded-md font-medium">
 
                             <i data-lucide="plus-circle" class="w-4 h-4"></i>
 
@@ -113,7 +113,7 @@
                 </div>
 
                 <!-- Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 mb-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-5 mb-6">
 
                     <!-- Total Plans -->
                     <div class="bg-white border border-slate-200 rounded-md p-5 shadow-sm">
@@ -205,28 +205,29 @@
                 <div class="bg-white border border-slate-200 rounded-md shadow-sm">
 
                     <!-- Header -->
-                    <div class="flex items-center justify-between p-5 border-b">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5 border-b
+">
 
                         <h3 class="text-l font-semibold text-slate-800">
                             Plan List
                         </h3>
 
-                        <div class="flex items-center gap-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:flex gap-3 w-full lg:w-auto">
 
-                            <button class="flex items-center gap-2 border rounded-md px-4 py-1 text-[13px]">
+                            <button class="flex items-center gap-2 border rounded-md px-4 py-2 text-[13px] w-full sm:w-auto">
                                 <i data-lucide="calendar-days" class="w-4 h-4"></i>
                                 09/06/2026 - 09/06/2026
                             </button>
 
-                            <select class="border rounded-md px-4 py-1 text-[13px]">
+                            <select class="border rounded-md px-4 py-2 text-[13px] w-full sm:w-auto">
                                 <option>Select Plan</option>
                             </select>
 
-                            <select class="border rounded-md px-4 py-1 text-[13px]">
+                            <select class="border rounded-md px-4 py-2 text-[13px] w-full sm:w-auto">
                                 <option>Select Status</option>
                             </select>
 
-                            <select class="border rounded-md px-4 py-1 text-[13px]">
+                            <select class="border rounded-md px-4 py-2 text-[13px] w-full sm:w-auto">
                                 <option>Sort By : Last 7 Days</option>
                             </select>
 
@@ -235,9 +236,9 @@
                     </div>
 
                     <!-- Controls -->
-                    <div class="flex items-center justify-between p-5">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5">
 
-                        <div class="flex items-center gap-3">
+                        <div class="flex flex-wrap items-center gap-2 w-full lg:w-auto">
 
                             <span class="text-sm">
                                 Row Per Page
@@ -254,14 +255,14 @@
                         </div>
 
                         <input type="text" placeholder="Search"
-                            class="border border-slate-200 rounded-md px-4 py-1 text-[13px] w-[180px]">
+                            class="border border-slate-200 rounded-md px-4 py-2 text-[13px] w-full md:w-[220px]">
 
                     </div>
 
                     <!-- Table -->
                     <div class="overflow-x-auto">
 
-                        <table class="w-full">
+                        <table class="w-full min-w-[900px]">
 
                             <thead>
 
@@ -315,7 +316,7 @@
                                     <td class="p-4">
                                         <span
                                             class="bg-green-500 text-white text-[11px] font-semibold px-3 py-1 rounded">
-                                            • Active
+                                            Active
                                         </span>
                                     </td>
                                     <td class="p-4">
@@ -335,7 +336,7 @@
                                     <td class="p-4 text-slate-500">$200</td>
                                     <td class="p-4 text-slate-500">21 Jan 2024</td>
                                     <td class="p-4"><span
-                                            class="bg-green-500 text-white text-[11px] font-semibold px-3 py-1 rounded">•
+                                            class="bg-green-500 text-white text-[11px] font-semibold px-3 py-1 rounded">
                                             Active</span></td>
                                     <td class="p-4">
                                         <div class="flex gap-4 text-slate-500"><i data-lucide="square-pen"
@@ -353,7 +354,7 @@
                                     <td class="p-4 text-slate-500">$300</td>
                                     <td class="p-4 text-slate-500">10 Feb 2024</td>
                                     <td class="p-4"><span
-                                            class="bg-green-500 text-white text-[11px] font-semibold px-3 py-1 rounded">•
+                                            class="bg-green-500 text-white text-[11px] font-semibold px-3 py-1 rounded">
                                             Active</span></td>
                                     <td class="p-4">
                                         <div class="flex gap-4 text-slate-500"><i data-lucide="square-pen"
@@ -371,7 +372,7 @@
                                     <td class="p-4 text-slate-500">$400</td>
                                     <td class="p-4 text-slate-500">18 Feb 2024</td>
                                     <td class="p-4"><span
-                                            class="bg-green-500 text-white text-[11px] font-semibold px-3 py-1 rounded">•
+                                            class="bg-green-500 text-white text-[11px] font-semibold px-3 py-1 rounded">
                                             Active</span></td>
                                     <td class="p-4">
                                         <div class="flex gap-4 text-slate-500"><i data-lucide="square-pen"
@@ -389,7 +390,7 @@
                                     <td class="p-4 text-slate-500">$600</td>
                                     <td class="p-4 text-slate-500">15 Mar 2024</td>
                                     <td class="p-4"><span
-                                            class="bg-green-500 text-white text-[11px] font-semibold px-3 py-1 rounded">•
+                                            class="bg-green-500 text-white text-[11px] font-semibold px-3 py-1 rounded">
                                             Active</span></td>
                                     <td class="p-4">
                                         <div class="flex gap-4 text-slate-500"><i data-lucide="square-pen"
@@ -407,7 +408,7 @@
                                     <td class="p-4 text-slate-500">$2400</td>
                                     <td class="p-4 text-slate-500">26 Mar 2024</td>
                                     <td class="p-4"><span
-                                            class="bg-green-500 text-white text-[11px] font-semibold px-3 py-1 rounded">•
+                                            class="bg-green-500 text-white text-[11px] font-semibold px-3 py-1 rounded">
                                             Active</span></td>
                                     <td class="p-4">
                                         <div class="flex gap-4 text-slate-500"><i data-lucide="square-pen"
@@ -425,7 +426,7 @@
                                     <td class="p-4 text-slate-500">$3600</td>
                                     <td class="p-4 text-slate-500">05 Apr 2024</td>
                                     <td class="p-4"><span
-                                            class="bg-green-500 text-white text-[11px] font-semibold px-3 py-1 rounded">•
+                                            class="bg-green-500 text-white text-[11px] font-semibold px-3 py-1 rounded">
                                             Active</span></td>
                                     <td class="p-4">
                                         <div class="flex gap-4 text-slate-500"><i data-lucide="square-pen"
@@ -443,7 +444,7 @@
                                     <td class="p-4 text-slate-500">$4800</td>
                                     <td class="p-4 text-slate-500">16 Apr 2024</td>
                                     <td class="p-4"><span
-                                            class="bg-green-500 text-white text-[11px] font-semibold px-3 py-1 rounded">•
+                                            class="bg-green-500 text-white text-[11px] font-semibold px-3 py-1 rounded">
                                             Active</span></td>
                                     <td class="p-4">
                                         <div class="flex gap-4 text-slate-500"><i data-lucide="square-pen"
@@ -457,13 +458,13 @@
                         </table>
 
                         <!-- Pagination -->
-                        <div class="flex items-center justify-between p-5 border-t">
+                        <div class="flex items-center justify-between p-3 border-t">
 
                             <p class="text-sm text-slate-600">
                                 Showing 1 - 8 of 8 entries
                             </p>
 
-                            <div class="flex items-center gap-4">
+                            <div class="flex items-center justify-center gap-4">
 
                                 <button>
                                     <i data-lucide="chevron-left" class="text-slate-500 w-4 h-4"></i>

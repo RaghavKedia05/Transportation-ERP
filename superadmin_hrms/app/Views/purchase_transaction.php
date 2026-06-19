@@ -46,7 +46,7 @@
             <!-- Page Content -->
             <div class="flex-1 overflow-y-auto p-5">
                 <!-- Page Header -->
-                <div class="flex items-start justify-between mb-6">
+                <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 m-4 lg:m-4 lg:m-6">
 
                     <div>
 
@@ -101,16 +101,16 @@
                 <div class="bg-white rounded-md border border-gray-200 mt-6">
 
                     <!-- Header -->
-                    <div class="flex items-center justify-between p-4 border-b">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5 border-b">
 
                         <h3 class="text-l font-semibold text-slate-800">
                             Transaction List
                         </h3>
 
-                        <div class="flex items-center gap-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:flex gap-3 w-full lg:w-auto">
 
                             <!-- Date -->
-                            <button class="flex items-center gap-2 border rounded-md px-4 py-1 p-2 text-xs">
+                            <button class="flex items-center gap-2 border rounded-md px-4 py-2 text-xs w-full sm:w-auto">
                                 <i data-lucide="calendar-days" class="w-4 h-4"></i>
                                 08/06/2026 - 08/06/2026
                             </button>
@@ -135,7 +135,7 @@
                     </div>
 
                     <!-- Table Top Controls -->
-                    <div class="flex items-center justify-between p-4">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5">
 
                         <div class="flex items-center gap-3">
 
@@ -162,7 +162,7 @@
                         <!-- Table -->
                         <div class="overflow-x-auto">
 
-                            <table class="w-full">
+                            <table class="w-full min-w-[1100px]">
 
                                 <thead>
                                     <tr class="bg-slate-100 border-b text-sm font-semibold text-slate-800">

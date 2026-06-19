@@ -46,11 +46,11 @@
             <!-- Page Content -->
             <div class="flex-1 overflow-y-auto p-5">
                 <!-- Page Header -->
-                <div class="flex items-start justify-between mb-6">
+                <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 m-4 lg:m-4 lg:m-6">
 
                     <div>
 
-                        <h1 class="text-2xl font-semibold text-slate-800">
+                        <h1 class="text-xl sm:text-2xl font-bold text-slate-800 ">
                             Subscription
                         </h1>
 
@@ -250,13 +250,13 @@
                 <div class="bg-white rounded-md border border-gray-200 mt-6">
 
                     <!-- Header -->
-                    <div class="flex items-center justify-between p-4 border-b">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5 border-b">
 
                         <h3 class="text-l font-semibold text-slate-800">
                             Subscription List
                         </h3>
 
-                        <div class="flex items-center gap-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:flex gap-3 w-full lg:w-auto">
 
                             <!-- Date -->
                             <button class="flex items-center gap-2 border rounded-md px-4 py-1 p-2 text-xs">
@@ -284,7 +284,7 @@
                     </div>
 
                     <!-- Table Top Controls -->
-                    <div class="flex items-center justify-between p-4">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5">
 
                         <div class="flex items-center gap-3">
 
@@ -306,7 +306,7 @@
 
                     </div>
 
-                    <div class="overflow-x-auto">
+                    
 
                         <!-- Table -->
                         <div class="overflow-x-auto">

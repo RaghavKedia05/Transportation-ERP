@@ -241,8 +241,7 @@
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:flex gap-3 w-full lg:w-auto">
 
                             <!-- Date -->
-                            <button
-                                class="flex items-center gap-2 border rounded-md px-4 py-2 text-xs w-full sm:w-auto">
+                            <button class="flex items-center gap-2 border rounded-md px-4 py-1 p-2 text-xs">
                                 <i data-lucide="calendar-days" class="w-4 h-4"></i>
                                 08/06/2026 - 08/06/2026
                             </button>
@@ -269,7 +268,7 @@
                     <!-- Table Top Controls -->
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5">
 
-                        <div class="flex items-center flex-wrap gap-2">
+                        <div class="flex items-center gap-3">
 
                             <span class="text-sm text-slate-700">
                                 Row Per Page
@@ -286,13 +285,13 @@
                         </div>
 
                         <input type="text" placeholder="Search"
-                            class="border rounded-md px-4 py-2 text-sm w-full md:w-[220px]">
+                            class="border rounded-md px-4 py-1 text-xs w-[170px]">
 
                     </div>
 
                     <div class="overflow-x-auto">
 
-                        <table class="w-full min-w-[1100px]">
+                        <table class="w-full">
 
                             <thead>
 
@@ -356,7 +355,7 @@
 
                                     <td class="p-4 text-sm text-slate-500">12 Sep 2024</td>
                                     <td class="p-4 "><span
-                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
+                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">
                                             Active</span></td>
                                     <td class="p-4 text-sm text-slate-500">
                                         <div class="flex gap-4 text-sm text-slate-500">
@@ -388,7 +387,7 @@
                                     </td>
                                     <td class="p-4 text-sm text-slate-500">24 Oct 2024</td>
                                     <td class="p-4 text-sm text-slate-500"><span
-                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
+                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">
                                             Active</span></td>
                                     <td class="p-4 text-sm text-slate-500">
                                         <div class="flex items-center gap-3"><i data-lucide="eye" class="w-4 h-4"></i>
@@ -420,7 +419,7 @@
 
                                     <td class="p-4 text-sm text-slate-500">18 Feb 2024</td>
                                     <td class="p-4 text-sm text-slate-500"><span
-                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
+                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">
                                             Active</span></td>
                                     <td class="p-4 text-sm text-slate-500">
                                         <div class="flex items-center gap-3"><i data-lucide="eye" class="w-4 h-4"></i><i
@@ -451,7 +450,7 @@
 
                                     <td class="p-4 text-sm text-slate-500">17 Oct 2024</td>
                                     <td class="p-4 text-sm text-slate-500"><span
-                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
+                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">
                                             Active</span></td>
                                     <td class="p-4 text-sm text-slate-500">
                                         <div class="flex items-center gap-3"><i data-lucide="eye" class="w-4 h-4"></i><i
@@ -482,7 +481,7 @@
 
                                     <td class="p-4 text-sm text-slate-500">20 Jul 2024</td>
                                     <td class="p-4 text-sm text-slate-500"><span
-                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
+                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">
                                             Active</span></td>
                                     <td class="p-4 text-sm text-slate-500">
                                         <div class="flex items-center gap-3"><i data-lucide="eye" class="w-4 h-4"></i><i
@@ -513,7 +512,7 @@
 
                                     <td class="p-4 text-sm text-slate-500">10 Apr 2024</td>
                                     <td class="p-4 text-sm text-slate-500"><span
-                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
+                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">
                                             Active</span></td>
                                     <td class="p-4 text-sm text-slate-500">
                                         <div class="flex items-center gap-3"><i data-lucide="eye" class="w-4 h-4"></i><i
@@ -544,7 +543,7 @@
 
                                     <td class="p-4 text-sm text-slate-500">29 Aug 2024</td>
                                     <td class="p-4 text-sm text-slate-500"><span
-                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
+                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">
                                             Active</span></td>
                                     <td class="p-4 text-sm text-slate-500">
                                         <div class="flex items-center gap-3"><i data-lucide="eye" class="w-4 h-4"></i><i
@@ -576,7 +575,7 @@
                                     <td class="p-4 text-sm text-slate-500">22 Feb 2024</td>
                                     <td class="p-4 text-sm text-slate-500">
                                         <span
-                                            class="bg-red-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
+                                            class="bg-red-500 text-white font-semibold text-[11px] px-3 py-1 rounded">
                                             Inactive</span>
                                     </td>
                                     <td class="p-4 text-sm text-slate-500">
@@ -607,7 +606,7 @@
                                     </td>
                                     <td class="p-4 text-sm text-slate-500">03 Nov 2024</td>
                                     <td class="p-4 text-sm text-slate-500"><span
-                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
+                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">
                                             Active</span></td>
                                     <td class="p-4 text-sm text-slate-500">
                                         <div class="flex items-center gap-3"><i data-lucide="eye" class="w-4 h-4"></i><i
@@ -638,7 +637,7 @@
 
                                     <td class="p-4 text-sm text-slate-500">17 Dec 2024</td>
                                     <td class="p-4 text-sm text-slate-500"><span
-                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">•
+                                            class="bg-green-500 text-white font-semibold text-[11px] px-3 py-1 rounded">
                                             Active</span></td>
                                     <td class="p-4 text-sm text-slate-500">
                                         <div class="flex items-center gap-3"><i data-lucide="eye" class="w-4 h-4"></i><i
@@ -654,7 +653,7 @@
                         </table>
 
 
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-5 border-t">
+                        <div class="flex items-center justify-between p-3 border-t">
 
                             <p class="text-sm text-slate-600">
                                 Showing 1 - 10 of 10 entries

@@ -45,16 +45,16 @@
 
 
             <!-- Page Content -->
-            <div class="flex-1 overflow-y-auto p-5">
+            <div class="flex-1 overflow-y-auto p-4 sm:p-5">
                 <!-- Page Header -->
-                <div class="flex items-start justify-between mb-6">
+                <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
 
                     <div>
-                        <h1 class="text-[28px] font-semibold text-2xl text-slate-800">
+                        <h1 class="text-2xl sm:text-[28px] font-semibold text-slate-800">
                             Packages
                         </h1>
 
-                        <div class="flex items-center gap-2 mt-2 text-sm text-slate-500">
+                        <div class="flex flex-wrap items-center gap-2 mt-2 text-xs sm:text-sm text-slate-500">
                             <i data-lucide="house" class="w-4 h-4"></i>
 
                             <i data-lucide="chevron-right" class="w-4 h-4"></i>
@@ -69,7 +69,7 @@
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-3">
+                    <div class="flex flex-wrap items-center gap-2">
 
                         <!-- List View -->
                         <a href="<?= base_url('packages') ?>"
@@ -85,7 +85,7 @@
 
                         <!-- Export -->
                         <button
-                            class="flex items-center gap-2 px-4 py-1.5 bg-white border border-slate-200 rounded-md text-sm">
+                            class="flex items-center justify-center gap-2 px-3 py-2 text-xs sm:text-sm bg-white border border-slate-200 rounded-md">
                             <i data-lucide="file-down" class="w-4 h-4"></i>
 
                             Export
@@ -95,7 +95,7 @@
 
                         <!-- Add Plan -->
                         <button onclick="openAddPlanModal()"
-                            class="flex items-center gap-2 px-4 py-1.5 bg-orange-500 text-white rounded-md text-sm font-medium">
+                            class="flex items-center justify-center gap-2 px-3 py-2 text-xs sm:text-sm bg-orange-500 text-white rounded-md font-medium">
 
                             <i data-lucide="plus-circle" class="w-4 h-4"></i>
 
@@ -113,7 +113,7 @@
                 </div>
 
                 <!-- Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 mb-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5 mb-6">
 
                     <!-- Total Plans -->
                     <div class="bg-white border border-slate-200 rounded-md p-5 shadow-sm">
@@ -205,19 +205,20 @@
                 <div class="bg-white border border-slate-200 rounded-md shadow-sm">
 
                     <!-- Header -->
-                    <div class="flex items-center justify-between p-5 border-b">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5 border-b
+">
 
                         <h3 class="text-l font-semibold text-slate-800">
                             Plan List
                         </h3>
 
-                        <div class="flex items-center gap-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full lg:w-auto">
 
-                            <select class="border rounded-md px-4 py-1 text-[13px]">
+                            <select class="w-full border rounded-md px-4 py-2 text-[13px]">
                                 <option>Select Plan</option>
                             </select>
 
-                            <select class="border rounded-md px-4 py-1 text-[13px]">
+                            <select class="w-full border rounded-md px-4 py-2 text-[13px]">
                                 <option>Sort By : Last 7 Days</option>
                             </select>
 
@@ -229,7 +230,7 @@
                 </div>
 
                 <!-- Pricing Section -->
-                <div class="bg-white border border-slate-200 rounded-md p-5 mt-6 shadow-md">
+                <div class="bg-white border border-slate-200 rounded-md p-4 sm:p-5 mt-6 shadow-md">
 
                     <!-- Toggle -->
                     <div class="flex justify-center items-center gap-3 mb-6">
@@ -255,18 +256,18 @@
                     </div>
 
                     <!-- Pricing Cards -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 mb-6">
 
                         <!-- Basic Card -->
-                        <div class="bg-white border border-slate-200 rounded-md p-5 shadow-md">
+                        <div class="bg-white border border-slate-200 rounded-md p-4 sm:p-5 shadow-md">
 
-                            <div class="border border-slate-200 rounded-md p-5 shadow-sm">
+                            <div class="border border-slate-200 rounded-md p-4 sm:p-5 shadow-sm">
 
                                 <h3 class="text-lg font-semibold text-slate-800">
                                     Basic
                                 </h3>
 
-                                <div class="flex items-end">
+                                <div class="flex items-end gap-1 flex-wrap">
 
                                     <span class="text-3xl font-semibold text-slate-900">
                                         $50
@@ -293,7 +294,7 @@
 
                                 </div>
 
-                                <ul class="space-y-5 text-[15px]">
+                                <ul class="space-y-4 text-sm sm:text-[15px]">
 
                                     <li class="flex items-center gap-3">
                                         <i data-lucide="badge-check" class="w-4 h-4 text-green-500"></i>
@@ -331,21 +332,21 @@
 
                             <!-- Button -->
                             <button
-                                class="w-full mt-4 bg-slate-950 hover:bg-slate-900 text-white font-medium py-3 rounded-md transition">
+                                class="w-full mt-4 py-3.5 bg-slate-950 hover:bg-slate-900 text-white font-medium rounded-md transition">
                                 Choose Plan
                             </button>
 
                         </div>
 
                         <!-- Advanced Card -->
-                        <div class="bg-white border border-slate-200 rounded-md p-5 shadow-md">
+                        <div class="bg-white border border-slate-200 rounded-md p-4 sm:p-5 shadow-md">
 
-                            <div class="border border-slate-200 rounded-md p-5 shadow-sm">
+                            <div class="border border-slate-200 rounded-md p-4 sm:p-5 shadow-sm">
                                 <h3 class="text-lg font-semibold text-slate-800">
                                     Advanced
                                 </h3>
 
-                                <div class="flex items-end">
+                                <div class="flex items-end gap-1 flex-wrap">
                                     <span class="text-3xl font-semibold text-slate-900">$200</span>
                                     <span class="text-xs text-slate-500 mb-1">/monthly</span>
                                 </div>
@@ -360,7 +361,7 @@
                                     <div class="flex-1 h-px bg-slate-200"></div>
                                 </div>
 
-                                <ul class="space-y-5 text-[15px]">
+                                <ul class="space-y-4 text-sm sm:text-[15px]">
 
                                     <li class="flex items-center gap-3">
                                         <i data-lucide="badge-check" class="w-4 h-4 text-green-500"></i>
@@ -397,21 +398,21 @@
                             </div>
 
                             <button
-                                class="w-full mt-4 bg-slate-950 hover:bg-slate-900 text-white font-medium py-3 rounded-md transition">
+                                class="w-full mt-4 py-3.5 bg-slate-950 hover:bg-slate-900 text-white font-medium rounded-md transition">
                                 Choose Plan
                             </button>
 
                         </div>
 
                         <!-- Premium Card -->
-                        <div class="bg-white border border-slate-200 rounded-md p-5 shadow-md">
+                        <div class="bg-white border border-slate-200 rounded-md p-4 sm:p-5 shadow-md">
 
-                            <div class="border border-slate-200 ounded-md p-5 shadow-sm">
+                            <div class="border border-slate-200 rounded-md p-5 shadow-sm">
                                 <h3 class="text-lg font-semibold text-slate-800">
                                     Premium
                                 </h3>
 
-                                <div class="flex items-end">
+                                <div class="flex items-end gap-1 flex-wrap">
                                     <span class="text-3xl font-semibold text-slate-900">$300</span>
                                     <span class="text-xs text-slate-500 mb-1">/monthly</span>
                                 </div>
@@ -426,7 +427,7 @@
                                     <div class="flex-1 h-px bg-slate-200"></div>
                                 </div>
 
-                                <ul class="space-y-5 text-[15px]">
+                                <ul class="space-y-4 text-sm sm:text-[15px]">
 
                                     <li class="flex items-center gap-3">
                                         <i data-lucide="badge-check" class="w-4 h-4 text-green-500"></i>
@@ -463,21 +464,21 @@
                             </div>
 
                             <button
-                                class="w-full mt-4 bg-slate-950 hover:bg-slate-900 text-white font-medium py-3 rounded-md transition">
+                                class="w-full mt-4 py-3.5 bg-slate-950 hover:bg-slate-900 text-white font-medium rounded-md transition">
                                 Choose Plan
                             </button>
 
                         </div>
 
                         <!-- Enterprise Card -->
-                        <div class="bg-white border border-slate-200 rounded-md p-5 shadow-md">
+                        <div class="bg-white border border-slate-200 rounded-md p-4 sm:p-5 shadow-md">
 
-                            <div class="border border-slate-200 rounded-md p-5 shadow-sm">
+                            <div class="border border-slate-200 rounded-md p-4 sm:p-5 shadow-sm">
                                 <h3 class="text-lg font-semibold text-slate-800">
                                     Enterprise
                                 </h3>
 
-                                <div class="flex items-end">
+                                <div class="flex items-end gap-1 flex-wrap">
                                     <span class="text-3xl font-semibold text-slate-900">$400</span>
                                     <span class="text-xs text-slate-500 mb-1">/monthly</span>
                                 </div>
@@ -492,7 +493,7 @@
                                     <div class="flex-1 h-px bg-slate-200"></div>
                                 </div>
 
-                                <ul class="space-y-5 text-[15px]">
+                                <ul class="space-y-4 text-sm sm:text-[15px]">
 
                                     <li class="flex items-center gap-3">
                                         <i data-lucide="badge-check" class="w-4 h-4 text-green-500"></i>
@@ -529,7 +530,7 @@
                             </div>
 
                             <button
-                                class="w-full mt-4 bg-slate-950 hover:bg-slate-900 text-white font-medium py-3 rounded-md transition">
+                                class="w-full mt-4 py-3.5 bg-slate-950 hover:bg-slate-900 text-white font-medium rounded-md transition">
                                 Choose Plan
                             </button>
 

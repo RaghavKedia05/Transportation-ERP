@@ -25,14 +25,14 @@
 
 </head>
 
-<body class="bg-[#f8fafc]">
+<body class="bg-[#f8fafc] overflow-x-hidden h-screen">
 
     <div
         id="sidebarOverlay"
         class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden">
     </div>
 
-    <div class="flex min-h-screen overflow-hidden">
+    <div class="flex h-screen overflow-hidden">
 
         <!-- Sidebar -->
 
@@ -45,9 +45,9 @@
             <?php include __DIR__ . '/navbar.php'; ?>
 
             <!-- Main Content -->
-            <main class="flex-1 overflow-y-auto p-3 sm:p-4 lg:p-5">
+            <main class="flex-1 overflow-y-auto p-4 lg:p-5">
                 <!-- Header -->
-                <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 m-4 lg:m-4 lg:m-6">
+                <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 m-4 lg:m-6">
                     <!-- Left -->
                     <div>
 
@@ -56,7 +56,7 @@
                         </h1>
 
                         <!-- Breadcrumb -->
-                        <div class="flex items-center gap-2 mt-2 text-sm text-gray-500">
+                        <div class="flex flex-wrap items-center gap-2 mt-2 text-sm text-gray-500">
                             <i data-lucide="house" class="w-4 h-4"></i>
                             <span>Home</span>
 
@@ -77,7 +77,7 @@
                     <div class="flex flex-wrap items-center gap-2">
                         <!-- Date Range -->
                         <button
-                            class="bg-white border border-gray-200 rounded-md px-4 py-2 shadow-sm flex items-center gap-2">
+                            class="w-full sm:w-auto bg-white border border-gray-200 rounded-md px-4 py-2 shadow-sm flex items-center justify-center gap-2">
 
                             <i data-lucide="calendar-days" class="w-4 h-4"></i>
 
@@ -100,7 +100,7 @@
                 </div>
 
                 <!-- Welcome Banner -->
-                <div class="relative overflow-hidden rounded-md bg-orange-500 p-8 mb-6 m-4 lg:m-6">
+                <div class="relative overflow-hidden rounded-md bg-orange-500 p-5 sm:p-8 mb-6 m-4 lg:m-6">
 
                     <!-- Decorative circles -->
                     <div class="absolute -top-8 -left-8 h-20 w-20 rounded-full bg-orange-400 opacity-40"></div>
@@ -126,7 +126,7 @@
                                 Companies
                             </button>
 
-                            <button class="bg-white text-slate-800 px-5 py-2 rounded-md font-medium">
+                            <button class="bg-white text-slate-800 px-5 py-2 rounded-md font-medium w-full sm:w-auto">
                                 All Packages
                             </button>
 
@@ -137,7 +137,7 @@
                 </div>
 
                 <!-- Stats Cards Section-->
-                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-6 m-4 lg:m-4 lg:m-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-6 m-4 lg:m-6">
 
                     <!-- Card 1 -->
                     <div class="bg-white rounded-md p-6 min-h-[150px] border border-gray-200 shadow-md">
@@ -151,13 +151,13 @@
 
                             </div>
 
-                            <span class="bg-green-500 text-white text-xs px-2 py-1 rounded">
+                            <span class="bg-green-500 text-white text-xs px-2 py-2 rounded">
                                 +19.01%
                             </span>
 
                         </div>
 
-                        <h3 class="mt-5 text-2xl font-semibold text-slate-800">
+                        <h3 class="mt-5 text-xl sm:text-2xl font-semibold text-slate-800 break-all">
                             5468
                         </h3>
 
@@ -183,13 +183,13 @@
 
                             </div>
 
-                            <span class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                            <span class="bg-red-500 text-white text-xs font-semibold px-2 py-2 rounded">
                                 -12%
                             </span>
 
                         </div>
 
-                        <h3 class="mt-5 text-2xl font-semibold text-slate-800">
+                        <h3 class="mt-5 text-xl sm:text-2xl font-semibold text-slate-800 break-all">
                             4598
                         </h3>
 
@@ -213,13 +213,13 @@
 
                             </div>
 
-                            <span class="bg-green-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                            <span class="bg-green-500 text-white text-xs font-semibold px-2 py-2 rounded">
                                 +6%
                             </span>
 
                         </div>
 
-                        <h3 class="mt-5 text-2xl font-semibold text-slate-800">
+                        <h3 class="mt-5 text-xl sm:text-2xl font-semibold text-slate-800 break-all">
                             3698
                         </h3>
 
@@ -245,13 +245,13 @@
 
                             </div>
 
-                            <span class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded">
+                            <span class="bg-red-500 text-white text-xs font-semibold px-2 py-2 rounded">
                                 -16%
                             </span>
 
                         </div>
 
-                        <h3 class="mt-5 text-2xl font-semibold text-slate-800">
+                        <h3 class="mt-5 text-xl sm:text-2xl font-semibold text-slate-800 break-all">
                             $89,878,58
                         </h3>
 
@@ -272,14 +272,14 @@
 
 
                 <!-- Charts -->
-                <div class="grid grid-cols-1 xl:grid-cols-12 gap-4 lg:gap-6 m-4 lg:m-4 lg:m-6">
+                <div class="grid grid-cols-1 xl:grid-cols-12 gap-4 lg:gap-6 m-4 lg:m-6">
 
                     <!-- Companies -->
                     <div class="xl:col-span-3">
                         <div class="bg-white rounded-md border border-gray-200 min-h-[390px] shadow-sm flex flex-col">
 
                             <!-- Header -->
-                            <div class="flex items-center justify-between p-3 border-b">
+                            <div class="flex flex-wrap items-center justify-between gap-2 p-3 border-b">
 
                                 <h3 class="text-lg font-semibold text-slate-800">
                                     Companies
@@ -297,7 +297,7 @@
 
                             <!-- Chart -->
                             <div class="p-4">
-                                <div class="h-[180px] sm:h-[220px]">
+                                <div class="h-[180px] sm:h-[220px] min-h-[180px]">
                                     <canvas id="companiesChart"></canvas>
                                 </div>
 
@@ -322,7 +322,7 @@
                     <div class="xl:col-span-6">
                         <div class="bg-white rounded-md border border-gray-200 min-h-[390px] shadow-sm flex flex-col">
 
-                            <div class="flex justify-between items-center p-3 border-b">
+                            <div class="flex flex-wrap items-center justify-between gap-2 p-3 border-b">
 
                                 <h3 class="text-lg font-semibold text-slate-800">
                                     Revenue
@@ -356,7 +356,7 @@
                                         </p>
                                     </div>
 
-                                    <div class="flex items-center gap-2 mt-2">
+                                    <div class="flex flex-wrap items-center gap-2 mt-2">
                                         <span class="w-2 h-2 rounded-full bg-orange-500"></span>
                                         <span class="text-sm text-slate-700">
                                             Revenue
@@ -365,7 +365,7 @@
 
                                 </div>
 
-                                <div class="mt-4 h-[230px]">
+                                <div class="mt-4 h-[230px] min-h-[230px]">
                                     <canvas id="revenueChart"></canvas>
                                 </div>
 
@@ -377,7 +377,7 @@
                     <div class="xl:col-span-3">
                         <div class="bg-white rounded-md border border-gray-200 min-h-[390px] shadow-sm flex flex-col">
 
-                            <div class="flex justify-between items-center p-3 border-b">
+                            <div class="flex flex-wrap items-center justify-between gap-2 p-3 border-b">
 
                                 <h3 class="text-md font-semibold text-slate-800">
                                     Top Plans
@@ -394,13 +394,13 @@
                             </div>
 
                             <div class="p-4 flex-1 flex flex-col">
-                                <div class="h-[180px] flex items-center justify-center">
+                                <div class="h-[180px] min-h-[180px] flex items-center justify-center">
 
                                     <canvas id="plansChart"></canvas>
                                 </div>
                                 <div class="mt-6 mb-2 space-y-3">
 
-                                    <div class="flex justify-between">
+                                    <div class="flex justify-between items-center">
 
                                         <div class="flex text-sm items-center gap-2">
                                             <span class="w-3 h-3 rounded-full bg-orange-500"></span>
@@ -411,7 +411,7 @@
 
                                     </div>
 
-                                    <div class="flex justify-between">
+                                    <div class="flex justify-between items-center">
 
                                         <div class="flex text-sm items-center gap-2">
                                             <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
@@ -422,7 +422,7 @@
 
                                     </div>
 
-                                    <div class="flex justify-between">
+                                    <div class="flex justify-between items-center">
 
                                         <div class="flex text-sm items-center gap-2">
                                             <span class="w-3 h-3 rounded-full bg-blue-500"></span>
@@ -443,18 +443,18 @@
                 </div>
 
                 <!-- Recent Activities Section -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6 m-4 lg:m-4 lg:m-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6 m-4 lg:m-6">
 
                     <!-- Recent Transactions -->
                     <div class="bg-white rounded-md border border-gray-200 shadow-sm flex flex-col">
 
-                        <div class="flex items-center justify-between p-3 border-b">
+                        <div class="flex flex-wrap items-center justify-between gap-2 p-3 border-b">
 
                             <h3 class="font-semibold text-slate-800">
                                 Recent Transactions
                             </h3>
 
-                            <button class="flex items-center gap-2 text-sm border rounded-lg px-3 py-2">
+                            <button class="flex items-center justify-center gap-2 text-sm border rounded-lg px-3 py-2 whitespace-nowrap">
 
                                 View All
 
@@ -476,7 +476,7 @@
 
                                     <div>
 
-                                        <h4 class="text-sm font-semibold text-slate-800 mb-1">
+                                        <h4 class="text-sm font-semibold text-slate-800 mb-1 break-words">
                                             Stellar Dynamics
                                         </h4>
 
@@ -510,7 +510,7 @@
 
                                     <div>
 
-                                        <h4 class="text-sm font-semibold text-slate-800 mb-1">
+                                        <h4 class="text-sm font-semibold text-slate-800 mb-1 break-words">
                                             Quantum Nexus
                                         </h4>
 
@@ -544,7 +544,7 @@
 
                                     <div>
 
-                                        <h4 class="text-sm font-semibold text-slate-800 mb-1">
+                                        <h4 class="text-sm font-semibold text-slate-800 mb-1 break-words">
                                             Aurora Technologies
                                         </h4>
 
@@ -578,7 +578,7 @@
 
                                     <div>
 
-                                        <h4 class="text-sm font-semibold text-slate-800 mb-1">
+                                        <h4 class="text-sm font-semibold text-slate-800 mb-1 break-words">
                                             Epicurean Delights
                                         </h4>
 
@@ -612,7 +612,7 @@
 
                                     <div>
 
-                                        <h4 class="text-sm font-semibold text-slate-800 mb-1">
+                                        <h4 class="text-sm font-semibold text-slate-800 mb-1 break-words">
                                             Epicurean Delights
                                         </h4>
 
@@ -644,13 +644,13 @@
                     <!-- Recent Registered -->
                     <div class="bg-white rounded-md border border-gray-200 shadow-sm flex flex-col">
 
-                        <div class="flex items-center justify-between p-3 border-b">
+                        <div class="flex flex-wrap items-center justify-between gap-2 p-3 border-b">
 
                             <h3 class="font-semibold text-slate-800">
                                 Recently Registered
                             </h3>
 
-                            <button class="flex items-center gap-2 text-sm border rounded-lg px-3 py-2">
+                            <button class="flex items-center justify-center gap-2 text-sm border rounded-lg px-3 py-2 whitespace-nowrap">
 
                                 View All
 
@@ -672,7 +672,7 @@
 
                                     <div>
 
-                                        <h4 class="text-sm font-semibold text-slate-800 mb-1">
+                                        <h4 class="text-sm font-semibold text-slate-800 mb-1 break-words">
                                             Pitch
                                         </h4>
 
@@ -706,7 +706,7 @@
 
                                     <div>
 
-                                        <h4 class="text-sm font-semibold text-slate-800 mb-1">
+                                        <h4 class="text-sm font-semibold text-slate-800 mb-1 break-words">
                                             Initech
                                         </h4>
 
@@ -740,7 +740,7 @@
 
                                     <div>
 
-                                        <h4 class="text-sm font-semibold text-slate-800 mb-1">
+                                        <h4 class="text-sm font-semibold text-slate-800 mb-1 break-words">
                                             Umbrella Corp
                                         </h4>
 
@@ -774,7 +774,7 @@
 
                                     <div>
 
-                                        <h4 class="text-sm font-semibold text-slate-800 mb-1">
+                                        <h4 class="text-sm font-semibold text-slate-800 mb-1 break-words">
                                             Capital Partners
                                         </h4>
 
@@ -808,7 +808,7 @@
 
                                     <div>
 
-                                        <h4 class="text-sm font-semibold text-slate-800 mb-1">
+                                        <h4 class="text-sm font-semibold text-slate-800 mb-1 break-words">
                                             Massive Dynamic
                                         </h4>
 
@@ -839,13 +839,13 @@
 
                     <!-- Recent Plans Expired -->
                     <div class="bg-white rounded-md border border-gray-200 shadow-sm flex flex-col">
-                        <div class="flex items-center justify-between p-3 border-b">
+                        <div class="flex flex-wrap items-center justify-between gap-2 p-3 border-b">
 
                             <h3 class="font-semibold text-slate-800">
                                 Recent Plan Expired
                             </h3>
 
-                            <button class="flex items-center gap-2 text-sm border rounded-lg px-3 py-2">
+                            <button class="flex items-center justify-center gap-2 text-sm border rounded-lg px-3 py-2 whitespace-nowrap">
                                 View All
                                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
                             </button>
@@ -864,7 +864,7 @@
 
                                     <div>
 
-                                        <h4 class="text-sm font-semibold text-slate-800 mb-1">
+                                        <h4 class="text-sm font-semibold text-slate-800 mb-1 break-words">
                                             Silicon Corp
                                         </h4>
 
@@ -898,7 +898,7 @@
 
                                     <div>
 
-                                        <h4 class="text-sm font-semibold text-slate-800 mb-1">
+                                        <h4 class="text-sm font-semibold text-slate-800 mb-1 break-words">
                                             Hubspot
                                         </h4>
 
@@ -932,7 +932,7 @@
 
                                     <div>
 
-                                        <h4 class="text-sm font-semibold text-slate-800 mb-1">
+                                        <h4 class="text-sm font-semibold text-slate-800 mb-1 break-words">
                                             Licon Industries
                                         </h4>
 
@@ -966,7 +966,7 @@
 
                                     <div>
 
-                                        <h4 class="text-sm font-semibold text-slate-800 mb-1">
+                                        <h4 class="text-sm font-semibold text-slate-800 mb-1 break-words">
                                             TerraFusion Energy
                                         </h4>
 
@@ -1000,7 +1000,7 @@
 
                                     <div>
 
-                                        <h4 class="text-sm font-semibold text-slate-800 mb-1">
+                                        <h4 class="text-sm font-semibold text-slate-800 mb-1 break-words">
                                             Epicurean Delights
                                         </h4>
 
@@ -1070,11 +1070,7 @@
             });
     </script>
 
-    <!-- Card 1 Chart -->
-
-
-
-
+    
     <!-- Companies Chart Data -->
     <script>
         new Chart(
@@ -1248,12 +1244,5 @@
             });
     </script>
 
-
-
-
-
-
-
 </body>
 
-</html>

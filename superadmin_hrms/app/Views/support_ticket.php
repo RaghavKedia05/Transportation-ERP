@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="bg-slate-100">
+<body class="bg-slate-100 overflow-x-hidden">
 
     <div
         id="sidebarOverlay"
@@ -40,10 +40,10 @@
             <!-- Navbar -->
             <?php include __DIR__ . '/navbar.php'; ?>
 
-            <div class="flex-1 overflow-y-auto p-6">
+            <div class="flex-1 overflow-y-auto p-4 md:p-6">
 
                 <!-- Header -->
-                <div class="flex justify-between items-start mb-6">
+                <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-6">
 
                     <div>
 
@@ -69,7 +69,7 @@
 
                     </div>
 
-                    <div class="flex items-center gap-3">
+                    <div class="flex flex-wrap gap-3">
 
                         <button
                             class="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-md text-sm">
@@ -96,7 +96,7 @@
                 </div>
 
                 <!-- Stats Cards -->
-                <div class="grid grid-cols-4 gap-6 mb-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6 mb-6">
 
                     <!-- Card 1 -->
                     <div class="bg-white rounded-md border p-5 shadow-sm">
@@ -231,23 +231,23 @@
                 <!-- Filter Bar -->
                 <div class="bg-white rounded-md border p-4 mb-6 shadow-sm">
 
-                    <div class="flex justify-between items-center">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
 
                         <h2 class="text-md font-semibold">
                             Ticket List
                         </h2>
 
-                        <div class="flex gap-3 text-xs">
+                        <div class="flex flex-col sm:flex-row gap-3 text-xs w-full md:w-auto">
 
-                            <select class="h-8 px-2 border rounded-md bg-white">
+                            <select class="h-10 w-full sm:w-auto px-3 border rounded-md bg-white">
                                 <option>Priority</option>
                             </select>
 
-                            <select class="h-8 px-2 border rounded-md bg-white">
+                            <select class="h-10 w-full sm:w-auto px-3 border rounded-md bg-white">
                                 <option>Select Status</option>
                             </select>
 
-                            <select class="h-8 px-2 border rounded-md bg-white">
+                            <select class="h-10 w-full sm:w-auto px-3 border rounded-md bg-white">
                                 <option>Sort By : Last 7 Days</option>
                             </select>
 
@@ -258,20 +258,20 @@
                 </div>
 
                 <!-- Main Grid -->
-                <div class="grid grid-cols-12 gap-6">
+                <div class="grid grid-cols-1 xl:grid-cols-12 gap-6">
 
                     <!-- LEFT -->
-                    <div class="col-span-9 space-y-6">
+                    <div class="xl:col-span-9 space-y-6">
 
                         <!-- Ticket Card -->
-                        <div class="bg-white border border-slate-200 rounded-md p-5 shadow-sm">
+                        <div class="bg-white border border-slate-200 rounded-md p-4 md:p-5 shadow-sm">
 
-                            <div class="grid grid-cols-12 gap-6">
+                            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
 
                                 <!-- Ticket Number -->
-                                <div class="col-span-3">
+                                <div class="md:col-span-3">
 
-                                    <div class="border rounded-md p-8 text-center">
+                                    <div class="border rounded-md p-6 md:p-8 text-center">
 
                                         <h3 class="font-semibold text-xs">
                                             #TIC0016
@@ -289,13 +289,13 @@
 
                                 </div>
 
-                                <!-- Details -->
-                                <div class="col-span-9">
+                                <!-- Left Side Cards -->
+                                <div class="md:col-span-9">
 
-                                    <div class="flex justify-between items-center">
+                                    <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
 
                                         <div>
-                                            <div class="flex items-center gap-3">
+                                            <div class="flex flex-col sm:flex-row sm:items-center gap-3">
                                                 <h3 class="text-md font-semibold">
                                                     Login not working
                                                 </h3>
@@ -319,7 +319,7 @@
 
                                     <hr class="my-5">
 
-                                    <div class="flex justify-between items-start">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                                         <div>
                                             <p class="text-xs text-slate-500">
@@ -329,7 +329,7 @@
                                             <div class="flex items-center gap-3 mt-2">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div>
 
-                                                <p class="text-sm font-medium">
+                                                <p class="text-sm font-medium break-words">
                                                     Aurora Technologies
                                                 </p>
                                             </div>
@@ -344,7 +344,7 @@
                                             <div class="flex items-center gap-3 mt-2">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div>
 
-                                                <p class="text-sm font-medium">
+                                                <p class="text-sm font-medium break-words">
                                                     Aurora Technologies
                                                 </p>
                                             </div>
@@ -357,7 +357,7 @@
                                                 Status
                                             </p>
 
-                                            <select class="h-8 px-2 border text-xs rounded-md mt-2">
+                                            <select class="h-10 w-full sm:w-auto px-3 border text-xs rounded-md mt-2">
                                                 <option>Open</option>
                                             </select>
 
@@ -372,13 +372,13 @@
                         </div>
 
                         <!-- Ticket Card 2 -->
-                        <div class="bg-white border border-slate-200 rounded-md p-5 shadow-sm">
+                        <div class="bg-white border border-slate-200 rounded-md p-4 md:p-5 shadow-sm">
 
-                            <div class="grid grid-cols-12 gap-6">
+                            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
 
-                                <div class="col-span-3">
+                                <div class="md:col-span-3">
 
-                                    <div class="border rounded-md p-8 text-center">
+                                    <div class="border rounded-md p-6 md:p-8 text-center">
 
                                         <h3 class="font-semibold text-xs">
                                             #TIC0017
@@ -397,13 +397,13 @@
 
                                 </div>
 
-                                <div class="col-span-9">
+                                <div class="md:col-span-9">
 
-                                    <div class="flex justify-between items-center">
+                                    <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
 
                                         <div>
 
-                                            <div class="flex items-center gap-3">
+                                            <div class="flex flex-col sm:flex-row sm:items-center gap-3">
 
                                                 <h3 class="text-md font-semibold">
                                                     Payroll calculation issue
@@ -428,7 +428,7 @@
 
                                     <hr class="my-5">
 
-                                    <div class="flex justify-between items-start">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                                         <div>
                                             <p class="text-xs text-slate-500">
@@ -438,7 +438,7 @@
                                             <div class="flex items-center gap-3 mt-2">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div>
 
-                                                <p class="text-sm font-medium">
+                                                <p class="text-sm font-medium break-words">
                                                     Aurora Technologies
                                                 </p>
                                             </div>
@@ -452,7 +452,7 @@
                                             <div class="flex items-center gap-3 mt-2">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div>
 
-                                                <p class="text-sm font-medium">
+                                                <p class="text-sm font-medium break-words">
                                                     Aurora Technologies
                                                 </p>
                                             </div>
@@ -463,7 +463,7 @@
                                                 Status
                                             </p>
 
-                                            <select class="h-8 px-2 border text-xs rounded-md mt-2">
+                                            <select class="h-10 w-full sm:w-auto px-3 border text-xs rounded-md mt-2">
                                                 <option>Pending</option>
                                             </select>
                                         </div>
@@ -477,13 +477,13 @@
                         </div>
 
                         <!-- Ticket Card 3 -->
-                        <div class="bg-white border border-slate-200 rounded-md p-5 shadow-sm">
+                        <div class="bg-white border border-slate-200 rounded-md p-4 md:p-5 shadow-sm">
 
-                            <div class="grid grid-cols-12 gap-6">
+                            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
 
-                                <div class="col-span-3">
+                                <div class="md:col-span-3">
 
-                                    <div class="border rounded-md p-8 text-center">
+                                    <div class="border rounded-md p-6 md:p-8 text-center">
 
                                         <h3 class="font-semibold text-xs">
                                             #TIC0018
@@ -502,13 +502,13 @@
 
                                 </div>
 
-                                <div class="col-span-9">
+                                <div class="md:col-span-9">
 
-                                    <div class="flex justify-between items-center">
+                                    <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
 
                                         <div>
 
-                                            <div class="flex items-center gap-3">
+                                            <div class="flex flex-col sm:flex-row sm:items-center gap-3">
 
                                                 <h3 class="text-md font-semibold">
                                                     Employee profile update issue
@@ -533,7 +533,7 @@
 
                                     <hr class="my-5">
 
-                                    <div class="flex justify-between items-start">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                                         <div>
                                             <p class="text-xs text-slate-500">
@@ -543,7 +543,7 @@
                                             <div class="flex items-center gap-3 mt-2">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div>
 
-                                                <p class="text-sm font-medium">
+                                                <p class="text-sm font-medium break-words">
                                                     Aurora Technologies
                                                 </p>
                                             </div>
@@ -557,7 +557,7 @@
                                             <div class="flex items-center gap-3 mt-2">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div>
 
-                                                <p class="text-sm font-medium">
+                                                <p class="text-sm font-medium break-words">
                                                     Aurora Technologies
                                                 </p>
                                             </div>
@@ -568,7 +568,7 @@
                                                 Status
                                             </p>
 
-                                            <select class="h-8 px-2 border text-xs rounded-md mt-2">
+                                            <select class="h-10 w-full sm:w-auto px-3 border text-xs rounded-md mt-2">
                                                 <option>Solved</option>
                                             </select>
                                         </div>
@@ -582,13 +582,13 @@
                         </div>
 
                         <!-- Ticket Card 4 -->
-                        <div class="bg-white border border-slate-200 rounded-md p-5 shadow-sm">
+                        <div class="bg-white border border-slate-200 rounded-md p-4 md:p-5 shadow-sm">
 
-                            <div class="grid grid-cols-12 gap-6">
+                            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
 
-                                <div class="col-span-3">
+                                <div class="md:col-span-3">
 
-                                    <div class="border rounded-md p-8 text-center">
+                                    <div class="border rounded-md p-6 md:p-8 text-center">
 
                                         <h3 class="font-semibold text-xs">
                                             #TIC0019
@@ -606,13 +606,13 @@
 
                                 </div>
 
-                                <div class="col-span-9">
+                                <div class="md:col-span-9">
 
-                                    <div class="flex justify-between items-center">
+                                    <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
 
                                         <div>
 
-                                            <div class="flex items-center gap-3">
+                                            <div class="flex flex-col sm:flex-row sm:items-center gap-3">
 
                                                 <h3 class="text-md font-semibold">
                                                     Unable to generate invoice
@@ -637,7 +637,7 @@
 
                                     <hr class="my-5">
 
-                                    <div class="flex justify-between items-start">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                                         <div>
                                             <p class="text-xs text-slate-500">
@@ -647,7 +647,7 @@
                                             <div class="flex items-center gap-3 mt-2">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div>
 
-                                                <p class="text-sm font-medium">
+                                                <p class="text-sm font-medium break-words">
                                                     Aurora Technologies
                                                 </p>
                                             </div>
@@ -661,7 +661,7 @@
                                             <div class="flex items-center gap-3 mt-2">
                                                 <div class="w-7 h-7 rounded-full border bg-white"></div>
 
-                                                <p class="text-sm font-medium">
+                                                <p class="text-sm font-medium break-words">
                                                     Aurora Technologies
                                                 </p>
                                             </div>
@@ -672,7 +672,7 @@
                                                 Status
                                             </p>
 
-                                            <select class="h-8 px-2 border text-xs rounded-md mt-2">
+                                            <select class="h-10 w-full sm:w-auto px-3 border text-xs rounded-md mt-2">
                                                 <option>Open</option>
                                             </select>
                                         </div>
@@ -696,7 +696,7 @@
                     </div>
 
                     <!-- RIGHT SIDEBAR -->
-                    <div class="col-span-3 space-y-6">
+                    <div class="xl:col-span-3 space-y-6">
 
                         <!-- Categories -->
                         <div class="bg-white border rounded-md">
@@ -711,35 +711,35 @@
 
                             <div>
 
-                                <div class="flex justify-between text-sm p-4 border-b">
+                                <div class="flex justify-between items-center text-sm p-4 border-b">
                                     <span>Access Issue</span>
                                     <span class="bg-slate-900 text-white text-xs px-2 py-1 rounded-full">
                                         1
                                     </span>
                                 </div>
 
-                                <div class="flex justify-between text-sm p-4 border-b">
+                                <div class="flex justify-between items-center text-sm p-4 border-b">
                                     <span>Module Issue</span>
                                     <span class="bg-slate-900 text-white text-xs px-2 py-1 rounded-full">
                                         1
                                     </span>
                                 </div>
 
-                                <div class="flex justify-between text-sm p-4 border-b">
+                                <div class="flex justify-between items-center text-sm p-4 border-b">
                                     <span>Billing & Payments</span>
                                     <span class="bg-slate-900 text-white text-xs px-2 py-1 rounded-full">
                                         0
                                     </span>
                                 </div>
 
-                                <div class="flex justify-between text-sm p-4 border-b">
+                                <div class="flex justify-between items-center text-sm p-4 border-b">
                                     <span>API / Integration Issues</span>
                                     <span class="bg-slate-900 text-white text-xs px-2 py-1 rounded-full">
                                         2
                                     </span>
                                 </div>
 
-                                <div class="flex justify-between text-sm p-4 border-b">
+                                <div class="flex justify-between items-center text-sm p-4 border-b">
                                     <span>Plan / Subscription Issues</span>
                                     <span class="bg-slate-900 text-white text-xs px-2 py-1 rounded-full">
                                         1
@@ -764,7 +764,7 @@
                             <div>
 
                                 <div class="flex justify-between items-center p-4 border-b">
-                                    <div class="flex items-center gap-3">
+                                    <div class="flex flex-col sm:flex-row sm:items-center gap-3">
 
                                         <div class="w-8 h-8 rounded-full border"></div>
 
@@ -782,7 +782,7 @@
 
                                 <div class="flex justify-between items-center p-4 border-b">
 
-                                    <div class="flex items-center gap-3">
+                                    <div class="flex flex-col sm:flex-row sm:items-center gap-3">
                                         <div class="w-8 h-8 rounded-full border"></div>
                                         <span class="text-slate-600 text-sm">
                                             Ann Lynch
@@ -798,7 +798,7 @@
 
                                 <div class="flex justify-between items-center p-4 border-b">
 
-                                    <div class="flex items-center gap-3">
+                                    <div class="flex flex-col sm:flex-row sm:items-center gap-3">
                                         <div class="w-8 h-8 rounded-full border"></div>
                                         <span class="text-slate-600 text-sm">
                                             Juan Hermann
@@ -814,7 +814,7 @@
 
                                 <div class="flex justify-between items-center p-4">
 
-                                    <div class="flex items-center gap-3">
+                                    <div class="flex flex-col sm:flex-row sm:items-center gap-3">
                                         <div class="w-8 h-8 rounded-full border"></div>
                                         <span class="text-slate-600 text-sm">
                                             Jessie Otero
