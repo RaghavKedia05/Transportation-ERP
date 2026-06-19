@@ -28,10 +28,8 @@
 <body>
     <div class="flex h-screen overflow-hidden">
 
-    <div
-        id="sidebarOverlay"
-        class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden">
-    </div>
+        <div id="sidebarOverlay" class="fixed inset-0 bg-black/40 z-40 hidden lg:hidden">
+        </div>
 
         <!-- Sidebar -->
         <?php include __DIR__ . '/sidebar.php'; ?>
@@ -42,10 +40,10 @@
             <!-- Navbar -->
             <?php include __DIR__ . '/navbar.php'; ?>
             <!-- Main Content -->
-            <div class="flex-1 overflow-y-auto p-5">
+            <div class="flex-1 overflow-y-auto p-3 sm:p-5">
 
                 <!-- Header -->
-                <div class="flex justify-between items-start mb-6">
+                <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-6">
 
                     <div>
                         <h1 class="text-[28px] font-semibold text-slate-800">
@@ -61,16 +59,16 @@
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-3">
+                    <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
                         <button
-                            class="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-md text-sm">
+                            class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-md text-sm">
                             <i data-lucide="file-down" class="w-4 h-4"></i>
                             Export
                             <i data-lucide="chevron-down" class="w-4 h-4"></i>
                         </button>
 
                         <a href="<?= base_url('invoice/add') ?>"
-                            class="flex items-center gap-2 px-4 py-2 bg-orange-500 text-white rounded-md text-sm hover:bg-orange-600 transition">
+                            class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 bg-orange-500 text-white rounded-md text-sm hover:bg-orange-600 transition">
                             <i data-lucide="plus" class="w-4 h-4"></i>
                             Add Invoice
                         </a>
@@ -79,12 +77,12 @@
                 </div>
 
                 <!-- Stats -->
-                <div class="grid grid-cols-4 gap-5 mb-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
 
                     <!-- Card 1 -->
-                    <div class="bg-white rounded-lg border p-6 shadow-sm">
+                    <div class="bg-white rounded-lg border p-4 sm:p-6 shadow-sm">
                         <p class="text-sm text-slate-500 font-semibold">Total Invoice</p>
-                        <h3 class="text-2xl font-semibold mt-2">$3,237.94</h3>
+                        <h3 class="text-xl sm:text-2xl font-semibold mt-2 break-all">$3,237.94</h3>
 
                         <div class="w-full h-2 bg-slate-100 rounded-full mt-5">
                             <div class="w-[85%] h-2 bg-pink-500 rounded-full"></div>
@@ -97,9 +95,9 @@
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="bg-white rounded-lg border p-6 shadow-sm">
+                    <div class="bg-white rounded-lg border p-4 sm:p-6 shadow-sm">
                         <p class="text-sm text-slate-500 font-semibold">Outstanding</p>
-                        <h3 class="text-2xl font-semibold mt-2">$3,237.94</h3>
+                        <h3 class="text-xl sm:text-2xl font-semibold mt-2 break-all">$3,237.94</h3>
 
                         <div class="w-full h-2 bg-slate-100 rounded-full mt-5">
                             <div class="w-[50%] h-2 bg-purple-500 rounded-full"></div>
@@ -112,9 +110,9 @@
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="bg-white rounded-lg border p-6 shadow-sm">
+                    <div class="bg-white rounded-lg border p-4 sm:p-6 shadow-sm">
                         <p class="text-sm text-slate-500 font-semibold">Draft</p>
-                        <h3 class="text-2xl font-semibold mt-2">$3,237.94</h3>
+                        <h3 class="text-xl sm:text-2xl font-semibold mt-2 break-all">$3,237.94</h3>
 
                         <div class="w-full h-2 bg-slate-100 rounded-full mt-5">
                             <div class="w-[35%] h-2 bg-yellow-500 rounded-full"></div>
@@ -127,9 +125,9 @@
                     </div>
 
                     <!-- Card 4 -->
-                    <div class="bg-white rounded-lg border p-6 shadow-sm">
+                    <div class="bg-white rounded-lg border p-4 sm:p-6 shadow-sm">
                         <p class="text-sm text-slate-500 font-semibold">Total Overdue</p>
-                        <h3 class="text-2xl font-semibold mt-2">$3,237.94</h3>
+                        <h3 class="text-xl sm:text-2xl font-semibold mt-2 break-all">$3,237.94</h3>
 
                         <div class="w-full h-2 bg-slate-100 rounded-full mt-5">
                             <div class="w-[30%] h-2 bg-red-500 rounded-full"></div>
@@ -149,9 +147,9 @@
                     <!-- Top -->
                     <div class="p-5 border-b">
 
-                        <div class="flex justify-between items-center">
+                        <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-4">
 
-                            <div class="flex items-center gap-3">
+                            <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
                                 <h2 class="font-semibold text-lg text-slate-800">
                                     Invoices
                                 </h2>
@@ -161,13 +159,13 @@
                                 </span>
                             </div>
 
-                            <div class="flex items-center gap-3">
+                            <div class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
 
-                                <input type="date" class="border rounded-md px-4 py-1 text-sm">
+                                <input type="date" class="w-full border rounded-md px-4 py-2 text-sm">
 
-                                <input type="date" class="border rounded-md px-4 py-1 text-sm">
+                                <input type="date" class="w-full border rounded-md px-4 py-2 text-sm">
 
-                                <select class="border rounded-md px-4 py-1 text-sm">
+                                <select class="w-full border rounded-md px-4 py-2 text-sm">
                                     <option>Select Status</option>
                                     <option>Paid</option>
                                     <option>Pending</option>
@@ -175,7 +173,7 @@
                                     <option>Overdue</option>
                                 </select>
 
-                                <select class="border rounded-md px-4 py-1 text-sm">
+                                <select class="w-full border rounded-md px-4 py-2 text-sm">
                                     <option>Sort By : Last 7 Days</option>
                                     <option>Created Date</option>
                                     <option>Due Date</option>
@@ -188,7 +186,7 @@
                     </div>
 
                     <!-- Controls -->
-                    <div class="flex justify-between items-center p-5">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 p-4 sm:p-5">
 
                         <div class="flex items-center gap-2 text-sm">
                             <span>Row Per Page</span>
@@ -200,13 +198,14 @@
                             <span>Entries</span>
                         </div>
 
-                        <input type="text" placeholder="Search" class="border rounded-md px-4 py-2 text-sm w-52">
+                        <input type="text" placeholder="Search"
+                            class="w-full sm:w-52 border rounded-md px-4 py-2 text-sm">
                     </div>
 
                     <!-- Table -->
-                    <div class="overflow-x-auto">
+                    <div class="overflow-x-auto rounded-lg">
 
-                        <table class="w-full">
+                        <table class="w-full min-w-[1100px]">
 
                             <thead class="bg-slate-100 text-left">
 
@@ -368,23 +367,24 @@
                     </div>
 
                     <!-- Footer -->
-                    <div class="flex justify-between items-center p-5 border-t">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 p-4 sm:p-5 border-t">
 
                         <span class="text-sm text-slate-500">
                             Showing 1 - 10 of 11 entries
                         </span>
 
-                        <div class="flex items-center gap-3">
+                        <div class="flex justify-center items-center gap-3 flex-wrap">
 
                             <button>
                                 <i data-lucide="chevron-left" class="w-4 h-4 text-slate-500"></i>
                             </button>
 
-                            <button class="w-8 h-8 rounded-full bg-orange-500 text-white text-sm">
+                            <button
+                                class="w-8 h-8 rounded-full bg-orange-500 text-white text-sm flex items-center justify-center">
                                 1
                             </button>
 
-                            <button class="w-8 h-8 rounded-full border text-sm">
+                            <button class="w-8 h-8 rounded-full border text-sm flex items-center justify-center">
                                 2
                             </button>
 

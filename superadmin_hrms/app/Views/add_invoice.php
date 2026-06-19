@@ -44,7 +44,7 @@
             <!-- Content -->
             <div class="flex-1 overflow-y-auto p-5">
 
-                <div class="max-w-7xl mx-auto">
+                <div class="max-w-7xl mx-auto w-full">
 
                     <!-- Back -->
                     <a href="<?= base_url('/invoice') ?>"
@@ -54,10 +54,10 @@
                     </a>
 
                     <!-- Card -->
-                    <div class="bg-white border rounded-lg shadow-sm p-6">
+                    <div class="bg-white border rounded-lg shadow-sm p-4 md:p-6">
 
                         <!-- Top Actions -->
-                        <div class="flex justify-between items-center mb-6">
+                        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
 
                             <div>
                                 <h2 class="text-2xl font-semibold text-slate-800">
@@ -65,7 +65,7 @@
                                 </h2>
                             </div>
 
-                            <div class="flex items-center gap-5">
+                            <div class="flex flex-wrap items-center gap-4">
 
                                 <button class="text-orange-500 text-sm font-medium hover:underline">
                                     Preview
@@ -81,7 +81,7 @@
                         </div>
 
                         <!-- From Section -->
-                        <div class="border rounded-lg p-5 mb-6 bg-slate-50">
+                        <div class="border rounded-lg p-4 md:p-5 mb-6 bg-slate-50">
 
                             <h3 class="font-semibold text-slate-800 mb-4">
                                 From
@@ -106,7 +106,7 @@
                                 Invoice Details
                             </h3>
 
-                            <div class="space-y-5">
+                            <div class="space-y-4 md:space-y-5">
 
                                 <div>
                                     <label class="text-[13px] font-medium text-slate-700 block mb-1.5">
@@ -117,7 +117,7 @@
                                         class="w-full border rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-orange-500">
                                 </div>
 
-                                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
 
                                     <div>
                                         <label class="text-[13px] font-medium text-slate-700 block mb-1.5">
@@ -159,10 +159,10 @@
                                 Payment Details
                             </h3>
 
-                            <div class="grid grid-cols-1 md:grid-cols-4 gap-5">
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-5">
 
                                 <div>
-                                    <div class="flex justify-between items-center mb-2">
+                                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 mb-2">
 
                                         <label class="text-sm font-medium">
                                             Customer
@@ -225,9 +225,9 @@
 
                             <div class="border rounded-lg p-5">
 
-                                <div class="grid grid-cols-12 gap-5 items-end">
+                                <div class="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-5 items-end">
 
-                                    <div class="col-span-6">
+                                    <div class="md:col-span-6">
                                         <label class="text-[13px] font-medium text-slate-700 block mb-1.5">
                                             Description
                                         </label>
@@ -235,7 +235,7 @@
                                         <input type="text" class="w-full border rounded-md px-4 py-3">
                                     </div>
 
-                                    <div class="col-span-2">
+                                    <div class="md:col-span-2">
                                         <label class="text-[13px] font-medium text-slate-700 block mb-1.5">
                                             Qty
                                         </label>
@@ -243,7 +243,7 @@
                                         <input type="number" class="w-full border rounded-md px-4 py-3">
                                     </div>
 
-                                    <div class="col-span-2">
+                                    <div class="md:col-span-2">
                                         <label class="text-[13px] font-medium text-slate-700 block mb-1.5">
                                             Discount
                                         </label>
@@ -251,7 +251,7 @@
                                         <input type="number" class="w-full border rounded-md px-4 py-3">
                                     </div>
 
-                                    <div class="col-span-2">
+                                    <div class="md:col-span-2">
                                         <label class="text-[13px] font-medium text-slate-700 block mb-1.5">
                                             Rate
                                         </label>
@@ -276,7 +276,7 @@
                                 Additional Details
                             </h3>
 
-                            <div class="space-y-5">
+                            <div class="space-y-4 md:space-y-5">
 
                                 <div>
                                     <label class="text-[13px] font-medium text-slate-700 block mb-1.5">
@@ -301,16 +301,16 @@
                         </div>
 
                         <!-- Buttons -->
-                        <div class="flex justify-end gap-3">
+                        <div class="flex flex-col sm:flex-row sm:justify-end gap-3">
 
                             <button
-                                class="flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-md hover:bg-slate-800 transition">
+                                class="flex items-center justify-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-sm font-medium rounded-md hover:bg-slate-800 transition">
                                 <i data-lucide="save" class="w-4 h-4"></i>
                                 Save as Draft
                             </button>
 
                             <button
-                                class="flex items-center gap-2 px-5 py-2.5 bg-orange-500 text-white text-sm font-medium rounded-md hover:bg-orange-600 transition">
+                                class="flex items-center justify-center gap-2 px-5 py-2.5 bg-orange-500 text-white text-sm font-medium rounded-md hover:bg-orange-600 transition">
                                 <i data-lucide="send" class="w-4 h-4"></i>
                                 Save & Send
                             </button>

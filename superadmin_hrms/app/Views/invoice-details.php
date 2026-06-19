@@ -44,9 +44,9 @@
             <div class="flex-1 overflow-y-auto p-5">
 
                 <!-- Header -->
-                <div class="flex justify-between items-start mb-6">
+                <div class="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-4 mb-6">
                     <div>
-                        <h1 class="text-[28px] font-semibold text-slate-800">
+                        <h1 class="text-2xl sm:text-[28px] font-semibold text-slate-800">
                             Invoices
                         </h1>
 
@@ -60,13 +60,13 @@
                     </div>
 
                     <button
-                        class="flex items-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-md text-sm hover:bg-slate-800">
+                        class="w-full sm:w-auto flex items-center justify-center gap-2 px-4 py-2 bg-slate-900 text-white rounded-md text-sm hover:bg-slate-800">
                         <i data-lucide="download" class="w-4 h-4"></i>
                         Download
                     </button>
                 </div>
 
-                <div class="flex-1 overflow-y-auto p-5">
+                
 
                     <div class="max-w-7xl mx-auto">
 
@@ -82,14 +82,14 @@
 
                             <div class="bg-white rounded-lg border shadow-sm overflow-hidden">
 
-                                <div class="p-6">
+                                <div class="p-4 sm:p-6">
 
 
                                     <!-- Company Header -->
-                                    <div class="flex justify-between items-start border-b pb-4">
+                                    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-6 border-b pb-4">
 
                                         <div>
-                                            <h2 class="text-3xl font-bold text-blue-500">
+                                            <h2 class="text-2xl sm:text-3xl font-bold text-blue-500">
                                                 GIC<span class="text-slate-800">HRMS</span>
                                             </h2>
 
@@ -98,7 +98,7 @@
                                             </p>
                                         </div>
 
-                                        <div class="text-right">
+                                        <div class="text-left md:text-right">
                                             <h3 class="text-lg font-semibold text-slate-700">
                                                 Invoice No
                                                 <span class="text-orange-500">
@@ -124,7 +124,7 @@
                                     </div>
 
                                     <!-- From / To / Status -->
-                                    <div class="flex justify-between py-4 border-b ">
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 py-4 border-b ">
 
                                         <!-- From -->
                                         <div>
@@ -192,12 +192,12 @@
                                             </h4>
 
                                             <span
-                                                class="inline-flex items-center px-4 py-1 bg-red-100 text-red-600 rounded-md text-sm font-semibold">
+                                                class="inline-flex items-center px-3 py-1 text-xs sm:text-sm bg-red-100 text-red-600 rounded-md text-sm font-semibold">
                                                 Due in 10 Days
                                             </span>
 
                                             <div
-                                                class="w-14 h-14 border-2 border-dashed border-slate-300 rounded-lg mt-6 flex items-center justify-center text-slate-400">
+                                                class="w-12 h-12 sm:w-14 sm:h-14 border-2 border-dashed border-slate-300 rounded-lg mt-6 flex items-center justify-center text-slate-400">
                                                 QR
                                             </div>
 
@@ -218,7 +218,7 @@
                                         <!-- Table -->
                                         <div class="mt-6 overflow-x-auto">
 
-                                            <table class="w-full">
+                                            <table class="w-full min-w-[700px]">
 
                                                 <thead class="bg-slate-100">
                                                     <tr class="h-10 text-sm font-semibold text-slate-700">
@@ -294,7 +294,7 @@
                                     </div>
 
                                     <!-- Terms + Totals -->
-                                    <div class="grid grid-cols-2 gap-16 py-8 border-t border-b">
+                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 py-8 border-t border-b">
 
                                         <!-- Left -->
                                         <div>
@@ -350,11 +350,11 @@
 
                                             <div class="flex justify-between pt-5 border-t">
 
-                                                <span class="text-2xl font-semibold text-slate-800">
+                                                <span class="text-lg sm:text-2xl font-semibold text-slate-800">
                                                     Total Amount
                                                 </span>
 
-                                                <span class="text-3xl font-bold text-slate-800">
+                                                <span class="text-2xl sm:text-3xl font-bold text-slate-800">
                                                     $5775
                                                 </span>
 
@@ -372,7 +372,7 @@
                                     <!-- Signature -->
                                     <div class="mt-24 border-b">
 
-                                        <div class="text-right">
+                                        <div class="text-left md:text-right">
 
                                             <h4 class="text-lg font-semibold text-slate-800">
                                                 Ted M. Davis
@@ -389,7 +389,7 @@
                                     <!-- Footer -->
                                     <div class="py-4 text-center">
 
-                                        <h2 class="text-3xl font-bold text-blue-500">
+                                        <h2 class="text-2xl sm:text-3xl font-bold text-blue-500">
                                             GIC<span class="text-slate-800">HRMS</span>
                                         </h2>
 
@@ -397,7 +397,7 @@
                                             Payment Made Via bank transfer / Cheque in the name of Thomas Lawler
                                         </p>
 
-                                        <div class="flex justify-center gap-4 mt-2 text-xs text-slate-500 flex-wrap">
+                                        <div class="flex flex-wrap justify-center gap-4 mt-2 text-xs text-slate-500">
 
                                             <p>Bank Name :
                                                 <span class="text-slate-800">
@@ -426,16 +426,16 @@
                             </div>
 
                             <!-- Bottom Buttons -->
-                            <div class="flex justify-center gap-4 mt-8">
+                            <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
 
                                 <button
-                                    class="flex items-center gap-2 px-6 py-3 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition">
+                                    class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition">
                                     <i data-lucide="printer" class="w-4 h-4"></i>
                                     Print Invoice
                                 </button>
 
                                 <button
-                                    class="flex items-center gap-2 px-6 py-3 border rounded-md hover:bg-slate-50 transition">
+                                    class="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition">
                                     <i data-lucide="copy" class="w-4 h-4"></i>
                                     Clone Invoice
                                 </button>

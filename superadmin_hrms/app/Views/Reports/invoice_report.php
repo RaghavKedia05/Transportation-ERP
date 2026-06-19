@@ -367,256 +367,256 @@
                         </div>
 
                         <div class="overflow-x-auto">
-                            <!-- Table -->
-                            <table class="w-full min-w-[1100px]">
+                        <!-- Table -->
+                        <table class="w-full min-w-[1100px]">
 
-                                <thead class="bg-slate-100">
+                            <thead class="bg-slate-100">
 
-                                    <tr class="text-left">
+                                <tr class="text-left">
 
-                                        <th class="py-3 px-4">
-                                            <input type="checkbox">
-                                        </th>
+                                    <th class="py-3 px-4">
+                                        <input type="checkbox">
+                                    </th>
 
-                                        <th class="px-4 text-sm">Invoice ID</th>
-                                        <th class="px-4 text-sm">Client Name</th>
-                                        <th class="px-4 text-sm">Company Name</th>
-                                        <th class="px-4 text-sm">Created Date</th>
-                                        <th class="px-4 text-sm">Due Date</th>
-                                        <th class="px-4 text-sm">Amount</th>
-                                        <th class="px-4 text-sm">Status</th>
+                                    <th class="px-4 text-sm">Invoice ID</th>
+                                    <th class="px-4 text-sm">Client Name</th>
+                                    <th class="px-4 text-sm">Company Name</th>
+                                    <th class="px-4 text-sm">Created Date</th>
+                                    <th class="px-4 text-sm">Due Date</th>
+                                    <th class="px-4 text-sm">Amount</th>
+                                    <th class="px-4 text-sm">Status</th>
 
-                                    </tr>
+                                </tr>
 
-                                </thead>
+                            </thead>
 
-                                <tbody>
+                            <tbody>
 
-                                    <tr class="border-b border-slate-200 hover:bg-slate-50">
-                                        <td class="px-5 py-3"><input type="checkbox"></td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">Inv-001</td>
-                                        <td class="px-5 py-3">
-                                            <div class="flex flex-wrap items-center gap-3">
-                                                <img src="https://i.pravatar.cc/40?img=1" class="w-8 h-8 rounded-full">
-                                                <div>
-                                                    <p class="font-medium text-slate-800">Michael Walker</p>
-                                                    <p class="text-xs text-slate-500">CEO</p>
-                                                </div>
+                                <tr class="border-b border-slate-200 hover:bg-slate-50">
+                                    <td class="px-5 py-3"><input type="checkbox"></td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">Inv-001</td>
+                                    <td class="px-5 py-3">
+                                        <div class="flex flex-wrap items-center gap-3">
+                                            <img src="https://i.pravatar.cc/40?img=1" class="w-8 h-8 rounded-full">
+                                            <div>
+                                                <p class="font-medium text-slate-800">Michael Walker</p>
+                                                <p class="text-xs text-slate-500">CEO</p>
                                             </div>
-                                        </td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">BrightWave Innovations</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">14 Jan 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">15 Jan 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">$3000</td>
-                                        <td class="px-5 py-3">
-                                            <span
-                                                class="px-2.5 py-1 text-[11px] rounded bg-green-100 text-green-600">Approved</span>
-                                        </td>
-                                    </tr>
+                                        </div>
+                                    </td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">BrightWave Innovations</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">14 Jan 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">15 Jan 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">$3000</td>
+                                    <td class="px-5 py-3">
+                                        <span
+                                            class="px-2.5 py-1 text-[11px] rounded bg-green-100 text-green-600">Approved</span>
+                                    </td>
+                                </tr>
 
-                                    <tr class="border-b border-slate-200 hover:bg-slate-50">
-                                        <td class="px-5 py-3"><input type="checkbox"></td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">Inv-002</td>
-                                        <td class="px-5 py-3">
-                                            <div class="flex flex-wrap items-center gap-3">
-                                                <img src="https://i.pravatar.cc/40?img=5" class="w-8 h-8 rounded-full">
-                                                <div>
-                                                    <p class="font-medium text-slate-800">Sophie Headrick</p>
-                                                    <p class="text-xs text-slate-500">Manager</p>
-                                                </div>
+                                <tr class="border-b border-slate-200 hover:bg-slate-50">
+                                    <td class="px-5 py-3"><input type="checkbox"></td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">Inv-002</td>
+                                    <td class="px-5 py-3">
+                                        <div class="flex flex-wrap items-center gap-3">
+                                            <img src="https://i.pravatar.cc/40?img=5" class="w-8 h-8 rounded-full">
+                                            <div>
+                                                <p class="font-medium text-slate-800">Sophie Headrick</p>
+                                                <p class="text-xs text-slate-500">Manager</p>
                                             </div>
-                                        </td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">Stellar Dynamics</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">21 Jan 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">25 Jan 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">$2500</td>
-                                        <td class="px-5 py-3">
-                                            <span
-                                                class="px-2.5 py-1 text-[11px] rounded bg-yellow-100 text-yellow-600">Pending</span>
-                                        </td>
-                                    </tr>
+                                        </div>
+                                    </td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">Stellar Dynamics</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">21 Jan 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">25 Jan 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">$2500</td>
+                                    <td class="px-5 py-3">
+                                        <span
+                                            class="px-2.5 py-1 text-[11px] rounded bg-yellow-100 text-yellow-600">Pending</span>
+                                    </td>
+                                </tr>
 
-                                    <tr class="border-b border-slate-200 hover:bg-slate-50">
-                                        <td class="px-5 py-3"><input type="checkbox"></td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">Inv-003</td>
-                                        <td class="px-5 py-3">
-                                            <div class="flex flex-wrap items-center gap-3">
-                                                <img src="https://i.pravatar.cc/40?img=12" class="w-8 h-8 rounded-full">
-                                                <div>
-                                                    <p class="font-medium text-slate-800">Cameron Drake</p>
-                                                    <p class="text-xs text-slate-500">Director</p>
-                                                </div>
+                                <tr class="border-b border-slate-200 hover:bg-slate-50">
+                                    <td class="px-5 py-3"><input type="checkbox"></td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">Inv-003</td>
+                                    <td class="px-5 py-3">
+                                        <div class="flex flex-wrap items-center gap-3">
+                                            <img src="https://i.pravatar.cc/40?img=12" class="w-8 h-8 rounded-full">
+                                            <div>
+                                                <p class="font-medium text-slate-800">Cameron Drake</p>
+                                                <p class="text-xs text-slate-500">Director</p>
                                             </div>
-                                        </td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">Quantum Nexus</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">20 Feb 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">22 Feb 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">$2800</td>
-                                        <td class="px-5 py-3">
-                                            <span
-                                                class="px-2.5 py-1 text-[11px] rounded bg-red-100 text-red-600">Rejected</span>
-                                        </td>
-                                    </tr>
+                                        </div>
+                                    </td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">Quantum Nexus</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">20 Feb 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">22 Feb 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">$2800</td>
+                                    <td class="px-5 py-3">
+                                        <span
+                                            class="px-2.5 py-1 text-[11px] rounded bg-red-100 text-red-600">Rejected</span>
+                                    </td>
+                                </tr>
 
-                                    <tr class="border-b border-slate-200 hover:bg-slate-50">
-                                        <td class="px-5 py-3"><input type="checkbox"></td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">Inv-004</td>
-                                        <td class="px-5 py-3">
-                                            <div class="flex flex-wrap items-center gap-3">
-                                                <img src="https://i.pravatar.cc/40?img=23" class="w-8 h-8 rounded-full">
-                                                <div>
-                                                    <p class="font-medium text-slate-800">Doris Crowley</p>
-                                                    <p class="text-xs text-slate-500">Consultant</p>
-                                                </div>
+                                <tr class="border-b border-slate-200 hover:bg-slate-50">
+                                    <td class="px-5 py-3"><input type="checkbox"></td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">Inv-004</td>
+                                    <td class="px-5 py-3">
+                                        <div class="flex flex-wrap items-center gap-3">
+                                            <img src="https://i.pravatar.cc/40?img=23" class="w-8 h-8 rounded-full">
+                                            <div>
+                                                <p class="font-medium text-slate-800">Doris Crowley</p>
+                                                <p class="text-xs text-slate-500">Consultant</p>
                                             </div>
-                                        </td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">EcoVision Enterprises</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">15 Mar 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">17 Mar 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">$3300</td>
-                                        <td class="px-5 py-3">
-                                            <span
-                                                class="px-2.5 py-1 text-[11px] rounded bg-yellow-100 text-yellow-600">Pending
-                                            </span>
-                                        </td>
-                                    </tr>
+                                        </div>
+                                    </td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">EcoVision Enterprises</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">15 Mar 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">17 Mar 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">$3300</td>
+                                    <td class="px-5 py-3">
+                                        <span
+                                            class="px-2.5 py-1 text-[11px] rounded bg-yellow-100 text-yellow-600">Pending
+                                        </span>
+                                    </td>
+                                </tr>
 
-                                    <tr class="border-b border-slate-200 hover:bg-slate-50">
-                                        <td class="px-5 py-3"><input type="checkbox"></td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">Inv-005</td>
-                                        <td class="px-5 py-3">
-                                            <div class="flex flex-wrap items-center gap-3">
-                                                <img src="https://i.pravatar.cc/40?img=31" class="w-8 h-8 rounded-full">
-                                                <div>
-                                                    <p class="font-medium text-slate-800">Thomas Bordelon</p>
-                                                    <p class="text-xs text-slate-500">Manager</p>
-                                                </div>
+                                <tr class="border-b border-slate-200 hover:bg-slate-50">
+                                    <td class="px-5 py-3"><input type="checkbox"></td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">Inv-005</td>
+                                    <td class="px-5 py-3">
+                                        <div class="flex flex-wrap items-center gap-3">
+                                            <img src="https://i.pravatar.cc/40?img=31" class="w-8 h-8 rounded-full">
+                                            <div>
+                                                <p class="font-medium text-slate-800">Thomas Bordelon</p>
+                                                <p class="text-xs text-slate-500">Manager</p>
                                             </div>
-                                        </td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">Aurora Technologies</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">12 Apr 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">16 Apr 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">$3600</td>
-                                        <td class="px-5 py-3">
-                                            <span
-                                                class="px-2.5 py-1 text-[11px] rounded bg-green-100 text-green-600">Approved
-                                            </span>
-                                        </td>
-                                    </tr>
+                                        </div>
+                                    </td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">Aurora Technologies</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">12 Apr 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">16 Apr 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">$3600</td>
+                                    <td class="px-5 py-3">
+                                        <span
+                                            class="px-2.5 py-1 text-[11px] rounded bg-green-100 text-green-600">Approved
+                                        </span>
+                                    </td>
+                                </tr>
 
-                                    <tr class="border-b border-slate-200 hover:bg-slate-50">
-                                        <td class="px-5 py-3"><input type="checkbox"></td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">Inv-006</td>
-                                        <td class="px-5 py-3">
-                                            <div class="flex flex-wrap items-center gap-3">
-                                                <img src="https://i.pravatar.cc/40?img=15" class="w-8 h-8 rounded-full">
-                                                <div>
-                                                    <p class="font-medium text-slate-800">Kathleen Gutierrez</p>
-                                                    <p class="text-xs text-slate-500">Director</p>
-                                                </div>
+                                <tr class="border-b border-slate-200 hover:bg-slate-50">
+                                    <td class="px-5 py-3"><input type="checkbox"></td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">Inv-006</td>
+                                    <td class="px-5 py-3">
+                                        <div class="flex flex-wrap items-center gap-3">
+                                            <img src="https://i.pravatar.cc/40?img=15" class="w-8 h-8 rounded-full">
+                                            <div>
+                                                <p class="font-medium text-slate-800">Kathleen Gutierrez</p>
+                                                <p class="text-xs text-slate-500">Director</p>
                                             </div>
-                                        </td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">BlueSky Ventures</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">20 Apr 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">21 Apr 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">$2000</td>
-                                        <td class="px-5 py-3">
-                                            <span
-                                                class="px-2.5 py-1 text-[11px] rounded bg-green-100 text-green-600">Approved</span>
-                                        </td>
-                                    </tr>
+                                        </div>
+                                    </td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">BlueSky Ventures</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">20 Apr 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">21 Apr 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">$2000</td>
+                                    <td class="px-5 py-3">
+                                        <span
+                                            class="px-2.5 py-1 text-[11px] rounded bg-green-100 text-green-600">Approved</span>
+                                    </td>
+                                </tr>
 
-                                    <tr class="border-b border-slate-200 hover:bg-slate-50">
-                                        <td class="px-5 py-3"><input type="checkbox"></td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">Inv-007</td>
-                                        <td class="px-5 py-3">
-                                            <div class="flex flex-wrap items-center gap-3">
-                                                <img src="https://i.pravatar.cc/40?img=47" class="w-8 h-8 rounded-full">
-                                                <div>
-                                                    <p class="font-medium text-slate-800">Bruce Wright</p>
-                                                    <p class="text-xs text-slate-500">CEO</p>
-                                                </div>
+                                <tr class="border-b border-slate-200 hover:bg-slate-50">
+                                    <td class="px-5 py-3"><input type="checkbox"></td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">Inv-007</td>
+                                    <td class="px-5 py-3">
+                                        <div class="flex flex-wrap items-center gap-3">
+                                            <img src="https://i.pravatar.cc/40?img=47" class="w-8 h-8 rounded-full">
+                                            <div>
+                                                <p class="font-medium text-slate-800">Bruce Wright</p>
+                                                <p class="text-xs text-slate-500">CEO</p>
                                             </div>
-                                        </td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">TerraFusion Energy</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">06 Jul 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">06 Jul 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">$3400</td>
-                                        <td class="px-5 py-3">
-                                            <span
-                                                class="px-2.5 py-1 text-[11px] rounded bg-yellow-100 text-yellow-600">Pending</span>
-                                        </td>
-                                    </tr>
+                                        </div>
+                                    </td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">TerraFusion Energy</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">06 Jul 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">06 Jul 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">$3400</td>
+                                    <td class="px-5 py-3">
+                                        <span
+                                            class="px-2.5 py-1 text-[11px] rounded bg-yellow-100 text-yellow-600">Pending</span>
+                                    </td>
+                                </tr>
 
-                                    <tr class="border-b border-slate-200 hover:bg-slate-50">
-                                        <td class="px-5 py-3"><input type="checkbox"></td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">Inv-008</td>
-                                        <td class="px-5 py-3">
-                                            <div class="flex flex-wrap items-center gap-3">
-                                                <img src="https://i.pravatar.cc/40?img=33" class="w-8 h-8 rounded-full">
-                                                <div>
-                                                    <p class="font-medium text-slate-800">Estelle Morgan</p>
-                                                    <p class="text-xs text-slate-500">Manager</p>
-                                                </div>
+                                <tr class="border-b border-slate-200 hover:bg-slate-50">
+                                    <td class="px-5 py-3"><input type="checkbox"></td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">Inv-008</td>
+                                    <td class="px-5 py-3">
+                                        <div class="flex flex-wrap items-center gap-3">
+                                            <img src="https://i.pravatar.cc/40?img=33" class="w-8 h-8 rounded-full">
+                                            <div>
+                                                <p class="font-medium text-slate-800">Estelle Morgan</p>
+                                                <p class="text-xs text-slate-500">Manager</p>
                                             </div>
-                                        </td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">UrbanPulse Design</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">02 Sep 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">04 Sep 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">$4000</td>
-                                        <td class="px-5 py-3">
-                                            <span
-                                                class="px-2.5 py-1 text-[11px] rounded bg-green-100 text-green-600">Approved</span>
-                                        </td>
-                                    </tr>
+                                        </div>
+                                    </td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">UrbanPulse Design</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">02 Sep 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">04 Sep 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">$4000</td>
+                                    <td class="px-5 py-3">
+                                        <span
+                                            class="px-2.5 py-1 text-[11px] rounded bg-green-100 text-green-600">Approved</span>
+                                    </td>
+                                </tr>
 
-                                    <tr class="border-b border-slate-200 hover:bg-slate-50">
-                                        <td class="px-5 py-3"><input type="checkbox"></td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">Inv-009</td>
-                                        <td class="px-5 py-3">
-                                            <div class="flex flex-wrap items-center gap-3">
-                                                <img src="https://i.pravatar.cc/40?img=9" class="w-8 h-8 rounded-full">
-                                                <div>
-                                                    <p class="font-medium text-slate-800">Stephen Dias</p>
-                                                    <p class="text-xs text-slate-500">CEO</p>
-                                                </div>
+                                <tr class="border-b border-slate-200 hover:bg-slate-50">
+                                    <td class="px-5 py-3"><input type="checkbox"></td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">Inv-009</td>
+                                    <td class="px-5 py-3">
+                                        <div class="flex flex-wrap items-center gap-3">
+                                            <img src="https://i.pravatar.cc/40?img=9" class="w-8 h-8 rounded-full">
+                                            <div>
+                                                <p class="font-medium text-slate-800">Stephen Dias</p>
+                                                <p class="text-xs text-slate-500">CEO</p>
                                             </div>
-                                        </td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">Nimbus Networks</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">15 Nov 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">15 Nov 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">$4500</td>
-                                        <td class="px-5 py-3">
-                                            <span
-                                                class="px-2.5 py-1 text-[11px] rounded bg-red-100 text-red-600">Rejected</span>
-                                        </td>
-                                    </tr>
+                                        </div>
+                                    </td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">Nimbus Networks</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">15 Nov 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">15 Nov 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">$4500</td>
+                                    <td class="px-5 py-3">
+                                        <span
+                                            class="px-2.5 py-1 text-[11px] rounded bg-red-100 text-red-600">Rejected</span>
+                                    </td>
+                                </tr>
 
-                                    <tr class="hover:bg-slate-50">
-                                        <td class="px-5 py-3"><input type="checkbox"></td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">Inv-010</td>
-                                        <td class="px-5 py-3">
-                                            <div class="flex flex-wrap items-center gap-3">
-                                                <img src="https://i.pravatar.cc/40?img=14" class="w-8 h-8 rounded-full">
-                                                <div>
-                                                    <p class="font-medium text-slate-800">Angela Thomas</p>
-                                                    <p class="text-xs text-slate-500">Consultant</p>
-                                                </div>
+                                <tr class="hover:bg-slate-50">
+                                    <td class="px-5 py-3"><input type="checkbox"></td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">Inv-010</td>
+                                    <td class="px-5 py-3">
+                                        <div class="flex flex-wrap items-center gap-3">
+                                            <img src="https://i.pravatar.cc/40?img=14" class="w-8 h-8 rounded-full">
+                                            <div>
+                                                <p class="font-medium text-slate-800">Angela Thomas</p>
+                                                <p class="text-xs text-slate-500">Consultant</p>
                                             </div>
-                                        </td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">Epicurean Delights</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">10 Dec 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">11 Dec 2024</td>
-                                        <td class="px-5 py-3 text-sm text-slate-500">$3800</td>
-                                        <td class="px-5 py-3">
-                                            <span
-                                                class="px-2.5 py-1 text-[11px] rounded bg-green-100 text-green-600">Approved</span>
-                                        </td>
-                                    </tr>
+                                        </div>
+                                    </td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">Epicurean Delights</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">10 Dec 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">11 Dec 2024</td>
+                                    <td class="px-5 py-3 text-sm text-slate-500">$3800</td>
+                                    <td class="px-5 py-3">
+                                        <span
+                                            class="px-2.5 py-1 text-[11px] rounded bg-green-100 text-green-600">Approved</span>
+                                    </td>
+                                </tr>
 
-                                </tbody>
+                            </tbody>
 
-                            </table>
+                        </table>
                         </div>
 
                         <!-- Footer -->
