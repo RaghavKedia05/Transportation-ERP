@@ -31,3 +31,5 @@ $routes->get('/invoice/add', 'DashboardController::addInvoice');
 
 $routes->get('/chat', 'ChatController::index');
 $routes->get('/chat/(:num)', 'ChatController::conversation/$1');
+
+$routes->get('/employee_attendance', 'DashboardController::employee_attendance');
