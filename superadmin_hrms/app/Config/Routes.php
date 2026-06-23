@@ -33,4 +33,6 @@ $routes->get('/chat', 'ChatController::index');
 $routes->get('/chat/(:num)', 'ChatController::conversation/$1');
 
 $routes->get('/employee_attendance', 'DashboardController::employee_attendance');
-$routes->get('/performance_review', 'DashboardController::performance_review');
+
+$routes->get('/performance_review', 'PerformanceReviewController::performance_review');
+$routes->post('performance_review/save', 'PerformanceReviewController::save');
