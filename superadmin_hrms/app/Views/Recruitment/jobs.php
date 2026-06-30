@@ -97,7 +97,7 @@
 
                             <i data-lucide="plus-circle" class="w-4 h-4"></i>
 
-                            Post Job
+                            Create Job Requisition
                         </button>
 
                         <!-- Scroll Top -->

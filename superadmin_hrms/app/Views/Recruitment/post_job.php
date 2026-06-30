@@ -18,16 +18,17 @@
 </head>
 
 <body>
-    <!-- Post Job Modal -->
+    <!-- Create Job Requisition Modal -->
     <div id="addJobModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 sm:p-6">
 
-        <div class="bg-white rounded-md shadow-xl w-full max-w-[660px] max-h-[95vh] overflow-y-auto mx-2 sm:mx-0 scrollbar-hide">
+        <div
+            class="bg-white rounded-md shadow-xl w-full max-w-[660px] max-h-[95vh] overflow-y-auto mx-2 sm:mx-0 scrollbar-hide">
 
             <!-- Header -->
             <div class="flex items-center justify-between px-4 py-3 border-b border-slate-200">
 
                 <h2 class="text-lg sm:text-[18px] font-semibold text-slate-800">
-                    Post Job
+                    Create Job Requisition
                 </h2>
 
                 <button onclick="closeAddJobModal()">
@@ -52,7 +53,7 @@
 
                 </div>
 
-                
+
 
                 <!-- Job Title -->
                 <div class="mb-3">
@@ -173,7 +174,8 @@
             <!-- Footer -->
             <div class="border-t border-slate-200 px-4 py-3 flex flex-col-reverse sm:flex-row justify-end gap-3">
 
-                <button class="w-full sm:w-auto px-4 py-2 text-sm border border-slate-200 rounded">
+                <button type="button" onclick="closeAddJobModal()"
+                    class="w-full sm:w-auto px-4 py-2 text-sm border border-slate-200 rounded">
                     Cancel
                 </button>
 
@@ -210,6 +212,14 @@
             scrollbar-width: none;
         }
     </style>
+
+    <script>
+        function closeAddJobModal() {
+            document.getElementById('addJobModal').classList.add('hidden');
+            document.getElementById('addJobModal').classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        }
+    </script>
 
 
 

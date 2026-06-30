@@ -53,3 +53,36 @@ $routes->get('/Recruitment/jobs-grid', 'RecruitmentController::jobsGrid');
 $routes->get('/Recruitment/candidates', 'RecruitmentController::candidates');
 $routes->get('/Recruitment/candidates-grid', 'RecruitmentController::candidatesGrid');
 $routes->get('/Recruitment/candidates-kanban', 'RecruitmentController::candidatesKanban');
+
+// =========================
+// Recruitment - Requisitions
+// =========================
+
+$routes->group('Recruitment', ['filter' => 'auth'], function ($routes) {
+
+    $routes->get('requisitions', 'Recruitment\RequisitionController::index');
+
+    $routes->get('requisitions/create', 'Recruitment\RequisitionController::create');
+
+    $routes->post('requisitions/save-draft', 'Recruitment\RequisitionController::saveDraft');
+
+    $routes->post('requisitions/submit', 'Recruitment\RequisitionController::submit');
+
+    $routes->get(
+        'requisitions/get/(:num)',
+        'Recruitment\RequisitionController::getRequisition/$1'
+    );
+
+    $routes->post(
+        'requisitions/update/(:num)',
+        'Recruitment\RequisitionController::update/$1'
+    );
+
+    $routes->get(
+        'requisitions/delete/(:num)',
+        'Recruitment\RequisitionController::delete/$1'
+    );
+
+});
+
+

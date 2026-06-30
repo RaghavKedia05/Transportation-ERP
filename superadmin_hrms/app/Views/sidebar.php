@@ -41,6 +41,22 @@ if (empty($currentPage)) {
             Recruitment
         </h6>
 
+        <a href="/Recruitment/requisitions" class="group flex items-center justify-between gap-3 px-4 py-3 rounded-md mt-4
+            <?= ($currentPage == 'requisitions')
+                ? 'bg-slate-200 text-slate-800'
+                : 'text-slate-800 hover:bg-slate-200'; ?>">
+
+            <div class="flex items-center gap-2 lg:gap-2.5">
+                <i data-lucide="calendar-check-2" class="w-4 h-4"></i>
+                <span class="text-xs lg:text-[13px] font-semibold">
+                   Job Requesitions
+                </span>
+            </div>
+
+            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+
+        </a>
+
         <a href="/Recruitment/jobs" class="group flex items-center justify-between gap-3 px-4 py-3 rounded-md mt-4
             <?= ($currentPage == 'jobs')
                 ? 'bg-slate-200 text-slate-800'
