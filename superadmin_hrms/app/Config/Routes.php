@@ -4,8 +4,19 @@ use CodeIgniter\Router\RouteCollection;
 
 /** @var RouteCollection $routes */
 
-$routes->get('/', 'Auth::login');
+$routes->get('/', function () {
+    return redirect()->to('/login');
+});
+
+$routes->get('/login', 'Auth::login');
 $routes->post('/login', 'Auth::authenticate');
+
+$routes->get('/register', 'Auth::register');
+$routes->post('/register', 'Auth::saveUser');
+
+$routes->get('/logout', 'Auth::logout');
+
+
 
 $routes->get('/dashboard', 'DashboardController::index');
 
