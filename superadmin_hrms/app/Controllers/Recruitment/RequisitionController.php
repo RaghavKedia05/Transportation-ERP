@@ -17,13 +17,61 @@ class RequisitionController extends BaseController
 
     public function index()
     {
-        $data['requisitions'] = $this->requisitionModel
-            ->orderBy('id', 'DESC')
-            ->findAll();
+        $role = session('role');
+        $userId = session('user_id');
+
+        switch ($role) {
+
+            // Admin sees everything
+            case 'admin':
+
+                $data['requisitions'] = $this->requisitionModel
+                    ->orderBy('id', 'DESC')
+                    ->findAll();
+
+                break;
+
+            // Hiring Manager sees only his requisitions
+            case 'hiring_manager':
+
+                $data['requisitions'] = $this->requisitionModel
+                    ->where('requested_by', $userId)
+                    ->orderBy('id', 'DESC')
+                    ->findAll();
+
+                break;
+
+            // Department Head sees only requests waiting for HOD approval
+            case 'department_head':
+
+                $data['requisitions'] = $this->requisitionModel
+                    ->where('status', 'Pending Approval')
+                    ->where('hod_status', 'Pending')
+                    ->orderBy('id', 'DESC')
+                    ->findAll();
+
+                break;
+
+            // HR sees only requests approved by HOD and waiting for HR
+            case 'hr':
+
+                $data['requisitions'] = $this->requisitionModel
+                    ->where('hod_status', 'Approved')
+                    ->where('hr_status', 'Pending')
+                    ->orderBy('id', 'DESC')
+                    ->findAll();
+
+                break;
+
+            default:
+
+                $data['requisitions'] = [];
+
+                break;
+        }
 
         return view('Recruitment/requisitions', $data);
     }
-
     public function create()
     {
         $departmentModel = new DepartmentModel();
@@ -57,9 +105,9 @@ class RequisitionController extends BaseController
 
             'requested_by' => session()->get('user_id'),
 
-            'hod_status' => 'Pending',
+            'hod_status' => 'Pending HOD Approval',
 
-            'hr_status' => 'Pending',
+            'hr_status' => 'Pending HR Approval',
 
             'updated_at' => date('Y-m-d H:i:s')
         ];
@@ -93,9 +141,9 @@ class RequisitionController extends BaseController
 
             'submitted_at' => date('Y-m-d H:i:s'),
 
-            'hod_status' => 'Pending',
+            'hod_status' => 'Pending HOD Approval',
 
-            'hr_status' => 'Pending',
+            'hr_status' => 'Pending HR Approval',
 
             'updated_at' => date('Y-m-d H:i:s')
         ];
@@ -121,13 +169,92 @@ class RequisitionController extends BaseController
 
     }
 
-    public function update($id)
+    public function edit($id)
     {
+        $departmentModel = new DepartmentModel();
 
+        $data['departments'] = $departmentModel
+            ->where('status', 1)
+            ->findAll();
+
+        $data['requisition'] =
+            $this->requisitionModel->find($id);
+
+        return view('Recruitment/edit_requisition', $data);
     }
 
     public function delete($id)
     {
+        $this->requisitionModel->delete($id);
 
+        return redirect()
+            ->to('/Recruitment/requisitions')
+            ->with('success', 'Requisition deleted successfully.');
+
+    }
+
+    public function hodApprove($id)
+    {
+        $this->requisitionModel->update($id, [
+
+            'hod_status' => 'Approved',
+
+            'status' => 'Pending HR Approval',
+
+            'approved_by' => session('user_id')
+
+        ]);
+
+        return redirect()->back()->with(
+            'success',
+            'Approved successfully.'
+        );
+    }
+    public function hodReject($id)
+    {
+        $this->requisitionModel->update($id, [
+
+            'hod_status' => 'Rejected',
+
+            'status' => 'Rejected',
+
+            'updated_at' => date('Y-m-d H:i:s')
+
+        ]);
+
+        return redirect()->back()
+            ->with('success', 'Requisition rejected.');
+    }
+
+    public function hrApprove($id)
+    {
+        $this->requisitionModel->update($id, [
+
+            'hr_status' => 'Approved',
+
+            'status' => 'Published',
+
+            'published_at' => date('Y-m-d H:i:s')
+
+        ]);
+
+        return redirect()
+            ->back()
+            ->with('success', 'Job published successfully.');
+    }
+
+    public function hrReject($id)
+    {
+        $this->requisitionModel->update($id, [
+
+            'hr_status' => 'Rejected',
+
+            'status' => 'Rejected'
+
+        ]);
+
+        return redirect()
+            ->back()
+            ->with('success', 'Requisition rejected by HR.');
     }
 }

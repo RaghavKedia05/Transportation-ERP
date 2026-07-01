@@ -37,9 +37,12 @@ if (empty($currentPage)) {
     <!-- Navigation -->
     <nav class="flex-1 min-h-0 overflow-y-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden px-2 lg:px-3 py-3">
 
+        <?php if(in_array(session('role'),['admin','hiring_manager','department_head','hr'])): ?>
         <h6 class="px-1 mt-4 mb-2 text-[10px] lg:text-[11px] font-medium tracking-wider uppercase text-slate-400">
             Recruitment
         </h6>
+
+        
 
         <a href="/Recruitment/requisitions" class="group flex items-center justify-between gap-3 px-4 py-3 rounded-md mt-4
             <?= ($currentPage == 'requisitions')
@@ -47,7 +50,7 @@ if (empty($currentPage)) {
                 : 'text-slate-800 hover:bg-slate-200'; ?>">
 
             <div class="flex items-center gap-2 lg:gap-2.5">
-                <i data-lucide="calendar-check-2" class="w-4 h-4"></i>
+                <i data-lucide="user-round-plus" class="w-4 h-4"></i>
                 <span class="text-xs lg:text-[13px] font-semibold">
                    Job Requesitions
                 </span>
@@ -56,7 +59,9 @@ if (empty($currentPage)) {
             <i data-lucide="chevron-down" class="w-4 h-4"></i>
 
         </a>
-
+        
+        
+        
         <a href="/Recruitment/jobs" class="group flex items-center justify-between gap-3 px-4 py-3 rounded-md mt-4
             <?= ($currentPage == 'jobs')
                 ? 'bg-slate-200 text-slate-800'
@@ -73,6 +78,8 @@ if (empty($currentPage)) {
 
         </a>
         
+        
+        
         <a href="/Recruitment/candidates" class="group flex items-center justify-between gap-3 px-4 py-3 rounded-md mt-4
             <?= ($currentPage == 'candidates')
                 ? 'bg-slate-200 text-slate-800'
@@ -88,6 +95,7 @@ if (empty($currentPage)) {
             <i data-lucide="chevron-down" class="w-4 h-4"></i>
 
         </a>
+        <?php endif; ?>
 
 
         <!-- Dashboard -->

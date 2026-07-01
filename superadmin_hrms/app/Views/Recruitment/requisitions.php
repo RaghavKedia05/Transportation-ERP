@@ -36,14 +36,17 @@
                         </p>
                     </div>
 
-                    <a href="<?= base_url('Recruitment/requisitions/create') ?>"
-                        class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-lg flex items-center gap-2 shadow">
+                    <?php if (in_array(session('role'), ['hiring_manager', 'admin'])): ?>
+                        <a href="<?= base_url('Recruitment/requisitions/create') ?>"
+                            class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-lg flex items-center gap-2 shadow">
 
-                        <i data-lucide="plus" class="w-5 h-5"></i>
+                            <i data-lucide="plus" class="w-5 h-5"></i>
 
-                        Create Requisition
+                            Create Requisition
 
-                    </a>
+                        </a>
+
+                    <?php endif; ?>
 
                 </div>
 
@@ -161,28 +164,133 @@
 
                                                 <div class="flex justify-center gap-3">
 
-                                                    <a href="#" onclick="openViewModal(<?= $row['id'] ?>)"
-                                                        class="text-indigo-600 hover:text-indigo-800">
+                                                    <?php $role = session('role'); ?>
 
-                                                        <i data-lucide="eye" class="w-5 h-5"></i>
+                                                    <!-- Hiring Manager -->
 
-                                                    </a>
+                                                    <?php if ($role == 'hiring_manager'): ?>
+
+                                                        <a href="#" onclick="openViewModal(<?= $row['id'] ?>)"
+                                                            class="text-indigo-600">
+                                                            <i data-lucide="eye"></i>
+                                                        </a>
+
+                                                        <?php if ($row['status'] == 'Draft'): ?>
+
+                                                            <a href="#" onclick="openEditModal(<?= $row['id'] ?>)"
+                                                                class="text-amber-600">
+                                                                <i data-lucide="square-pen"></i>
+                                                            </a>
+
+                                                            <a href="#" onclick="openDeleteModal(<?= $row['id'] ?>)"
+                                                                class="text-red-600">
+                                                                <i data-lucide="trash-2"></i>
+                                                            </a>
+
+                                                        <?php endif; ?>
+
+                                                    <?php endif; ?>
 
 
-                                                    <a href="#" onclick="openEditModal(<?= $row['id'] ?>)"
-                                                        class="text-amber-600 hover:text-amber-800">
+                                                    <!-- Department Head -->
 
-                                                        <i data-lucide="square-pen" class="w-5 h-5"></i>
+                                                    <?php if ($role == 'department_head'): ?>
 
-                                                    </a>
+                                                        <a href="#" onclick="openViewModal(<?= $row['id'] ?>)"
+                                                            class="text-indigo-600">
+                                                            <i data-lucide="eye"></i>
+                                                        </a>
+
+                                                        <?php if ($row['hod_status'] == 'Pending' && $row['status'] == 'Pending Approval'): ?>
+
+                                                            <form method="post"
+                                                                action="<?= base_url('Recruitment/requisitions/hod-approve/' . $row['id']) ?>">
+
+                                                                <?= csrf_field() ?>
+
+                                                                <button class="text-green-600 hover:text-green-800">
+                                                                    <i data-lucide="check-circle"></i>
+                                                                </button>
+
+                                                            </form>
+
+                                                            <form method="post"
+                                                                action="<?= base_url('Recruitment/requisitions/hod-reject/' . $row['id']) ?>">
+
+                                                                <?= csrf_field() ?>
+
+                                                                <button class="text-red-600 hover:text-red-800">
+                                                                    <i data-lucide="x-circle"></i>
+                                                                </button>
+
+                                                            </form>
+
+                                                        <?php endif; ?>
+
+                                                    <?php endif; ?>
 
 
-                                                    <a href="#" onclick="deleteRequisition(<?= $row['id'] ?>)"
-                                                        class="text-red-600 hover:text-red-800">
+                                                    <!-- HR -->
 
-                                                        <i data-lucide="trash-2" class="w-5 h-5"></i>
+                                                    <?php if ($role == 'hr'): ?>
 
-                                                    </a>
+                                                        <a href="#" onclick="openViewModal(<?= $row['id'] ?>)"
+                                                            class="text-indigo-600">
+                                                            <i data-lucide="eye"></i>
+                                                        </a>
+
+                                                        <?php if (
+                                                            $row['hod_status'] == 'Approved' &&
+                                                            $row['hr_status'] == 'Pending'
+                                                        ): ?>
+
+                                                            <form method="post"
+                                                                action="<?= base_url('Recruitment/requisitions/hr-approve/' . $row['id']) ?>">
+
+                                                                <?= csrf_field() ?>
+
+                                                                <button class="text-green-600 hover:text-green-800">
+                                                                    <i data-lucide="badge-check"></i>
+                                                                </button>
+
+                                                            </form>
+
+                                                            <form method="post"
+                                                                action="<?= base_url('Recruitment/requisitions/hr-reject/' . $row['id']) ?>">
+
+                                                                <?= csrf_field() ?>
+
+                                                                <button class="text-red-600 hover:text-red-800">
+                                                                    <i data-lucide="x-circle"></i>
+                                                                </button>
+
+                                                            </form>
+
+                                                        <?php endif; ?>
+
+                                                    <?php endif; ?>
+
+
+                                                    <!-- Admin -->
+
+                                                    <?php if ($role == 'admin'): ?>
+
+                                                        <a href="#" onclick="openViewModal(<?= $row['id'] ?>)"
+                                                            class="text-indigo-600">
+                                                            <i data-lucide="eye"></i>
+                                                        </a>
+
+                                                        <a href="#" onclick="openEditModal(<?= $row['id'] ?>)"
+                                                            class="text-amber-600">
+                                                            <i data-lucide="square-pen"></i>
+                                                        </a>
+
+                                                        <a href="#" onclick="openDeleteModal(<?= $row['id'] ?>)"
+                                                            class="text-red-600">
+                                                            <i data-lucide="trash-2"></i>
+                                                        </a>
+
+                                                    <?php endif; ?>
 
                                                 </div>
 
@@ -237,6 +345,76 @@
         </div>
 
     <?php endif; ?>
+
+    <!-- Approval Modal -->
+    <div id="approvalModal" class="fixed inset-0 bg-black/50 hidden items-center justify-center z-50">
+
+        <div class="bg-white rounded-xl w-full max-w-3xl shadow-xl">
+
+            <!-- Header -->
+
+            <div class="flex justify-between items-center px-6 py-5 border-b">
+
+                <div>
+
+                    <h2 id="approvalTitle" class="text-2xl font-bold text-slate-900">
+
+                        Approve Requisition
+
+                    </h2>
+
+                    <p class="text-slate-500 text-sm mt-1">
+
+                        Please review the requisition before continuing.
+
+                    </p>
+
+                </div>
+
+                <button onclick="closeApprovalModal()">
+
+                    <i data-lucide="x"></i>
+
+                </button>
+
+            </div>
+
+            <!-- Content -->
+
+            <div id="approvalContent" class="p-6">
+
+            </div>
+
+            <!-- Footer -->
+
+            <div class="border-t px-6 py-5 flex justify-end gap-3">
+
+                <button onclick="closeApprovalModal()" class="px-5 py-2.5 rounded-lg border hover:bg-slate-100">
+
+                    Cancel
+
+                </button>
+
+                <form id="approvalForm" method="POST">
+
+                    <?= csrf_field() ?>
+
+                    <button id="approvalButton"
+                        class="px-6 py-2.5 rounded-lg bg-green-600 hover:bg-green-700 text-white">
+
+                        Approve
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <?= $this->include('Recruitment/delete_requisition_modal') ?>
 
     <script>
 
@@ -329,28 +507,246 @@
 
     <script>
 
-        function deleteRequisition(id) {
-            if (confirm("Delete this requisition permanently?")) {
-                window.location.href =
-                    "<?= base_url('Recruitment/requisitions/delete/') ?>" + id;
-            }
+        // View Requisition
+        function openViewModal(id) {
+
+            fetch("<?= base_url('Recruitment/requisitions/get/') ?>" + id)
+                .then(response => response.text())
+                .then(html => {
+
+                    document.getElementById("viewContent").innerHTML = html;
+
+                    const modal = document.getElementById("viewModal");
+
+                    modal.classList.remove("hidden");
+                    modal.classList.add("flex");
+
+                    lucide.createIcons();
+
+                });
+
         }
 
         function closeViewModal() {
-            document
-                .getElementById("viewModal")
-                .classList
-                .add("hidden");
+
+            const modal = document.getElementById("viewModal");
+
+            modal.classList.remove("flex");
+            modal.classList.add("hidden");
+
+        }
+
+
+
+        // Edit Requisition       
+        function openEditModal(id) {
+
+            fetch("<?= base_url('Recruitment/requisitions/edit/') ?>" + id)
+                .then(response => response.text())
+                .then(html => {
+
+                    document.getElementById("editContent").innerHTML = html;
+
+                    const modal = document.getElementById("editModal");
+
+                    modal.classList.remove("hidden");
+                    modal.classList.add("flex");
+
+                    lucide.createIcons();
+
+                });
+
         }
 
         function closeEditModal() {
-            document
-                .getElementById("editModal")
-                .classList
-                .add("hidden");
+
+            const modal = document.getElementById("editModal");
+
+            modal.classList.remove("flex");
+            modal.classList.add("hidden");
+
+        }
+        function openDeleteModal(id, requisitionNo, jobTitle) {
+
+            document.getElementById("deleteReqNo").textContent = requisitionNo;
+            document.getElementById("deleteJobTitle").textContent = jobTitle;
+
+            document.getElementById("confirmDeleteBtn").href =
+                "<?= base_url('Recruitment/requisitions/delete/') ?>" + id;
+
+            const modal = document.getElementById("deleteModal");
+
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+
+            lucide.createIcons();
+        }
+
+        function closeDeleteModal() {
+
+            const modal = document.getElementById("deleteModal");
+
+            modal.classList.remove("flex");
+            modal.classList.add("hidden");
+        }
+
+        function approveHOD(id) {
+
+            if (confirm("Approve this requisition?")) {
+
+                const form = document.createElement("form");
+
+                form.method = "POST";
+
+                form.action = "<?= base_url('Recruitment/requisitions/hod-approve/') ?>" + id;
+
+                document.body.appendChild(form);
+
+                form.submit();
+            }
+        }
+
+        function rejectHOD(id) {
+
+            if (confirm("Reject this requisition?")) {
+
+                const form = document.createElement("form");
+
+                form.method = "POST";
+
+                form.action = "<?= base_url('Recruitment/requisitions/hod-reject/') ?>" + id;
+
+                document.body.appendChild(form);
+
+                form.submit();
+            }
+        }
+
+        function approveHR(id) {
+
+            if (confirm("Approve and Publish this job?")) {
+
+                const form = document.createElement("form");
+
+                form.method = "POST";
+
+                form.action = "<?= base_url('Recruitment/requisitions/hr-approve/') ?>" + id;
+
+                document.body.appendChild(form);
+
+                form.submit();
+            }
+        }
+
+        function rejectHR(id) {
+
+            if (confirm("Reject this requisition?")) {
+
+                const form = document.createElement("form");
+
+                form.method = "POST";
+
+                form.action = "<?= base_url('Recruitment/requisitions/hr-reject/') ?>" + id;
+
+                document.body.appendChild(form);
+
+                form.submit();
+            }
+        }
+
+        let approvalAction = "";
+
+        function openApprovalModal(id, type) {
+
+            approvalAction = type;
+
+            fetch("<?= base_url('Recruitment/requisitions/get/') ?>" + id)
+
+                .then(response => response.text())
+
+                .then(html => {
+
+                    document.getElementById("approvalContent").innerHTML = html;
+
+                    const form = document.getElementById("approvalForm");
+
+                    const title = document.getElementById("approvalTitle");
+
+                    const button = document.getElementById("approvalButton");
+
+                    if (type == "hodApprove") {
+
+                        title.innerText = "Approve Requisition";
+
+                        button.innerText = "Confirm Approval";
+
+                        button.className = "px-6 py-2.5 rounded-lg bg-green-600 hover:bg-green-700 text-white";
+
+                        form.action = "<?= base_url('Recruitment/requisitions/hod-approve/') ?>" + id;
+
+                    }
+
+                    if (type == "hodReject") {
+
+                        title.innerText = "Reject Requisition";
+
+                        button.innerText = "Confirm Rejection";
+
+                        button.className = "px-6 py-2.5 rounded-lg bg-red-600 hover:bg-red-700 text-white";
+
+                        form.action = "<?= base_url('Recruitment/requisitions/hod-reject/') ?>" + id;
+
+                    }
+
+                    if (type == "hrApprove") {
+
+                        title.innerText = "Publish Job";
+
+                        button.innerText = "Approve & Publish";
+
+                        button.className = "px-6 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white";
+
+                        form.action = "<?= base_url('Recruitment/requisitions/hr-approve/') ?>" + id;
+
+                    }
+
+                    if (type == "hrReject") {
+
+                        title.innerText = "Reject Requisition";
+
+                        button.innerText = "Reject";
+
+                        button.className = "px-6 py-2.5 rounded-lg bg-red-600 hover:bg-red-700 text-white";
+
+                        form.action = "<?= base_url('Recruitment/requisitions/hr-reject/') ?>" + id;
+
+                    }
+
+                    const modal = document.getElementById("approvalModal");
+
+                    modal.classList.remove("hidden");
+
+                    modal.classList.add("flex");
+
+                    lucide.createIcons();
+
+                });
+
+        }
+
+        function closeApprovalModal() {
+
+            const modal = document.getElementById("approvalModal");
+
+            modal.classList.remove("flex");
+
+            modal.classList.add("hidden");
+
         }
 
     </script>
+
+
 
 
 

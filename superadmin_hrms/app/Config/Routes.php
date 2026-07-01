@@ -73,6 +73,11 @@ $routes->group('Recruitment', ['filter' => 'auth'], function ($routes) {
         'Recruitment\RequisitionController::getRequisition/$1'
     );
 
+    $routes->get(
+        'requisitions/edit/(:num)',
+        'Recruitment\RequisitionController::edit/$1'
+    );
+
     $routes->post(
         'requisitions/update/(:num)',
         'Recruitment\RequisitionController::update/$1'
@@ -81,6 +86,26 @@ $routes->group('Recruitment', ['filter' => 'auth'], function ($routes) {
     $routes->get(
         'requisitions/delete/(:num)',
         'Recruitment\RequisitionController::delete/$1'
+    );
+
+    $routes->post(
+        'requisitions/hod-approve/(:num)',
+        'Recruitment\RequisitionController::hodApprove/$1'
+    );
+
+    $routes->post(
+        'requisitions/hod-reject/(:num)',
+        'Recruitment\RequisitionController::hodReject/$1'
+    );
+
+    $routes->post(
+        'requisitions/hr-approve/(:num)',
+        'Recruitment\RequisitionController::hrApprove/$1'
+    );
+
+    $routes->post(
+        'requisitions/hr-reject/(:num)',
+        'Recruitment\RequisitionController::hrReject/$1'
     );
 
 });
