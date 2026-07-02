@@ -36,7 +36,7 @@
                         </p>
                     </div>
 
-                    <?php if (in_array(session('role'), ['hiring_manager', 'admin'])): ?>
+                    <?php if (in_array(session('role'), ['hiring_manager', 'admin', 'department_head'])): ?>
                         <a href="<?= base_url('Recruitment/requisitions/create') ?>"
                             class="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-3 rounded-lg flex items-center gap-2 shadow">
 
@@ -138,6 +138,9 @@
                                                     $class = "bg-blue-100 text-blue-700";
 
                                                 if ($status == "Approved")
+                                                    $class = "bg-green-100 text-green-700";
+
+                                                if ($status == "Published")
                                                     $class = "bg-green-100 text-green-700";
 
                                                 if ($status == "Rejected")

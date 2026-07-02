@@ -14,27 +14,45 @@ class RequisitionModel extends Model
 
     protected $allowedFields = [
 
-    'requisition_no',
-    'job_title',
-    'department',
-    'employment_type',
-    'vacancies',
-    'experience',
-    'salary_from',
-    'salary_to',
-    'location',
-    'description',
-    'skills',
-    'status',
-    'requested_by',
-    'approved_by',
-    'submitted_at',
-    'hod_status',
-    'hr_status',
-    'rejection_reason',
-    'published_at',
-    'updated_at'
-];
+        'requisition_no',
+        'job_title',
+        'department',
+        'request_date',
+        'vacancies',
+        'target_hire_date',
+        'employment_type',
+        'work_mode',
+        'location',
+
+        'reason_for_hire',
+        'previous_employee',
+        'budget_status',
+
+        'salary_from',
+        'salary_to',
+
+        'justification_notes',
+
+        'experience',
+        'education',
+
+        'mandatory_skills',
+        'preferred_skills',
+
+        'description',
+
+        'requested_by',
+        'approved_by',
+
+        'status',
+        'hod_status',
+        'hr_status',
+
+        'submitted_at',
+        'published_at',
+        'rejection_reason'
+
+    ];
 
     protected $useTimestamps = true;
 

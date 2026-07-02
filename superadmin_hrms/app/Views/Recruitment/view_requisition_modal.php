@@ -48,6 +48,7 @@
                     break;
 
                 case 'Approved':
+                case 'Published':
                     $badge = 'bg-green-100 text-green-700';
                     break;
 
