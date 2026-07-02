@@ -91,15 +91,6 @@
                             <i data-lucide="chevron-down" class="w-4 h-4"></i>
                         </button>
 
-                        <!-- Add Job -->
-                        <button onclick="openAddJobModal()"
-                            class="flex items-center justify-center gap-2 px-3 py-2 text-xs sm:text-sm bg-orange-500 text-white rounded-md font-medium">
-
-                            <i data-lucide="plus-circle" class="w-4 h-4"></i>
-
-                            Create Job Requisition
-                        </button>
-
                         <!-- Scroll Top -->
                         <button
                             class="w-8 h-8 bg-white border border-slate-200 rounded-md flex items-center justify-center">
@@ -112,12 +103,12 @@
 
                 <!-- Packages List -->
                 <div class="bg-white border border-slate-200 rounded-md shadow-sm">
-
                     <!-- Header -->
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5 border-b">
 
+
                         <h3 class="text-l font-semibold text-slate-800">
-                            Job List
+                            Job Grid
                         </h3>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:flex gap-3 w-full lg:w-auto">
@@ -128,11 +119,11 @@
                                 09/06/2026 - 09/06/2026
                             </button>
 
-                            <select class="border rounded-md px-4 py-2 text-[13px] w-full sm:w-auto" ">
+                            <select class="border rounded-md px-4 py-2 text-[13px] w-full sm:w-auto">
                                 <option>Select Role</option>
                             </select>
 
-                            <select class=" border rounded-md px-4 py-2 text-[13px] w-full sm:w-auto">
+                            <select class="border rounded-md px-4 py-2 text-[13px] w-full sm:w-auto">
                                 <option>Select Status</option>
                             </select>
 
@@ -144,377 +135,213 @@
 
                     </div>
 
-                    <!-- Controls -->
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 p-5">
-
-                        <div class="flex flex-wrap items-center gap-2 w-full lg:w-auto">
-
-                            <span class="text-sm">
-                                Row Per Page
-                            </span>
-
-                            <select class="border rounded-md px-3 py-1 text-sm">
-                                <option>10</option>
-                            </select>
-
-                            <span class="text-sm">
-                                Entries
-                            </span>
-
-                        </div>
-
-                        <input type="text" placeholder="Search"
-                            class="border border-slate-200 rounded-md px-4 py-2 text-[13px] w-full md:w-[220px]">
-
-                    </div>
-
                     <!-- Table -->
                     <div class="overflow-x-auto">
 
-                        <table class="w-full min-w-[900px]">
+                            <table class="w-full min-w-[900px]">
 
-                            <thead>
+                                <thead>
 
-                                <tr class="bg-[#f1f5f9] h-10">
+                                    <tr class="bg-[#f1f5f9] h-10">
 
-                                    <th class="w-12 text-center">
-                                        <input type="checkbox" id="selectAll" class="px-4 py-3 w-4 h-4">
-                                    </th>
+                                        <th class="w-12 text-center">
+                                            <input type="checkbox" id="selectAll" class="px-4 py-3 w-4 h-4">
+                                        </th>
 
-                                    <th class="px-4 py-3 text-left text-[13px] font-semibold">
-                                        Job ID
-                                    </th>
+                                        <th class="px-4 py-3 text-left text-[13px] font-semibold">
+                                            Job ID
+                                        </th>
 
-                                    <th class="px-4 py-3 text-left text-[13px] font-semibold">
-                                        Job Title
-                                    </th>
+                                        <th class="px-4 py-3 text-left text-[13px] font-semibold">
+                                            Job Title
+                                        </th>
 
-                                    <th class="px-4 py-3 text-left text-[13px] font-semibold">
-                                        Category
-                                    </th>
+                                        <th class="px-4 py-3 text-left text-[13px] font-semibold">
+                                            Category
+                                        </th>
 
-                                    <th class="px-4 py-3 text-left text-[13px] font-semibold">
-                                        Location
-                                    </th>
+                                        <th class="px-4 py-3 text-left text-[13px] font-semibold">
+                                            Location
+                                        </th>
 
-                                    <th class="px-4 py-3 text-left text-[13px] font-semibold">
-                                        Salary Range
-                                    </th>
+                                        <th class="px-4 py-3 text-left text-[13px] font-semibold">
+                                            Salary Range
+                                        </th>
 
-                                    <th class="px-4 py-3 text-left text-[13px] font-semibold">
-                                        Posted Date
-                                    </th>
+                                        <th class="px-4 py-3 text-left text-[13px] font-semibold">
+                                            Posted Date
+                                        </th>
 
-                                    <th class="p-4"></th>
+                                        <th class="p-4"></th>
 
-                                </tr>
+                                    </tr>
 
-                            </thead>
+                                </thead>
 
-                            <tbody class="divide-y divide-slate-100 text-sm text-slate-700">
+                                <tbody class="divide-y divide-slate-100 text-sm text-slate-700">
+                                    <?php
+                                        $publishedJobs = [];
+                                        foreach ($jobs as $job) {
+                                            if (!empty($job['status']) && !empty($job['hr_status']) &&
+                                                $job['status'] === 'Published' &&
+                                                $job['hr_status'] === 'Approved') {
+                                                $publishedJobs[] = $job;
+                                            }
+                                        }
+                                    ?>
+                                    <?php if (!empty($publishedJobs)): ?>
+                                        <?php foreach ($publishedJobs as $job): ?>
+                                            <?php $salaryRange = !empty($job['salary_from']) && !empty($job['salary_to']) ? '₹' . number_format($job['salary_from']) . ' - ₹' . number_format($job['salary_to']) : 'Not set'; ?>
+                                            <tr class="hover:bg-slate-50">
+                                                <td class="px-4 py-4">
+                                                    <input type="checkbox" class="rowCheckbox rounded border-slate-300">
+                                                </td>
+                                                <td class="px-4 py-4"><?= esc($job['requisition_no'] ?? 'N/A') ?></td>
+                                                <td class="px-4 py-4">
+                                                    <div class="font-semibold text-slate-800"><?= esc($job['job_title']) ?>
+                                                    </div>
+                                                    <div class="text-xs text-slate-500"><?= esc($job['vacancies'] ?? 1) ?>
+                                                        Openings</div>
+                                                </td>
+                                                <td class="px-4 py-4"><?= esc($job['department']) ?></td>
+                                                <td class="px-4 py-4"><?= esc($job['location']) ?></td>
+                                                <td class="px-4 py-4"><?= esc($salaryRange) ?></td>
+                                                <td class="px-4 py-4">
+                                                    <?= !empty($job['published_at']) ? date('d M Y', strtotime($job['published_at'])) : 'N/A' ?>
+                                                </td>
+                                                <td class="px-4 py-4">
+                                                    <div class="flex gap-3">
+                                                        <button type="button" onclick="openJobModal(<?= esc($job['id']) ?>)"
+                                                            class="text-slate-500 hover:text-blue-600">
+                                                            <i data-lucide="eye" class="w-4 h-4"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    <?php else: ?>
+                                        <tr>
+                                            <td colspan="8" class="px-4 py-8 text-center text-slate-500">
+                                                No published jobs available yet.
+                                            </td>
+                                        </tr>
+                                    <?php endif; ?>
+                                </tbody>
 
-                                <tr class="hover:bg-slate-50">
-                                    <td class="px-4 py-4">
-                                        <input type="checkbox" class="rowCheckbox rounded border-slate-300">
-                                    </td>
-                                    <td class="px-4 py-4">Job-001</td>
-                                    <td class="px-4 py-4">
-                                        <div class="font-semibold text-slate-800">Senior IOS Developer</div>
-                                        <div class="text-xs text-slate-500">25 Applicants</div>
-                                    </td>
-                                    <td class="px-4 py-4">Software</td>
-                                    <td class="px-4 py-4">New York, USA</td>
-                                    <td class="px-4 py-4">30,000 - 35,000 / month</td>
-                                    <td class="px-4 py-4">12 Sep 2024</td>
-                                    <td class="px-4 py-4">
-                                        <div class="flex gap-3">
-                                            <button><i data-lucide="pencil" class="w-4 h-4"></i></button>
-                                            <button><i data-lucide="trash-2" class="w-4 h-4"></i></button>
-                                        </div>
-                                    </td>
-                                </tr>
+                            </table>
 
-                                <tr class="hover:bg-slate-50">
-                                    <td class="px-4 py-4">
-                                        <input type="checkbox" class="rowCheckbox rounded border-slate-300">
-                                    </td>
-                                    <td class="px-4 py-4">Job-002</td>
-                                    <td class="px-4 py-4">
-                                        <div class="font-semibold text-slate-800">Junior PHP Developer</div>
-                                        <div class="text-xs text-slate-500">20 Applicants</div>
-                                    </td>
-                                    <td class="px-4 py-4">Software</td>
-                                    <td class="px-4 py-4">Los Angeles, USA</td>
-                                    <td class="px-4 py-4">20,000 - 25,000 / month</td>
-                                    <td class="px-4 py-4">24 Oct 2024</td>
-                                    <td class="px-4 py-4">
-                                        <div class="flex gap-3">
-                                            <button><i data-lucide="pencil" class="w-4 h-4"></i></button>
-                                            <button><i data-lucide="trash-2" class="w-4 h-4"></i></button>
-                                        </div>
-                                    </td>
-                                </tr>
+                            <!-- Pagination -->
+                            <div class="flex items-center justify-between p-3 border-t">
 
-                                <tr class="hover:bg-slate-50">
-                                    <td class="px-4 py-4">
-                                        <input type="checkbox" class="rowCheckbox rounded border-slate-300">
-                                    </td>
-                                    <td class="px-4 py-4">Job-003</td>
-                                    <td class="px-4 py-4">
-                                        <div class="font-semibold text-slate-800">Junior PHP Developer</div>
-                                        <div class="text-xs text-slate-500">20 Applicants</div>
-                                    </td>
-                                    <td class="px-4 py-4">Software</td>
-                                    <td class="px-4 py-4">Los Angeles, USA</td>
-                                    <td class="px-4 py-4">20,000 - 25,000 / month</td>
-                                    <td class="px-4 py-4">24 Oct 2024</td>
-                                    <td class="px-4 py-4">
-                                        <div class="flex gap-3">
-                                            <button><i data-lucide="pencil" class="w-4 h-4"></i></button>
-                                            <button><i data-lucide="trash-2" class="w-4 h-4"></i></button>
-                                        </div>
-                                    </td>
-                                </tr>
+                                <p class="text-sm text-slate-600">
+                                    Showing 1 - 8 of 8 entries
+                                </p>
 
-                                <tr class="hover:bg-slate-50">
-                                    <td class="px-4 py-4">
-                                        <input type="checkbox" class="rowCheckbox rounded border-slate-300">
-                                    </td>
-                                    <td class="px-4 py-4">Job-004</td>
-                                    <td class="px-4 py-4">
-                                        <div class="font-semibold text-slate-800">Junior React Developer</div>
-                                        <div class="text-xs text-slate-500">35 Applicants</div>
-                                    </td>
-                                    <td class="px-4 py-4">Software</td>
-                                    <td class="px-4 py-4">Bristol, UK</td>
-                                    <td class="px-4 py-4">30,000 - 35,000 / month</td>
-                                    <td class="px-4 py-4">18 Feb 2024</td>
-                                    <td class="px-4 py-4">
-                                        <div class="flex gap-3">
-                                            <button><i data-lucide="pencil" class="w-4 h-4"></i></button>
-                                            <button><i data-lucide="trash-2" class="w-4 h-4"></i></button>
-                                        </div>
-                                    </td>
-                                </tr>
+                                <div class="flex items-center justify-center gap-4">
 
-                                <tr class="hover:bg-slate-50">
-                                    <td class="px-4 py-4">
-                                        <input type="checkbox" class="rowCheckbox rounded border-slate-300">
-                                    </td>
-                                    <td class="px-4 py-4">Job-005</td>
-                                    <td class="px-4 py-4">
-                                        <div class="font-semibold text-slate-800">Senior Laravel Developer</div>
-                                        <div class="text-xs text-slate-500">40 Applicants</div>
-                                    </td>
-                                    <td class="px-4 py-4">Software</td>
-                                    <td class="px-4 py-4">Washington, USA</td>
-                                    <td class="px-4 py-4">32,000 - 36,000 / month</td>
-                                    <td class="px-4 py-4">20 Jul 2024</td>
-                                    <td class="px-4 py-4">
-                                        <div class="flex gap-3">
-                                            <button><i data-lucide="pencil" class="w-4 h-4"></i></button>
-                                            <button><i data-lucide="trash-2" class="w-4 h-4"></i></button>
-                                        </div>
-                                    </td>
-                                </tr>
+                                    <button>
+                                        <i data-lucide="chevron-left" class="text-slate-500 w-4 h-4"></i>
+                                    </button>
 
-                                <tr class="hover:bg-slate-50">
-                                    <td class="px-4 py-4">
-                                        <input type="checkbox" class="rowCheckbox rounded border-slate-300">
-                                    </td>
-                                    <td class="px-4 py-4">Job-006</td>
-                                    <td class="px-4 py-4">
-                                        <div class="font-semibold text-slate-800">DevOps Engineer</div>
-                                        <div class="text-xs text-slate-500">20 Applicants</div>
-                                    </td>
-                                    <td class="px-4 py-4">Software</td>
-                                    <td class="px-4 py-4">Coventry, UK</td>
-                                    <td class="px-4 py-4">25,000 - 35,000 / month</td>
-                                    <td class="px-4 py-4">10 Apr 2024</td>
-                                    <td class="px-4 py-4">
-                                        <div class="flex gap-3">
-                                            <button><i data-lucide="pencil" class="w-4 h-4"></i></button>
-                                            <button><i data-lucide="trash-2" class="w-4 h-4"></i></button>
-                                        </div>
-                                    </td>
-                                </tr>
+                                    <button class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs">
+                                        1
+                                    </button>
 
-                                <tr class="hover:bg-slate-50">
-                                    <td class="px-4 py-4">
-                                        <input type="checkbox" class="rowCheckbox rounded border-slate-300">
-                                    </td>
-                                    <td class="px-4 py-4">Job-007</td>
-                                    <td class="px-4 py-4">
-                                        <div class="font-semibold text-slate-800">Junior Android Developer</div>
-                                        <div class="text-xs text-slate-500">25 Applicants</div>
-                                    </td>
-                                    <td class="px-4 py-4">Software</td>
-                                    <td class="px-4 py-4">Chicago, USA</td>
-                                    <td class="px-4 py-4">28,000 - 32,000 / month</td>
-                                    <td class="px-4 py-4">29 Aug 2024</td>
-                                    <td class="px-4 py-4">
-                                        <div class="flex gap-3">
-                                            <button><i data-lucide="pencil" class="w-4 h-4"></i></button>
-                                            <button><i data-lucide="trash-2" class="w-4 h-4"></i></button>
-                                        </div>
-                                    </td>
-                                </tr>
+                                    <button>
+                                        <i data-lucide="chevron-right" class="text-slate-500 w-4 h-4"></i>
+                                    </button>
 
-                                <tr class="hover:bg-slate-50">
-                                    <td class="px-4 py-4">
-                                        <input type="checkbox" class="rowCheckbox rounded border-slate-300">
-                                    </td>
-                                    <td class="px-4 py-4">Job-008</td>
-                                    <td class="px-4 py-4">
-                                        <div class="font-semibold text-slate-800">Senior HTML Developer</div>
-                                        <div class="text-xs text-slate-500">35 Applicants</div>
-                                    </td>
-                                    <td class="px-4 py-4">Software</td>
-                                    <td class="px-4 py-4">Carlisle, UK</td>
-                                    <td class="px-4 py-4">25,000 - 28,000 / month</td>
-                                    <td class="px-4 py-4">22 Feb 2024</td>
-                                    <td class="px-4 py-4">
-                                        <div class="flex gap-3">
-                                            <button><i data-lucide="pencil" class="w-4 h-4"></i></button>
-                                            <button><i data-lucide="trash-2" class="w-4 h-4"></i></button>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <tr class="hover:bg-slate-50">
-                                    <td class="px-4 py-4">
-                                        <input type="checkbox" class="rowCheckbox rounded border-slate-300">
-                                    </td>
-                                    <td class="px-4 py-4">Job-009</td>
-                                    <td class="px-4 py-4">
-                                        <div class="font-semibold text-slate-800">Junior UI/UX Designer</div>
-                                        <div class="text-xs text-slate-500">20 Applicants</div>
-                                    </td>
-                                    <td class="px-4 py-4">Software</td>
-                                    <td class="px-4 py-4">Lancaster, UK</td>
-                                    <td class="px-4 py-4">20,000 - 25,000 / month</td>
-                                    <td class="px-4 py-4">03 Nov 2024</td>
-                                    <td class="px-4 py-4">
-                                        <div class="flex gap-3">
-                                            <button><i data-lucide="pencil" class="w-4 h-4"></i></button>
-                                            <button><i data-lucide="trash-2" class="w-4 h-4"></i></button>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                                <tr class="hover:bg-slate-50">
-                                    <td class="px-4 py-4">
-                                        <input type="checkbox" class="rowCheckbox rounded border-slate-300">
-                                    </td>
-                                    <td class="px-4 py-4">Job-010</td>
-                                    <td class="px-4 py-4">
-                                        <div class="font-semibold text-slate-800">Senior Graphic Designer</div>
-                                        <div class="text-xs text-slate-500">25 Applicants</div>
-                                    </td>
-                                    <td class="px-4 py-4">Software</td>
-                                    <td class="px-4 py-4">San Diego, USA</td>
-                                    <td class="px-4 py-4">22,000 - 28,000 / month</td>
-                                    <td class="px-4 py-4">17 Dec 2024</td>
-                                    <td class="px-4 py-4">
-                                        <div class="flex gap-3">
-                                            <button><i data-lucide="pencil" class="w-4 h-4"></i></button>
-                                            <button><i data-lucide="trash-2" class="w-4 h-4"></i></button>
-                                        </div>
-                                    </td>
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-
-                        <!-- Pagination -->
-                        <div class="flex items-center justify-between p-3 border-t">
-
-                            <p class="text-sm text-slate-600">
-                                Showing 1 - 8 of 8 entries
-                            </p>
-
-                            <div class="flex items-center justify-center gap-4">
-
-                                <button>
-                                    <i data-lucide="chevron-left" class="text-slate-500 w-4 h-4"></i>
-                                </button>
-
-                                <button class="w-6 h-6 rounded-full bg-orange-500 text-white text-xs">
-                                    1
-                                </button>
-
-                                <button>
-                                    <i data-lucide="chevron-right" class="text-slate-500 w-4 h-4"></i>
-                                </button>
+                                </div>
 
                             </div>
-
                         </div>
                     </div>
                 </div>
+
             </div>
-
         </div>
-    </div>
 
 
-    <script>
-        lucide.createIcons();
+        <script>
+            lucide.createIcons();
 
-        function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            const overlay = document.getElementById('sidebarOverlay');
+            function toggleSidebar() {
+                const sidebar = document.getElementById('sidebar');
+                const overlay = document.getElementById('sidebarOverlay');
 
-            sidebar.classList.toggle('-translate-x-full');
-            overlay.classList.toggle('hidden');
-        }
+                sidebar.classList.toggle('-translate-x-full');
+                overlay.classList.toggle('hidden');
+            }
 
-        document
-            .getElementById('sidebarOverlay')
-            .addEventListener('click', function () {
+            document
+                .getElementById('sidebarOverlay')
+                .addEventListener('click', function () {
 
-                document
-                    .getElementById('sidebar')
-                    .classList.add('-translate-x-full');
+                    document
+                        .getElementById('sidebar')
+                        .classList.add('-translate-x-full');
 
-                this.classList.add('hidden');
+                    this.classList.add('hidden');
+                });
+        </script>
+
+        <script>
+            const selectAll = document.getElementById('selectAll');
+            const rowCheckboxes = document.querySelectorAll('.rowCheckbox');
+
+            selectAll.addEventListener('change', function () {
+                rowCheckboxes.forEach(cb => {
+                    cb.checked = this.checked;
+                });
             });
-    </script>
 
-    <script>
-        const selectAll = document.getElementById('selectAll');
-        const rowCheckboxes = document.querySelectorAll('.rowCheckbox');
-
-        selectAll.addEventListener('change', function () {
             rowCheckboxes.forEach(cb => {
-                cb.checked = this.checked;
+                cb.addEventListener('change', function () {
+                    const allChecked =
+                        [...rowCheckboxes].every(c => c.checked);
+
+                    selectAll.checked = allChecked;
+                });
             });
-        });
-
-        rowCheckboxes.forEach(cb => {
-            cb.addEventListener('change', function () {
-                const allChecked =
-                    [...rowCheckboxes].every(c => c.checked);
-
-                selectAll.checked = allChecked;
-            });
-        });
-    </script>
+        </script>
 
 
-    <?= $this->include('Recruitment/post_job') ?>
+        <div id="jobViewModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40 px-4 py-8">
+            <div class="w-full max-w-4xl rounded-3xl bg-white shadow-2xl overflow-hidden">
+                <div class="flex items-center justify-between border-b border-slate-200 p-5">
+                    <div>
+                        <h2 class="text-xl font-semibold text-slate-900">Job Details</h2>
+                        <p class="text-sm text-slate-500">Review the published requisition details.</p>
+                    </div>
+                    <button type="button" onclick="closeJobModal()" class="text-slate-500 hover:text-slate-900">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+                <div id="jobViewContent" class="p-6 text-slate-700">Loading...</div>
+            </div>
+        </div>
 
-    <script>
-        function openAddJobModal() {
-            document.getElementById('addJobModal').classList.remove('hidden');
-            document.getElementById('addJobModal').classList.add('flex');
-        }
+        <script>
+            function openJobModal(id) {
+                fetch("<?= base_url('Recruitment/requisitions/get/') ?>" + id)
+                    .then(response => response.text())
+                    .then(html => {
+                        document.getElementById('jobViewContent').innerHTML = html;
+                        const modal = document.getElementById('jobViewModal');
+                        modal.classList.remove('hidden');
+                        modal.classList.add('flex');
+                        lucide.createIcons();
+                    })
+                    .catch(() => {
+                        document.getElementById('jobViewContent').innerHTML = '<div class="text-center text-red-600">Unable to load job details.</div>';
+                    });
+            }
 
-        function closeAddJobModal() {
-            document.getElementById('addJobModal').classList.add('hidden');
-            document.getElementById('addJobModal').classList.remove('flex');
-        }
-    </script>
+            function closeJobModal() {
+                const modal = document.getElementById('jobViewModal');
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }
+        </script>
 
 </body>

@@ -65,6 +65,7 @@ $routes->group('Recruitment', ['filter' => 'auth'], function ($routes) {
     $routes->get('requisitions/create', 'Recruitment\RequisitionController::create');
 
     $routes->post('requisitions/save-draft', 'Recruitment\RequisitionController::saveDraft');
+    $routes->post('requisitions/save', 'Recruitment\RequisitionController::save'); // legacy alias for old JobRequisitionController paths
 
     $routes->post('requisitions/submit', 'Recruitment\RequisitionController::submit');
 

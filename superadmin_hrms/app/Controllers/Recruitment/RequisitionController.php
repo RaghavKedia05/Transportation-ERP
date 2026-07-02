@@ -138,13 +138,19 @@ class RequisitionController extends BaseController
         $data = $this->payloadFromRequest();
         $data['status'] = 'Draft';
         $data['requested_by'] = session('user_id');
-        $data['hod_status'] = 'Approved'; // phase 1: HOD step bypassed
+        $data['hod_status'] = 'Pending';
         $data['hr_status'] = 'Pending';
 
         $this->requisitionModel->insert($data);
 
         return redirect()->to('/Recruitment/requisitions')
             ->with('success', 'Draft Saved Successfully');
+    }
+
+    public function save()
+    {
+        // Legacy alias for older job requisition save routes.
+        return $this->saveDraft();
     }
 
     public function submit()
@@ -158,7 +164,7 @@ class RequisitionController extends BaseController
         $data['status'] = 'Pending Approval';
         $data['requested_by'] = session('user_id');
         $data['submitted_at'] = date('Y-m-d H:i:s');
-        $data['hod_status'] = 'Approved'; // phase 1: HOD step bypassed
+        $data['hod_status'] = 'Pending';
         $data['hr_status'] = 'Pending';
 
         $this->requisitionModel->insert($data);
@@ -210,7 +216,20 @@ class RequisitionController extends BaseController
                 ->with('errors', $this->validator->getErrors());
         }
 
-        $this->requisitionModel->update($id, $this->payloadFromRequest());
+        $payload = $this->payloadFromRequest();
+        $action = $this->request->getPost('action');
+        $status = $this->request->getPost('status');
+
+        if ($status === 'Pending Approval' || $action === 'submit') {
+            $payload['status'] = 'Pending Approval';
+            $payload['hod_status'] = 'Pending';
+            $payload['hr_status'] = 'Pending';
+            $payload['submitted_at'] = date('Y-m-d H:i:s');
+        } elseif ($action === 'draft') {
+            $payload['status'] = 'Draft';
+        }
+
+        $this->requisitionModel->update($id, $payload);
 
         return redirect()->to('/Recruitment/requisitions')
             ->with('success', 'Requisition updated successfully.');
